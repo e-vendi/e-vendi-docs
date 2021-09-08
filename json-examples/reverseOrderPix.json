@@ -1,0 +1,17 @@
+{
+    "method": "POST",
+    "url": "https://e-vendi.com.br/api/reverseOrderPix",
+    "httpVersion": "HTTP/1.1",
+    "queryString": [],
+    "headers": [
+        {
+            "name": "Content-Type",
+            "value": "application/json"
+        }
+    ],
+    "cookies": [],
+    "postData": {
+        "mimeType": "application/json",
+        "text": "{\"env\": \"Dev\", \"integrationToken\": \"KS852Aasfd2458251\", \"externalId\": \"1\"}"
+    }
+}

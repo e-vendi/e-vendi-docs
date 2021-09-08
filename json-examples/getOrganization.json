@@ -1,0 +1,17 @@
+{
+    "method": "POST",
+    "url": "https://e-vendi.com.br/api/getOrganization",
+    "httpVersion": "HTTP/1.1",
+    "queryString": [],
+    "headers": [
+        {
+            "name": "Content-Type",
+            "value": "application/json"
+        }
+    ],
+    "cookies": [],
+    "postData": {
+        "mimeType": "application/json",
+        "text": "{\"integrationToken\": \"KS852Aasfd2458251\", \"env\": \"dev\", \"externalId\": \"1\", \"domainName\": \"nome\", \"domainHost\": \"nome\", \"nome\": \"nome\"}"
+    }
+}
