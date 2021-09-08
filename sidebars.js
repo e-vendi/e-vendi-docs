@@ -10,7 +10,7 @@
  module.exports = {
   tutorialSidebar: {
     Welcome: ['quickstart/introduction'],
-    CriarLoja: ['newStore/introduction', 'newStore/checkDomain', 'newStore/organizationExist', 'newStore/createOrganization', 'newStore/getOrganization'],
+    'Criar Loja': ['newStore/introduction', 'newStore/checkDomain', 'newStore/organizationExist', 'newStore/createOrganization', 'newStore/getOrganization'],
     Produtos: ['products/introduction', 'products/createProduct', 'products/getProduct', 'products/updateStock', 'products/updateProductStock', 'products/getProductStock',
     'products/updateProduct', 'products/getStockReserved'],
     Pedidos: ['requests/introduction', 'requests/getOrdersOpened', 'requests/closeOrder', 'requests/reverseOrderCard', 'requests/reverseOrderPix'],
