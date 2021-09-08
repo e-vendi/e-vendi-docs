@@ -1,6 +1,6 @@
 ---
 id: createProduct
-title: Criar e atualizar o catálogo de produtos
+title: Criar/atualizar catálogo
 ---
 
 ## Método

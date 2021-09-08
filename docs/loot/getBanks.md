@@ -1,6 +1,6 @@
 ---
 id: getBanks
-title: Pegar Bancos Suportados
+title: Bancos Suportados
 ---
 
 ## Método

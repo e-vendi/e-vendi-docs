@@ -1,6 +1,6 @@
 ---
 id: checkDomain
-title: Verificar disponibilidades de subdominio
+title: Verificar subdominio
 ---
 
 ## Método

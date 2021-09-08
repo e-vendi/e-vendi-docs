@@ -1,6 +1,6 @@
 ---
 id: updateCatalogStatus
-title: Ativar ou inativar um catálogo
+title: Ativar/inativar catálogo
 ---
 
 ## Método

@@ -1,6 +1,6 @@
 ---
 id: uploadFile
-tilte: Hospedar imagem do produto
+title: Hospedar imagem
 ---
 
 ## Método

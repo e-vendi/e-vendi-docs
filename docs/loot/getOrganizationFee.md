@@ -1,6 +1,6 @@
 ---
 id: getOrganizationFee
-title: Pegar valor das taxas de transação
+title: Taxas de transação
 ---
 
 ## Método

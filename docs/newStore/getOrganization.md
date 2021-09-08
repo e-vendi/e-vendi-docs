@@ -1,6 +1,6 @@
 ---
 id: getOrganization
-title: Buscar dados de uma empresa
+title: Dados da empresa
 ---
 
 ## Método

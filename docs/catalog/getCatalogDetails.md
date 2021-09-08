@@ -1,6 +1,6 @@
 ---
 id: getCatalogDetails
-title: Pegar detalhes de um catálogo
+title: Pegar detalhes de catálogo
 ---
 
 ## Método
