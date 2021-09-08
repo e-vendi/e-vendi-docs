@@ -1,6 +1,6 @@
 ---
 id: organizationExist
-title: Verificar se uma empresa existe
+title: Verificar empresa existente
 ---
 
 ## Método

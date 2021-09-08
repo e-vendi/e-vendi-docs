@@ -1,6 +1,6 @@
 ---
 id: bankAccount
-title: Atualizar conta bancaria para saque
+title: Atualizar conta bancaria
 ---
 
 ## Método

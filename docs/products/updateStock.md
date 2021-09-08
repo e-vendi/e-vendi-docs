@@ -1,6 +1,6 @@
 ---
 id: updateStock
-title: Atualizar estoque de vários produtos
+title: Atualizar vários estoques
 ---
 
 ## Método

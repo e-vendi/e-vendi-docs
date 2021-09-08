@@ -1,6 +1,6 @@
 ---
 id: reverseOrderCard
-title: Estornar pedido (Cartão e Presencial)
+title: Estornar Cartão
 ---
 
 ## Método

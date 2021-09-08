@@ -1,6 +1,6 @@
 ---
 id: createOrganization
-title: Criar e atualizar empresa
+title: Criar/atualizar empresa
 ---
 
 ## Método
@@ -53,7 +53,7 @@ Esse método é responsável por cadastrar e criar sua empresa, ou caso ja tenha
 | dvAccount | integer | Número da conta (ex: 3)
 | holderName | string | Nome da pessoa |
 | document | integer | CPF da pessoa |
-| payments | string | Tipo de pagamento | 
+| payments | string | Tipo de pagamento (ex: "BOLETO")| 
 
 ## Request body
 

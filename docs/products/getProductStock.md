@@ -1,6 +1,6 @@
 ---
 id: getProductStock
-title: Pegar o estoque atual de um produto
+title: Pegar estoque de produto
 ---
 
 ## Método

@@ -1,6 +1,6 @@
 ---
 id: reverseOrderPix
-title: Estornar pedido (Boleto e Pix)
+title: Estornar Boleto e Pix
 ---
 
 ## Método

@@ -1,6 +1,6 @@
 ---
 id: updateCatalogCover
-title: Alterar a imagem do catálogo
+title: Alterar imagem de catálogo
 ---
 
 ## Método
