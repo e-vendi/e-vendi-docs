@@ -34,8 +34,8 @@ Esse método é responsável por trazer os dados das empresas solicitadas.
 ```json
 {
   "env": "dev",
-  "integrationToken": "KS852Aasfd2458251",
-  "organizationExternalId": "1"
+  "integrationToken": "seu token",
+  "organizationExternalId": "seu id"
 }
 ```
 
@@ -99,9 +99,9 @@ Exemplo
 
 ```json
 {
-    "integrationToken": "KS852Aasfd2458251",
+    "integrationToken": "seu token",
     "env": "dev",
-    "externalId": "1",
+    "externalId": "seu id",
     "store": {
         "freeShipping": [
             {

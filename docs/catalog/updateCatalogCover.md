@@ -36,10 +36,10 @@ Neste método você será capaz de alterar a imagem do catálogo.
 ```json
 {
     "env": "dev",
-    "organizationExternalId": "mobiage-1887.1888.1889.-3531689",
-    "integrationToken": "NA2gLbUgLJhSJ1WaVHmy",
-    "catalogExternalId": "39445C8F8A1A610A67E27290EE9E7C17",
-    "cover": "https://i.zst.com.br/images/roupas-femininas-para-academia-conheca-opcoes-para-todos-dos-gostos,-precos-e-marcas-photo795200438-44-13-32.jpg"
+    "organizationExternalId": "Seu ID",
+    "integrationToken": "Seu Token",
+    "catalogExternalId": "ID do catálogo",
+    "cover": "https://e-vendi.app/wp-content/uploads/2021/05/logo-evendi-site.png.webp"
 }
 ```
 

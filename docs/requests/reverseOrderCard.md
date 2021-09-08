@@ -34,8 +34,8 @@ Neste método você será capaz de estornar os pedidos feitos pelo cartão e pre
 
 ```json
 {
-   "integrationToken": "", 
-   "organizationExternalId": "13",
+   "integrationToken": "Seu token", 
+   "organizationExternalId": "id",
    "orderId": "",
    "env": "prod"
 }

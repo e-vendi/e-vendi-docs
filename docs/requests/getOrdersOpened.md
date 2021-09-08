@@ -7,7 +7,7 @@ title: Pegar pedidos abertos
 
 **/getOrdersOpened**
 
-`GET` https://e-vendi.com.br/api/getOrdersOpened?integrationToken=WTnxjpDoJD8kkdGucbXS&env=dev&organizationExternalId=81728472000167
+`GET` https://e-vendi.com.br/api/getOrdersOpened?integrationToken=SEU_TOKEN&env=dev&organizationExternalId=SEU_ID
 
 ---
 
@@ -153,12 +153,12 @@ Exemplo
 ```json
 [
     {
-        "id": "2RzF8RZhVtd5IIgYVUBQ",
+        "id": "ID",
         "discount": 0,
         "shipping": {
             "street": "Rua",
-            "zipCode": "87203134",
-            "street_number": "1149",
+            "zipCode": "3333333",
+            "street_number": "3333",
             "stateCode": "41",
             "country": {
                 "name": "Brasil",
@@ -174,10 +174,10 @@ Exemplo
             "complementary": "",
             "state": "PR"
         },
-        "postbackUrl": "https://grands.com.br/test",
+        "postbackUrl": "https://",
         "isCompleted": true,
         "paid": false,
-        "cartId": "4122418d-992f-4c99-9c50-875439c187dc",
+        "cartId": "",
         "createdAt": 1630699080656,
         "orderNumber": 1001,
         "organizationExternalId": "1",
@@ -190,7 +190,7 @@ Exemplo
         "customer": {
             "email": "@gmail.com",
             "document": "00000000000",
-            "id": "AIM7EIOVE1ATAKCT62E3NPQYDFT6SGDI",
+            "id": "id",
             "phone": "+5544999999999",
             "name": "nome"
         },
@@ -199,10 +199,10 @@ Exemplo
                 "itens": [
                     {
                         "sale": 1,
-                        "id": "HG7BA22TYHLNT9JBNBLUCKDKDJMGHRKV"
+                        "id": "id"
                     }
                 ],
-                "id": "ho2IxgmyC2AIDKmuq2rt"
+                "id": "id"
             }
         ],
         "opened": true,
@@ -217,7 +217,7 @@ Exemplo
                 "externalId": "5000",
                 "productType": {
                     "name": "Manga Longa",
-                    "id": "187118A8F07892ED9F38CECCCB87F719"
+                    "id": "id"
                 },
                 "price": 2.9,
                 "freightWidth": "123,00",
@@ -234,7 +234,7 @@ Exemplo
                         "color": "Verde",
                         "qnt": 1,
                         "externalId": "005000P001",
-                        "id": "HG7BA22TYHLNT9JBNBLUCKDKDJMGHRKV",
+                        "id": "id",
                         "integrationMetadata": {},
                         "colorRef": "#20c40a",
                         "price": 2.9,

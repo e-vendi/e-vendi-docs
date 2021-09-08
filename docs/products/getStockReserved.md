@@ -35,8 +35,8 @@ Este método serve para pegar o estoque reservado..
 
 ```json
 {
-    "integrationToken": "E8VGQxo19danVpAAJ3AY",
-    "organizationExternalId": "1",
+    "integrationToken": "seu token",
+    "organizationExternalId": "seu id",
     "env": "dev",
     "productExternalId": "5001",
     "itemExternalId": "005001P001"

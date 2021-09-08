@@ -33,9 +33,9 @@ Este método serve para pegar todos os detalhes de um catálogo.
 ```json
 {
     "env": "dev",
-    "integrationToken": "NA2gLbUgLJhSJ1WaVHmy",
-    "externalId": "mobiage-1887.1888.1889.-3531689",
-    "catalogExternalId": "39445C8F8A1A610A67E27290EE9E7C17"
+    "integrationToken": "Seu token",
+    "externalId": "Seu ID",
+    "catalogExternalId": "ID do catálogo"
 }
 ```
 

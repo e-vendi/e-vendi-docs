@@ -74,8 +74,8 @@ Este método serve para atualizar um produto específico.
 
 ```json
 {
-  "integrationToken": "E8VGQxo19danVpAAJ3AY",
-  "organizationExternalId": "1",
+  "integrationToken": "seu token",
+  "organizationExternalId": "seu id",
   "externalId": "333",
   "env": "dev",
   "name": "Bata merge kkkk",
@@ -94,7 +94,7 @@ Este método serve para atualizar um produto específico.
   "controlStock": false,
   "itens": [
     {
-      "externalId": "3896F2AF0180840E9E1D2E04B01EC414",
+      "externalId": "id",
       "integrationMetadata": {
         "priceSheetTypeId": ""
       },
@@ -116,11 +116,11 @@ Este método serve para atualizar um produto específico.
       ],
       "stock": 0,
       "files": [
-        "/dist/public/product-no-image.svg"
+        "/"
       ]
     },
     {
-      "externalId": "3896F2AF01A79BF3D8EE2E04B01EC414",
+      "externalId": "id",
       "integrationMetadata": {
         "priceSheetTypeId": ""
       },
@@ -142,11 +142,11 @@ Este método serve para atualizar um produto específico.
       ],
       "stock": 0,
       "files": [
-        "/dist/public/product-no-image.svg"
+        "/"
       ]
     },
     {
-      "externalId": "3896F2AF01A7BB45CC962E04B01EC414",
+      "externalId": "id",
       "integrationMetadata": {
         "priceSheetTypeId": ""
       },
@@ -168,11 +168,11 @@ Este método serve para atualizar um produto específico.
       ],
       "stock": 0,
       "files": [
-        "/dist/public/product-no-image.svg"
+        "/"
       ]
     },
     {
-      "externalId": "3896F2AF01A7DB1B1CC32E04B01EC414",
+      "externalId": "id",
       "integrationMetadata": {
         "priceSheetTypeId": ""
       },
@@ -194,7 +194,7 @@ Este método serve para atualizar um produto específico.
       ],
       "stock": 0,
       "files": [
-        "/dist/public/product-no-image.svg"
+        "/"
       ]
     }
   ]

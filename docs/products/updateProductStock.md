@@ -41,9 +41,9 @@ Este método serve para atualizar apenas um produto d eum estoque.
 
 ```json
 {
-	"integrationToken": "WTnxjpDoJD8kkdGucbXS",
+	"integrationToken": "seu token",
 	"env": "dev",
-	"organizationExternalId": "81728472000167",
+	"organizationExternalId": "seu id",
 	"productExternalId": "5000",
 	"itens": [
 		{

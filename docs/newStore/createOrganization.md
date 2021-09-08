@@ -59,9 +59,9 @@ Esse método é responsável por cadastrar e criar sua empresa, ou caso ja tenha
 
 ```json
 {
-    "integrationToken": "KS852Aasfd2458251",
+    "integrationToken": "seu token",
     "env": "dev",
-    "externalId": "1",
+    "externalId": "seu id",
     "store": {
         "domainName": "Nome",
         "name": "Store",

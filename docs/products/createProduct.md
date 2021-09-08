@@ -80,9 +80,9 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 ```json
 {
   "env": "dev",
-  "integrationToken": "WTnxjpDoJD8kkdGucbXS",
-  "organizationExternalId": "81728472000167",
-  "externalId": "35",
+  "integrationToken": "seu token",
+  "organizationExternalId": "seu id",
+  "externalId": "seu id",
   "name": "Catalogo N∫ 000035",
   "enableExpiration": false,
   "expiredAt": null,
@@ -103,7 +103,7 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
         {
           "externalId": "005000P001",
           "files": [
-            "https://cd.shoppub.com.br/usevolt/media/cache/77/ff/77ff69ba1a0a0d6fadff3d0c7e941531.jpg"
+            "https://"
           ],
           "name": "Crusher",
           "price": 2.9,
@@ -146,7 +146,7 @@ Exemplo
 
 ```json
 {
-    "url": "https://gabrielMS.e-vendi.site/catalogo-n-000035"
+    "url": "https://"
 }
 ```
 ### 400 

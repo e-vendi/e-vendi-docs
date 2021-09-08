@@ -34,10 +34,10 @@ Este método serve para pegar o estoque atual de um produto.
 
 ```json
 {
-	"integrationToken": "WTnxjpDoJD8kkdGucbXS",
+	"integrationToken": "seu token",
 	"env": "dev",
-	"organizationExternalId": "81728472000167",
-	"productExternalId": "5000"
+	"organizationExternalId": "seu id",
+	"productExternalId": "id do produto"
 }
 ```
 
@@ -65,9 +65,9 @@ Exemplo
 
 ```json
 {
-    "integrationToken": "WTnxjpDoJD8kkdGucbXS",
+    "integrationToken": "seu token",
     "env": "dev",
-    "organizationExternalId": "81728472000167",
+    "organizationExternalId": "seu id",
     "productExternalId": "5001",
     "itens": [
         {

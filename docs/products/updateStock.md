@@ -46,9 +46,9 @@ Este método serve para atualizar a quantidade de produtos nos estoques.
 
 ```json
 {
-  "integrationToken": "WTnxjpDoJD8kkdGucbXS",
+  "integrationToken": "seu token",
   "env": "dev",
-  "organizationExternalId": "1",
+  "organizationExternalId": "seu id",
   "products": [
   	{
 		"productExternalId": "5001",

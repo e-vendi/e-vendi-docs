@@ -34,8 +34,8 @@ Esse método é responsável por verificar se a expresa já existe ou não.
 ```json
 {
   "env": "dev",
-  "integrationToken": "KS852Aasfd2458251",
-  "organizationExternalId": "1"
+  "integrationToken": "seu token",
+  "organizationExternalId": "seu id"
 }
 ```
 

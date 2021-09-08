@@ -51,7 +51,7 @@ Exemplo
 ```json
 {
     "error": false,
-    "url": "https://storage.googleapis.com/zaap-admin.appspot.com/api-images/D9HE92TYRUALINFC0JMLYO9HQDPUUH5Y.png"
+    "url": "https://"
 }
 ```
 ### 400 

@@ -33,9 +33,9 @@ Este método serve para finalizar os pedidos feitos.
 ```json
 {
   "env": "dev",
-  "integrationToken": "WTnxjpDoJD8kkdGucbXS",
-  "organizationExternalId": "81728472000167",
-  "orderId": "d7JiRcS3BglHrPEPcfKe"
+  "integrationToken": "seu token",
+  "organizationExternalId": "seu id",
+  "orderId": "id od pedido"
 }
 ```
 

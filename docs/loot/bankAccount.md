@@ -43,8 +43,8 @@ Este método é responsável por verificar atualizar sua conta bancaria para o s
 ```json
 {
   "env": "dev",
-  "integrationToken": "WTnxjpDoJD8kkdGucbXS",
-  "organizationExternalId": "81728472000167",
+  "integrationToken": "Seu token",
+  "organizationExternalId": "seu id",
   "bankCode": "333",
   "accountType": "conta_corrente",
   "agency": "3333",

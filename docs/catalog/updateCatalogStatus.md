@@ -34,9 +34,9 @@ Este método serve para ativar ou desativar um catálogo.
 ```json
 {
     "env": "dev",
-    "organizationExternalId": "1",
-    "integrationToken": "E8VGQxo19danVpAAJ3AY",
-    "catalogExternalId": "333",
+    "organizationExternalId": "Seu ID",
+    "integrationToken": "Seu Token",
+    "catalogExternalId": "ID do catálogo",
     "published": true
 }
 ```

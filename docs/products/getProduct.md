@@ -34,8 +34,8 @@ Este método serve para ver quantos e quais catálogos você tem ativo.
 ```json
 {
     "env": "dev",
-    "integrationToken": "WTnxjpDoJD8kkdGucbXS",
-    "externalId": "1"
+    "integrationToken": "seu token",
+    "externalId": "seu id"
 }
 ```
 
@@ -66,9 +66,9 @@ Exemplo
 ```json
 [
     {
-        "id": "3l9zw10cqDcPM8jvIt0I",
+        "id": "id",
         "products": [
-            "mc828njGJm32wnMmrIkd"
+            "id do produto"
         ],
         "enableExpiration": false,
         "minimalPrice": null,
@@ -77,7 +77,7 @@ Exemplo
         "published": true,
         "externalId": "10",
         "createdAt": 1630593791739,
-        "postbackUrl": "https://grands.com.br/test",
+        "postbackUrl": "https://",
         "name": "Catalogo e-commerce",
         "totalItens": 1,
         "minimalPriceNumber": null,
@@ -87,12 +87,12 @@ Exemplo
         "expiredAt": null
     },
     {
-        "id": "tD3Ja8ZnnAvR1ocpAHbb",
+        "id": "id",
         "friendlyName": "catalogo-n-000035",
         "externalId": "333",
         "createdAt": 1630675157435,
         "products": [
-            "mc828njGJm32wnMmrIkd"
+            "id"
         ],
         "expiredAt": null,
         "postbackPaymentUrl": "",
@@ -102,7 +102,7 @@ Exemplo
         "minimalPrice": null,
         "tablePriceId": null,
         "minimalPriceNumber": null,
-        "postbackUrl": "https://grands.com.br/test",
+        "postbackUrl": "https://",
         "name": "Catalogo N∫ 000035",
         "published": true,
         "tablePriceWholesaleId": null

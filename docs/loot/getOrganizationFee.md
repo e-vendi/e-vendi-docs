@@ -34,8 +34,8 @@ Este método é responsável por pegar os valores das taxas de transação.
 ```json
 {
   "env": "dev",
-  "integrationToken": "WTnxjpDoJD8kkdGucbXS",
-  "externalId": "81728472000167"
+  "integrationToken": "seu token",
+  "externalId": "seu id"
 }
 ```
 
