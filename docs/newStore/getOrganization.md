@@ -77,9 +77,13 @@ Esse método é responsável por trazer os dados das empresas solicitadas.
 | name | string | Nome da loja | 
 | controlStock | boolean | Este atributo é para controlar o estoque | 
 | phone | string | Atributo para colocar seu telefone |
-| deliveryFee | float | Taxa para delivery | 
-| organizationFreightMode | string | modo de frete da organização |
-| storeMode | string | Tipo da loja | 
+| deliveryFee | float | Taxa de entrega ( Valor total, em reais R$) |
+| organizationFreightMode | string | Este atributo pode receber quatro tipos de dados, sendo eles: CORREIOS ( Os cadastros dos seus produtos terão informações de peso e dimensões, possibilitando o cálculo do frete no ato da compra de seus clientes. ), FIX_TAX ( Todos os clientes pagam a mesma taxa de entrega,
+isso é muito usado em empresas que tem seus próprios entregadores na cidade. ), DINAMIC ( O frete varia entre correios e taxa fixa, sendo
+taxa fixa para pedidos da mesma cidade e correios de outras cidade. ), TO_CALCULATE ( O valor do frete ficará a combinar com seu cliente. )| 
+| freightCepOrigin  | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatorio** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
+| storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
+| modality | string | modo do ecommerce, se mostra preço ou não, se tem dois preços etc.. aceita três tipos de dados ( ATACADO, VAREJO ou ATACAREJO ) |
 
 ### Bank
 
@@ -93,7 +97,7 @@ Esse método é responsável por trazer os dados das empresas solicitadas.
 | dvAccount | integer | Número da conta (ex: 3)
 | holderName | string | Nome da pessoa |
 | document | integer | CPF da pessoa |
-| payments | string | Tipo de pagamento | 
+| payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) | 
 
 Exemplo
 
