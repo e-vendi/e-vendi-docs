@@ -21,7 +21,11 @@ Esse método é responsável por cadastrar e criar sua empresa, ou caso ja tenha
 
 :::note
 
-organizationExternalId é o id do seu cliente na sua base de dados
+organizationExternalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
+
+por exemplo, você tem 2 clientes na sua base de dados
+Cliente 01 : ID: 1001
+Cliente 02 : ID: 1002
 
 :::
 
