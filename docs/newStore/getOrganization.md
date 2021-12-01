@@ -23,12 +23,9 @@ Esse método é responsável por trazer os dados das empresas solicitadas.
 
 organizationExternalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
 
-por exemplo, você tem 2 clientes na sua base de dados
-Cliente 01 : ID: 1001
-Cliente 02 : ID: 1002
+por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002
 
 :::
-
 
 ## Atributos
 
@@ -37,8 +34,150 @@ Cliente 02 : ID: 1002
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | organizationExternalId | integer | Seu código de identificação no e-vendi |
+
+---
+
+#### Store
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
+| active | boolean | Identifica se a loja está habilitada/desabilitada |
+| activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
+| captureLead | captureLead | Informações sobre a captação de lead |
+| cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
+| createdAt | number | Data de criação da loja |
+| deliveryFee | float | Taxa de entrega ( Valor total, em reais R$) |
+| descriptionSEO | string | Descrição do SEO para a sua página |
+| domainName | string | Nome escolhido para o domínio |
+| domainHost | string | Nome do domínio |
+| enableCartExpiration | boolean | Identifica se o carrinho expira |
+| enableEcommerceMode | boolean | Identifica modo e-commerce |
+| ecommerceCatalogId | string | ID do catálago |
+| about | boolean | Identifica se existe conteúdo 'sobre' para a loja |
+| enableExchangePolicy | boolean | HTML ou texto informado para a criação da página 'política de troca' da loja |
+| enableMsgTracking | boolean | Identifica notificações sobre o pedido para o cliente |
+| msgTrackingFiscalNote | string | Mensagem que o cliente receberá sobre a nota fiscal |
+| msgTrackingNewOrder | string | Mensagem que o cliente receberá sobre o pedido feito |
+| msgTrackingOrderInvoiced | string | Mensagem que o cliente receberá sobre pedido aprovado |
+| msgTrackingReversed | string | Mensagem que o cliente receberá sobre pedido estornado |
+| msgTrackingShipping | string | Mensagem que o cliente receberá quando o pedido for entregue à transportadora |
+| exchangePolicy | string | Conteúdo sobre a política de troca da loja, pode ser informado texto ou HTML |
+| facebook | string | Nome da loja no facebook |
+| facebookDomainTxt | string | Código de validação do facebook business |
+| favicon | string | Atributo do favicon da sua loja |
+| freeShipping | freeShipping | Configurações para frete grátis. Pode ser feito por região ou um intervalo de CEP's |
+| freeShippingValue | number | Valor mínimo da compra para ter frete grátis |
+| freightCepOrigin | string | CEP do frete de origem |
+| generalRules | generalRules | Você pode criar desconto automaticamente baseado em algumas condições que escolher |
+| instagram | string | Nome da loja no Instagram |
+| integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
+| keywords | array&#60;string&#62; | Palavras chave para o SEO da loja |
+| logo | string | Atributo para enviar a logo da sua empresa |
+| modality | string | Modo do ecommerce, se mostra preço ou não, se tem dois preços etc.. aceita três tipos de dados ( ATACADO, VAREJO ou ATACAREJO ) |
+| name | string | Nome da sua loja |
+| organizationFreightMode | string | Este atributo pode receber quatro tipos de dados, sendo eles: CORREIOS ( Os cadastros dos seus produtos terão informações de peso e dimensões, possibilitando o cálculo do frete no ato da compra de seus clientes. ), FIX_TAX ( Todos os clientes pagam a mesma taxa de entrega, isso é muito usado em empresas que tem seus próprios entregadores na cidade. ), DINAMIC ( O frete varia entre correios e taxa fixa, sendo taxa fixa para pedidos da mesma cidade e correios de outras cidade. ), TO_CALCULATE ( O valor do frete ficará a combinar com seu cliente. ) |
+| freightCepOrigin | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatório** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
+| organizationMinimalItens | number | Indica a quantidade mínima de itens para poder finalizar uma compra |
+| organizationMinimalPrice | number | Valor mínimo para compra |
+| organizationSlogan | string | Slogan da loja |
+| parcelRules | parcelRules | Configurações de parcelamento para a loja |
+| phone | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
+| plugChatCode | string | Código de integração do PlugChat |
+| postbackNewDealer | string | Atributo que armazena uma URL de uma API que o e-vendi vai chamar qando o cliente que se cadastrou no e-commerce solicitou ser um revendedor |
+| integratorLogo | string | Atributo para mandar a logo do integrador |
+| presentialDeliveryTime | number | Tempo de entrega presencial |
+| rewardBar | rewardBar | Barra de benefícios mostra banners com links para descontos |
+| showOnlyProductsAvailable | boolean | Identifica se mostra apenas os produtos disponíveis ou não |
+| storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
+| titleSEO | string | Título para SEO |
+| zApi | zApi | Configurações de integração com o zApi |
+
+#### Bank
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| bankCode | integer | Código do banco (ex: 333) |
+| accountType | integer | Tipo da conta (ex: Conta corrente) |
+| agency | integer | Agência do banco (ex: 3333) |
+| dvAgency | integer | Número da agência |
+| accountNumber | integer | Número da conta (ex: 33333) |
+| dvAccount | integer | Número da conta (ex: 3) |
+| holderName | string | Nome da pessoa |
+| document | integer | CPF da pessoa |
+| payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) |
+
+#### CaptureLead
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | captura lead sim ou não                           |
+| title          | string  | título da lead                                    |
+| subtitle       | string  | subtítulo da lead                                 |
+| description    | string  | descrição do que você deseja que apareça na lead  |
+| successMessage | string  | Mensagem que o cliente receberá ao aceitar a lead |
+
+#### FreeShipping
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Habilita/Desabilita frete grátis para região |
+| minimalValue | number | Valor mínimo para ter frete grátis |
+| name | string | Nome para a opção de frete grátis |
+| region | string | Nome da região para o frete grátis. Se fizer por região não informar cepStart nem cepEnd |
+| cepStart | string | CEP inicial para frete grátis |
+| cepEnd | string | CEP final para frete grátis |
+
+#### generalRules
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
+| benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
+
+##### conditions
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| operator | string | Operador para sua condição. ('>', '<', '=', '>=', '<=', '!=', 'contains') |
+| type | string | Tipo da condição (VALUE ou PAYMENT_TYPE). Se type for "VALUE" então o atributo value deve receber o valor para atender a condição do operator |
+| value | string | Valor para a condição (boleto, presential, pix) |
+| startParcel | number | Parcela inicial |
+| endParcel | number | Parcela final |
+
+##### benefits
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| type | string | Tipo do benefício, pode ser ('DISCOUNT' ou 'FREIGHT_FREE') |
+| operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
+| value | [] | Valor será conforme o operator informado. |
+
+#### parcelRules
+
+| Atributos    |  Tipo  | Descrição                                      |
+| :----------- | :----: | :--------------------------------------------- |
+| start        | number | Valor inicial (Ex: De X ate 100)               |
+| end          | number | Valor Final (Ex: De 0 ate X)                   |
+| installments | number | Parcelas permitidas para o intervalor definido |
+
+#### RewardBar
+
+| Atributos |  Tipo  | Descrição                                   |
+| :-------- | :----: | :------------------------------------------ |
+| link      | string | Link para o qual será direcionado ao clicar |
+| image     | string | Link para carregar a imagem do banner       |
+
+#### zApi
+
+| Atributos      |  Tipo   | Descrição                       |
+| :------------- | :-----: | :------------------------------ |
+| integratorName | string  | Nome do integrador              |
+| notifyStore    | boolean | Habilita/Desabilita notificação |
+| phone          | string  | Número do celular da integração |
+| token          | string  | Token para a integração         |
 
 ## Request body
 
@@ -59,139 +198,8 @@ Cliente 02 : ID: 1002
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | externalId | integer | Seu código de identificação no e-vendi |
-
-### Store
-#### FreeShipping
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| region | string | ID da região do usuário  |
-| name | string | Nome da região do usuário |
-| active | boolean | Atributo para saber se essa região está ativa ou não |
-| minimalValue | integer | Valor para o retorno |
-| enableMsgTracking | boolean | Atributo para ativar ou não o rastreamento |
-| createdAt | integer | Timestamp com a data e hora da primeira interação  |
-| active | boolean | Atributo para saber se a loja está ativa ou não | 
-| ecommerceCatalogId | string | Atributo para colocar o id do Ecomerce  |
-| enableCartExpiration | boolean | Atributo para fazer o carrinho de compras expirar ou não |
-| cartExpirationHours | integer | Atributo para atribuir a quantidade de tempo para o carrinho expirar |
-| organizationSlogan | string | Slogan da sua loja, para ser concatenaco com o nome |
-| plugChatCode | string | Token de integração com o Plug Chat |
-| titleSEO | string | Titulo atribuido ao SEO da empresa |
-| descriptionSEO | string | Descrição atribuida ao SEO da empresa |
-| keywords | string | Palavras chaves para encontrar o SEO da empresa |
-| activeWithDraw | boolean | Opção para tirar o produto na loja |
-| domainName | string | Nome do dominio |
-| domainHost | string | URL do dominio | 
-| enableEcommerceMode | boolean | Atributo para mudar para o modo Ecommerce |
-| name | string | Nome da loja | 
-| controlStock | boolean | Este atributo é para controlar o estoque | 
-| phone | string | Atributo para colocar seu telefone |
-| deliveryFee | float | Taxa de entrega ( Valor total, em reais R$) |
-| organizationFreightMode | string | Este atributo pode receber quatro tipos de dados, sendo eles: CORREIOS ( Os cadastros dos seus produtos terão informações de peso e dimensões, possibilitando o cálculo do frete no ato da compra de seus clientes. ), FIX_TAX ( Todos os clientes pagam a mesma taxa de entrega,
-isso é muito usado em empresas que tem seus próprios entregadores na cidade. ), DINAMIC ( O frete varia entre correios e taxa fixa, sendo
-taxa fixa para pedidos da mesma cidade e correios de outras cidade. ), TO_CALCULATE ( O valor do frete ficará a combinar com seu cliente. )| 
-| freightCepOrigin  | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatorio** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
-| storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
-| modality | string | modo do ecommerce, se mostra preço ou não, se tem dois preços etc.. aceita três tipos de dados ( ATACADO, VAREJO ou ATACAREJO ) |
-
-### Bank
-
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| bankCode | integer | Código do banco (ex: 333) |
-| accountType | integer | Tipo da conta (ex: Conta corrente) |
-| agency | integer | Agência do banco (ex: 3333) |
-| dvAgency | integer | Número da agência |
-| accountNumber | integer | Número da conta (ex: 33333)
-| dvAccount | integer | Número da conta (ex: 3)
-| holderName | string | Nome da pessoa |
-| document | integer | CPF da pessoa |
-| payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) | 
-
-Exemplo
-
-```json
-{
-    "integrationToken": "seu token",
-    "env": "dev",
-    "externalId": "seu id",
-    "store": {
-        "freeShipping": [
-            {
-                "region": "SUDESTE",
-                "name": "Sudeste",
-                "active": false,
-                "minimalValue": 0
-            },
-            {
-                "region": "NORDESTE",
-                "name": "Nordeste",
-                "active": false,
-                "minimalValue": 0
-            },
-            {
-                "region": "NORTE",
-                "name": "Norte",
-                "active": false,
-                "minimalValue": 0
-            },
-            {
-                "region": "CENTRO_OESTE",
-                "name": "Centro-Oeste",
-                "active": false,
-                "minimalValue": 0
-            },
-            {
-                "region": "SUL",
-                "name": "Sul",
-                "active": false,
-                "minimalValue": 0
-            }
-        ],
-        "enableMsgTracking": false,
-        "createdAt": 1630593204719,
-        "active": true,
-        "ecommerceCatalogId": null,
-        "enableCartExpiration": false,
-        "cartExpirationHours": 0,
-        "organizationSlogan": null,
-        "plugChatCode": null,
-        "titleSEO": null,
-        "descriptionSEO": null,
-        "keywords": [],
-        "activeWithDraw": false,
-        "domainName": "nome",
-        "domainHost": "e-vendi.site",
-        "enableEcommerceMode": false,
-        "name": "nome Store",
-        "integrationMetadata": {
-            "controlStock": true
-        },
-        "phone": "+5544999999999",
-        "deliveryFee": 2.5,
-        "organizationFreightMode": "FIX_TAX",
-        "storeMode": "VAREJO"
-    },
-    "bank": {
-        "bankCode": "333",
-        "accountType": "conta_corrente",
-        "agency": "3333",
-        "dvAgency": "",
-        "accountNumber": "33333",
-        "dvAccount": "3",
-        "holderName": "nome",
-        "document": "333333333333",
-        "payments": [
-            "BOLETO",
-            "CREDIT_CARD",
-            "PRESENTIAL",
-            "PIX"
-        ]
-    }
-}
-```
 
 ### 405
 

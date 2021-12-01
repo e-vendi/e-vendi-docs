@@ -63,25 +63,27 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
 | facebook | string | Nome da loja no facebook |
 | facebookDomainTxt | string | Código de validação do facebook business |
 | favicon | string | Atributo para mudar o favicon da sua loja |
-| freeShipping | freeShipping | XXXXX |
+| freeShipping | freeShipping | Configurações para frete grátis. Pode ser feito por região ou um intervalo de CEP's |
+| freeShippingValue | number | Valor mínimo da compra para ter frete grátis |
 | freightCepOrigin | string | CEP do frete de origem |
-| generalRules | XXXX | XXXXX |
+| generalRules | generalRules | Você pode criar desconto automaticamente baseado em algumas condições que escolher |
 | instagram | string | Nome da loja no Instagram |
-| integrationMetadata | XXXX | XXXX |
-| keywords | XXXXX | Palavras chave para o SEO da loja |
-| lifelong | boolean | XXXXX |
+| integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
+| keywords | array&#60;string&#62; | Palavras chave para o SEO da loja |
 | logo | string | Atributo para enviar a logo da sua empresa |
 | modality | string | modo do ecommerce, se mostra preço ou não, se tem dois preços etc.. aceita três tipos de dados ( ATACADO, VAREJO ou ATACAREJO ) |
 | name | string | Nome da sua loja |
 | organizationFreightMode | string | Este atributo pode receber quatro tipos de dados, sendo eles: CORREIOS ( Os cadastros dos seus produtos terão informações de peso e dimensões, possibilitando o cálculo do frete no ato da compra de seus clientes. ), FIX_TAX ( Todos os clientes pagam a mesma taxa de entrega, isso é muito usado em empresas que tem seus próprios entregadores na cidade. ), DINAMIC ( O frete varia entre correios e taxa fixa, sendo taxa fixa para pedidos da mesma cidade e correios de outras cidade. ), TO_CALCULATE ( O valor do frete ficará a combinar com seu cliente. ) |
 | freightCepOrigin | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatório** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
-| organizationMinimalItens | string | XXXXX |
+| organizationMinimalItens | number | Indica a quantidade mínima de itens para poder finalizar uma compra |
+| organizationMinimalPrice | number | Valor mínimo para compra |
 | organizationSlogan | string | Slogan da loja |
 | parcelRules | parcelRules | Configurações de parcelamento para a loja |
 | phone | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
 | plugChatCode | string | Código de integração do PlugChat |
-| postbackNewDealer | string | XXXXX |
+| postbackNewDealer | string | Atributo que armazena uma URL de uma API que o e-vendi vai chamar qando o cliente que se cadastrou no e-commerce solicitou ser um revendedor |
 | integratorLogo | string | Atributo para mandar a logo do integrador |
+| presentialDeliveryTime | number | Tempo de entrega presencial |
 | rewardBar | rewardBar | Barra de benefícios mostra banners com links para descontos |
 | showOnlyProductsAvailable | boolean | Habilita/Desabilita mostrar apenas produtos disponíveis |
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
@@ -102,7 +104,7 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
 | document | integer | CPF da pessoa |
 | payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) |
 
-### CaptureLead
+#### CaptureLead
 
 | Atributos      |  Tipo   | Descrição                                         |
 | :------------- | :-----: | :------------------------------------------------ |
@@ -112,31 +114,58 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
 | description    | string  | descrição do que você deseja que apareça na lead  |
 | successMessage | string  | Mensagem que o cliente receberá ao aceitar a lead |
 
-### FreeShipping
+#### FreeShipping
 
-| Atributos    |  Tipo   | Descrição                                    |
-| :----------- | :-----: | :------------------------------------------- |
-| active       | boolean | Habilita/Desabilita frete grátis para região |
-| minimalValue | number  | Valor mínimo para ter frete grátis           |
-| name         | string  | Nome para a opção de frete grátis            |
-| region       | string  | Nome da região para o frete grátis           |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Habilita/Desabilita frete grátis para região |
+| minimalValue | number | Valor mínimo para ter frete grátis |
+| name | string | Nome para a opção de frete grátis |
+| region | string | Nome da região para o frete grátis. Se fizer por região não informar cepStart nem cepEnd |
+| cepStart | string | CEP inicial para frete grátis |
+| cepEnd | string | CEP final para frete grátis |
 
-### parcelRules
+#### generalRules
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
+| benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
+
+##### conditions
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| operator | string | Operador para sua condição. ('>', '<', '=', '>=', '<=', '!=', 'contains') |
+| type | string | Tipo da condição (VALUE ou PAYMENT_TYPE). Se type for "VALUE" então o atributo value deve receber o valor para atender a condição do operator |
+| value | string | Valor para a condição (boleto, presential, pix) |
+| startParcel | number | Parcela inicial |
+| endParcel | number | Parcela final |
+
+##### benefits
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| type | string | Tipo do benefício, pode ser ('DISCOUNT' ou 'FREIGHT_FREE') |
+| operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
+| value | [] | Valor será conforme o operator informado. |
+
+#### parcelRules
 
 | Atributos    |  Tipo  | Descrição                                      |
 | :----------- | :----: | :--------------------------------------------- |
-| start        | number | Valor inicial (Ex: De 0 ate X)                 |
-| end          | number | Valor Final (Ex: De X ate 100)                 |
+| start        | number | Valor inicial (Ex: De X ate 100)               |
+| end          | number | Valor Final (Ex: De 0 ate X)                   |
 | installments | number | Parcelas permitidas para o intervalor definido |
 
-### RewardBar
+#### RewardBar
 
 | Atributos |  Tipo  | Descrição                                   |
 | :-------- | :----: | :------------------------------------------ |
 | link      | string | Link para o qual será direcionado ao clicar |
 | image     | string | Link para carregar a imagem do banner       |
 
-### zApi
+#### zApi
 
 | Atributos      |  Tipo   | Descrição                       |
 | :------------- | :-----: | :------------------------------ |
@@ -190,7 +219,7 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
     "msgTrackingShipping": "Tô passando pra avisar que seu pedido {numeroPedido} já está com a transportadora responsável pela entrega.\nPara acompanhar a entrega acesse {linkRastreio}",
     "exchangePolicy": "<p>conteúdo sobre a política de troca</p>",
     "facebook": "facebook",
-    "facebookDomainTxt": "SDGASG5SDG5SADGSA8GSADASD8ERHEHG",
+    "facebookDomainTxt": "SAGDHDFHEHDFASD6HF5DFHDFH5H5FHDFH",
     "favicon": "https://image.png",
     "freeShipping": [
       {
@@ -218,25 +247,48 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
         "region": "CENTRO_OESTE"
       },
       {
-        "active": false,
+        "active": true,
         "minimalValue": 0,
         "name": "Sul",
         "region": "SUL"
+      },
+      {
+        "active": true,
+        "minimalValue": 100,
+        "name": "Exemplo",
+        "cepStart": "99999000",
+        "cepEnd": "99999100"
       }
     ],
+    "freeShippingValue": 100,
     "freightCepOrigin": "99999888",
-    "generalRules": "XXXXX",
+    "generalRules": [
+      {
+        "benefits": [
+          {
+            "operator": "VALUE",
+            "type": "DISCOUNT",
+            "value": 10
+          }
+        ],
+        "conditions": [
+          {
+            "operator": "<=",
+            "type": "VALUE",
+            "value": 180
+          }
+        ]
+      }
+    ],
     "instagram": "instagram",
-    "integrationMetadata": {
-      "controlStock": true
-    },
+    "integrationMetadata": {},
     "keywords": [],
-    "lifelong": true,
     "logo": "https://image.png",
     "modality": "VAREJO",
     "name": "Store",
     "organizationFreightMode": "FIX_TAX",
     "organizationMinimalItens": "",
+    "organizationMinimalPrice": 9.9,
     "organizationSlogan": "slogan",
     "parcelRules": [
       {"start": 0, "end": 100, "installments": 3},
@@ -245,6 +297,7 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
     "phone": "+5544999999999",
     "plugChatCode": "SGFGDF4G-35DF4ER-8H4TJJFG-4J5XC4ZG-68E4YQE",
     "postbackNewDealer": "https://",
+    "presentialDeliveryTime": 1,
     "rewardBar": [{"link": "https://", "image": "https://image.png"}],
     "integratorLogo": "https://image.png",
     "showOnlyProductsAvailable": true,
