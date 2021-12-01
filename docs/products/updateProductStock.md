@@ -11,7 +11,7 @@ title: Atualizar estoque
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Atualizar estoque de um produto
 
@@ -26,31 +26,31 @@ Este método serve para atualizar apenas um produto d eum estoque.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | productExternalId | string | ID do grupo do produto |
 
 #### Itens
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| itemExternalId | string | Id do produto dentro do grupo | 
-| stock | integer | Quantia do estoque |
+| Atributos      |  Tipo   | Descrição                     |
+| :------------- | :-----: | :---------------------------- |
+| itemExternalId | string  | Id do produto dentro do grupo |
+| stock          | integer | Quantia do estoque            |
 
 ## Request body
 
 ```json
 {
-	"integrationToken": "seu token",
-	"env": "dev",
-	"organizationExternalId": "seu id",
-	"productExternalId": "5000",
-	"itens": [
-		{
-		  "itemExternalId": "005000P001",
-		  "stock": 20
-		}
-	]
+  "integrationToken": "seu token",
+  "env": "dev",
+  "externalId": "seu id",
+  "productExternalId": "5000",
+  "itens": [
+    {
+      "itemExternalId": "005000P001",
+      "stock": 20
+    }
+  ]
 }
 ```
 
@@ -64,15 +64,15 @@ Este método serve para atualizar apenas um produto d eum estoque.
 | :-- | :-: | :-- |
 | message | string | String de retorno para saber se o estoque foi atualizado |
 
-
 Exemplo
 
 ```json
 {
-    "message": "Stock update success"
+  "message": "Stock update success"
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

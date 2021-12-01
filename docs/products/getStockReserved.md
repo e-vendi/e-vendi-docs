@@ -11,7 +11,7 @@ title: Pegar estoque reservado
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Pegar estoque reservado
 
@@ -26,20 +26,20 @@ Este método serve para pegar o estoque reservado..
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | productExternalId | string | ID do grupo do produto |
-| itemExternalId | string | Id do produto dentro do grupo | 
+| itemExternalId | string | Id do produto dentro do grupo |
 
 ## Request body
 
 ```json
 {
-    "integrationToken": "seu token",
-    "organizationExternalId": "seu id",
-    "env": "dev",
-    "productExternalId": "5001",
-    "itemExternalId": "005001P001"
+  "integrationToken": "seu token",
+  "externalId": "seu id",
+  "env": "dev",
+  "productExternalId": "5001",
+  "itemExternalId": "005001P001"
 }
 ```
 
@@ -49,20 +49,21 @@ Este método serve para pegar o estoque reservado..
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| stockReserved | integer | Quantidade do estoque reservado |
-| message | string | String retornada se existir um estoque reservado | 
+| Atributos     |  Tipo   | Descrição                                        |
+| :------------ | :-----: | :----------------------------------------------- |
+| stockReserved | integer | Quantidade do estoque reservado                  |
+| message       | string  | String retornada se existir um estoque reservado |
 
 Exemplo
 
 ```json
 {
-    "stockReserved": 0,
-    "message": ""
+  "stockReserved": 0,
+  "message": ""
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

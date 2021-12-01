@@ -11,7 +11,7 @@ title: Atualizar produto
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Atualizar produto
 
@@ -26,8 +26,8 @@ Este método serve para atualizar um produto específico.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | externalId | string | ID do grupo do produto |
 | name | string | Nome do produto |
 | price | float | Preço do produto |
@@ -36,20 +36,20 @@ Este método serve para atualizar um produto específico.
 
 #### Itens
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| externalId | string | ID do produto dentro do grupo |
-| stock | integer | Quantidade de produtos em estoque |
-| files | url | Link da imagem do produto | 
+| Atributos  |  Tipo   | Descrição                         |
+| :--------- | :-----: | :-------------------------------- |
+| externalId | string  | ID do produto dentro do grupo     |
+| stock      | integer | Quantidade de produtos em estoque |
+| files      |   url   | Link da imagem do produto         |
 
 #### Variation
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| type | string | Tipo do produto (ex: "TAMANHO") |
-| value | string | Valor da variavel do produto (ex: "P") |
-| label | string | Etiqueta do produto (ex: "MILITAR") |
-| valueRef | boolean | Referência do valor |
+| Atributos |  Tipo   | Descrição                              |
+| :-------- | :-----: | :------------------------------------- |
+| type      | string  | Tipo do produto (ex: "TAMANHO")        |
+| value     | string  | Valor da variavel do produto (ex: "P") |
+| label     | string  | Etiqueta do produto (ex: "MILITAR")    |
+| valueRef  | boolean | Referência do valor                    |
 
 ### Opcionais
 
@@ -60,14 +60,13 @@ Este método serve para atualizar um produto específico.
 | freightWeight | integer | Peso do produto |
 | freightWidth | integer | Largura do produto |
 | enablePhotoByColor | boolean | Este atributo serve para separar produtos por cores, apresentando um modelo do produto e mostrando os modelos com cores diferentes |
-| isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor | 
+| isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor |
 | controlStock | boolean | Atributo para controle de estoque |
 
+#### integrationMetadata
 
-####  integrationMetadata
-
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
+| Atributos        |  Tipo  | Descrição         |
+| :--------------- | :----: | :---------------- |
 | priceSheetTypeId | string | Atributo genérico |
 
 ## Request body
@@ -75,7 +74,7 @@ Este método serve para atualizar um produto específico.
 ```json
 {
   "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
+  "externalId": "seu id",
   "externalId": "333",
   "env": "dev",
   "name": "Bata merge kkkk",
@@ -115,9 +114,7 @@ Este método serve para atualizar um produto específico.
         }
       ],
       "stock": 0,
-      "files": [
-        "/"
-      ]
+      "files": ["/"]
     },
     {
       "externalId": "id",
@@ -141,9 +138,7 @@ Este método serve para atualizar um produto específico.
         }
       ],
       "stock": 0,
-      "files": [
-        "/"
-      ]
+      "files": ["/"]
     },
     {
       "externalId": "id",
@@ -167,9 +162,7 @@ Este método serve para atualizar um produto específico.
         }
       ],
       "stock": 0,
-      "files": [
-        "/"
-      ]
+      "files": ["/"]
     },
     {
       "externalId": "id",
@@ -193,9 +186,7 @@ Este método serve para atualizar um produto específico.
         }
       ],
       "stock": 0,
-      "files": [
-        "/"
-      ]
+      "files": ["/"]
     }
   ]
 }
@@ -207,18 +198,19 @@ Este método serve para atualizar um produto específico.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| success | boolean | true / false |
+| Atributos |  Tipo   | Descrição    |
+| :-------- | :-----: | :----------- |
+| success   | boolean | true / false |
 
 Exemplo
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

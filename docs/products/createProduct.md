@@ -11,7 +11,7 @@ title: Criar/atualizar catálogo
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Criar e atualizar o catálogo de produtos
 
@@ -26,9 +26,8 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
-| externalId | integer | Seu ID dentro da e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | name | string | Nome do catálogo |
 | enableExpiration | boolean | Atributo para fazer o catálogo expirar o não |
 
@@ -37,31 +36,31 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | controlStock | boolean | Atributo para o controle de estoque |
-| enablePhotoByColor | boolean | Este atributo serve para separar produtos por cores, apresentando um modelo do produto e mostrando os modelos com cores diferentes| 
+| enablePhotoByColor | boolean | Este atributo serve para separar produtos por cores, apresentando um modelo do produto e mostrando os modelos com cores diferentes |
 | postbackUrl | url | Webhook(Postback) necessário para a conexão |
-| externalId | string | ID do catálogo | 
-| isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor | 
+| externalId | string | ID do catálogo |
+| isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor |
 
 #### Itens
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| externalId | string | ID do produto |
-| files | url | campo para o link da imagem | 
-| name | string | nome do produto | 
-| price | float | Preço do produto | 
-| stock | integer | Quantidade do produto em estoque | 
-| productType | string | Tipo do produto |
-| reference | integer | Referência do produto | 
+| Atributos   |  Tipo   | Descrição                        |
+| :---------- | :-----: | :------------------------------- |
+| externalId  | string  | ID do produto                    |
+| files       |   url   | campo para o link da imagem      |
+| name        | string  | nome do produto                  |
+| price       |  float  | Preço do produto                 |
+| stock       | integer | Quantidade do produto em estoque |
+| productType | string  | Tipo do produto                  |
+| reference   | integer | Referência do produto            |
 
 ##### Variation
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| label | string | Nome |
-| type | string | Tipo (ex: "COR") |
-| value | string | Cor do produto |
-| valueRef | string | Hexadecimal da cor | 
+| Atributos |  Tipo  | Descrição          |
+| :-------- | :----: | :----------------- |
+| label     | string | Nome               |
+| type      | string | Tipo (ex: "COR")   |
+| value     | string | Cor do produto     |
+| valueRef  | string | Hexadecimal da cor |
 
 ### Opcionais
 
@@ -81,7 +80,7 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 {
   "env": "dev",
   "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
+  "externalId": "seu id",
   "externalId": "seu id",
   "name": "Catalogo N∫ 000035",
   "enableExpiration": false,
@@ -95,16 +94,14 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
   "postbackUrl": "https://grands.com.br/test",
   "products": [
     {
-	  "controlStock": true,
+      "controlStock": true,
       "enablePhotoByColor": true,
       "externalId": "5000",
       "isGrid": true,
       "itens": [
         {
           "externalId": "005000P001",
-          "files": [
-            "https://"
-          ],
+          "files": ["https://"],
           "name": "Crusher",
           "price": 2.9,
           "stock": 10,
@@ -138,18 +135,19 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| url | link | Retorna o link para o seu catálogo |
+| Atributos | Tipo | Descrição                          |
+| :-------- | :--: | :--------------------------------- |
+| url       | link | Retorna o link para o seu catálogo |
 
 Exemplo
 
 ```json
 {
-    "url": "https://"
+  "url": "https://"
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

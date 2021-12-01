@@ -21,23 +21,27 @@ Esse método é responsável por cadastrar e criar sua empresa, ou caso ja tenha
 
 :::note
 
-organizationExternalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
+externalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
 
 por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002
 
 :::
 
-## Atributos
+:::caution Atributos obrigatórios
 
-### Obrigatórios
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
+
+## Atributos
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
+| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId\* | string | Seu código de identificação no e-vendi |
 
-#### Store
+#### Store\*
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -72,14 +76,14 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
 | keywords | array&#60;string&#62; | Palavras chave para o SEO da loja |
 | logo | string | Atributo para enviar a logo da sua empresa |
 | modality | string | modo do ecommerce, se mostra preço ou não, se tem dois preços etc.. aceita três tipos de dados ( ATACADO, VAREJO ou ATACAREJO ) |
-| name | string | Nome da sua loja |
+| name\* | string | Nome da sua loja |
 | organizationFreightMode | string | Este atributo pode receber quatro tipos de dados, sendo eles: CORREIOS ( Os cadastros dos seus produtos terão informações de peso e dimensões, possibilitando o cálculo do frete no ato da compra de seus clientes. ), FIX_TAX ( Todos os clientes pagam a mesma taxa de entrega, isso é muito usado em empresas que tem seus próprios entregadores na cidade. ), DINAMIC ( O frete varia entre correios e taxa fixa, sendo taxa fixa para pedidos da mesma cidade e correios de outras cidade. ), TO_CALCULATE ( O valor do frete ficará a combinar com seu cliente. ) |
 | freightCepOrigin | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatório** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
 | organizationMinimalItens | number | Indica a quantidade mínima de itens para poder finalizar uma compra |
 | organizationMinimalPrice | number | Valor mínimo para compra |
 | organizationSlogan | string | Slogan da loja |
 | parcelRules | parcelRules | Configurações de parcelamento para a loja |
-| phone | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
+| phone\* | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
 | plugChatCode | string | Código de integração do PlugChat |
 | postbackNewDealer | string | Atributo que armazena uma URL de uma API que o e-vendi vai chamar qando o cliente que se cadastrou no e-commerce solicitou ser um revendedor |
 | integratorLogo | string | Atributo para mandar a logo do integrador |
@@ -148,7 +152,7 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
 | :-- | :-: | :-- |
 | type | string | Tipo do benefício, pode ser ('DISCOUNT' ou 'FREIGHT_FREE') |
 | operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
-| value | [] | Valor será conforme o operator informado. |
+| value | array&#60;string&#62; | Valor será conforme o operator informado. |
 
 #### parcelRules
 

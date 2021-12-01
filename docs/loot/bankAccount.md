@@ -11,7 +11,7 @@ title: Atualizar conta bancaria
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Atualizar conta bancaria para saque
 
@@ -26,13 +26,13 @@ Este método é responsável por verificar atualizar sua conta bancaria para o s
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | bankCode | string | Código do banco |
 | accountType | string | Tipo da conta |
 | agency | string | Agência da conta |
 | dvAgency | string | Digito da ag~encia |
-| accountNumber| string | Número da conta |
+| accountNumber | string | Número da conta |
 | dvAccount | string | Dígito da conta |
 | holderName | string | Nome do dono |
 | document | string | CPF do dono |
@@ -44,7 +44,7 @@ Este método é responsável por verificar atualizar sua conta bancaria para o s
 {
   "env": "dev",
   "integrationToken": "Seu token",
-  "organizationExternalId": "seu id",
+  "externalId": "seu id",
   "bankCode": "333",
   "accountType": "conta_corrente",
   "agency": "3333",
@@ -63,9 +63,9 @@ Este método é responsável por verificar atualizar sua conta bancaria para o s
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| success | boolean | True / false | 
+| Atributos |  Tipo   | Descrição    |
+| :-------- | :-----: | :----------- |
+| success   | boolean | True / false |
 
 Exemplo
 

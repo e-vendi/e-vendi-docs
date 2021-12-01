@@ -11,7 +11,7 @@ title: Finalizar Pedido
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Finalizar Pedido
 
@@ -26,15 +26,15 @@ Este método serve para finalizar os pedidos feitos.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | orderId | string | ID da ordem de pedido |
 
 ```json
 {
   "env": "dev",
   "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
+  "externalId": "seu id",
   "orderId": "id od pedido"
 }
 ```
@@ -45,16 +45,17 @@ Este método serve para finalizar os pedidos feitos.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| success | boolean | True / false | 
+| Atributos |  Tipo   | Descrição    |
+| :-------- | :-----: | :----------- |
+| success   | boolean | True / false |
 
 Exemplo
 
 ```json
 success
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

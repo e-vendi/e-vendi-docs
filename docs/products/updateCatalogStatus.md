@@ -11,7 +11,7 @@ title: Ativar/inativar catálogo
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Ativa ou inativa um catálogo
 
@@ -26,18 +26,18 @@ Este método serve para ativar ou desativar um catálogo.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | catalogExternalId | string | ID do catálogo |
-| published | boolean | Atributo para ativar ou desativar o catálogo|
+| published | boolean | Atributo para ativar ou desativar o catálogo |
 
 ```json
 {
-    "env": "dev",
-    "organizationExternalId": "Seu ID",
-    "integrationToken": "Seu Token",
-    "catalogExternalId": "ID do catálogo",
-    "published": true
+  "env": "dev",
+  "externalId": "Seu ID",
+  "integrationToken": "Seu Token",
+  "catalogExternalId": "ID do catálogo",
+  "published": true
 }
 ```
 
@@ -47,18 +47,19 @@ Este método serve para ativar ou desativar um catálogo.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| success | boolean | True / false |
+| Atributos |  Tipo   | Descrição    |
+| :-------- | :-----: | :----------- |
+| success   | boolean | True / false |
 
 Exemplo
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

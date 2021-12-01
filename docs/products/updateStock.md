@@ -11,7 +11,7 @@ title: Atualizar vários estoques
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Atualizar estoque de vários produtos
 
@@ -26,21 +26,21 @@ Este método serve para atualizar a quantidade de produtos nos estoques.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 
 #### Products
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| productExternalId | string | Id do grupo do produto | 
+| Atributos         |  Tipo  | Descrição              |
+| :---------------- | :----: | :--------------------- |
+| productExternalId | string | Id do grupo do produto |
 
 #### Itens
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| itemExternalId | string | Id do produto dentro do grupo | 
-| stock | integer | Quantia do estoque |
+| Atributos      |  Tipo   | Descrição                     |
+| :------------- | :-----: | :---------------------------- |
+| itemExternalId | string  | Id do produto dentro do grupo |
+| stock          | integer | Quantia do estoque            |
 
 ## Request body
 
@@ -48,17 +48,17 @@ Este método serve para atualizar a quantidade de produtos nos estoques.
 {
   "integrationToken": "seu token",
   "env": "dev",
-  "organizationExternalId": "seu id",
+  "externalId": "seu id",
   "products": [
-  	{
-		"productExternalId": "5001",
-		"itens": [
-			{
-			  "itemExternalId": "005001P001",
-			  "stock": 23
-			}
-		]
-  	}
+    {
+      "productExternalId": "5001",
+      "itens": [
+        {
+          "itemExternalId": "005001P001",
+          "stock": 23
+        }
+      ]
+    }
   ]
 }
 ```
@@ -77,10 +77,11 @@ Exemplo
 
 ```json
 {
-    "message": "Stock update success"
+  "message": "Stock update success"
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

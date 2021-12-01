@@ -11,7 +11,7 @@ title: Pegar Catálogo
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Pegar Catálogo
 
@@ -26,16 +26,16 @@ Este método serve para ver quantos e quais catálogos você tem ativo.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 
 ## Request body
 
 ```json
 {
-    "env": "dev",
-    "integrationToken": "seu token",
-    "externalId": "seu id"
+  "env": "dev",
+  "integrationToken": "seu token",
+  "externalId": "seu id"
 }
 ```
 
@@ -53,11 +53,11 @@ Este método serve para ver quantos e quais catálogos você tem ativo.
 | minimalPrice | boolean | Atributo para aparecer o preço mínimo |
 | cover | boolean | Esse atributo serve para colocar uma capa(Thumbnail) no catálogo |
 | postbackPaymentUrl | boolean | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando algo for vendido |
-| name | string | Nome do catálogo | 
+| name | string | Nome do catálogo |
 | totalItens | integer | quantidade de itens no catálogo |
 | minimalPriceNumber | boolean | Numero de proços mínimos |
 | tablePriceId | boolean |  |
-| tablePriceWholesaleId | |
+| tablePriceWholesaleId |  |
 | friendlyName | string | O nome do catálogo de forma curta |
 | expiredAt | boolean | Se o catálogo já expirou ou não |
 
@@ -65,51 +65,48 @@ Exemplo
 
 ```json
 [
-    {
-        "id": "id",
-        "products": [
-            "id do produto"
-        ],
-        "enableExpiration": false,
-        "minimalPrice": null,
-        "cover": null,
-        "postbackPaymentUrl": "",
-        "published": true,
-        "externalId": "10",
-        "createdAt": 1630593791739,
-        "postbackUrl": "https://",
-        "name": "Catalogo e-commerce",
-        "totalItens": 1,
-        "minimalPriceNumber": null,
-        "tablePriceId": null,
-        "tablePriceWholesaleId": null,
-        "friendlyName": "catalogo-e-commerce",
-        "expiredAt": null
-    },
-    {
-        "id": "id",
-        "friendlyName": "catalogo-n-000035",
-        "externalId": "333",
-        "createdAt": 1630675157435,
-        "products": [
-            "id"
-        ],
-        "expiredAt": null,
-        "postbackPaymentUrl": "",
-        "cover": null,
-        "totalItens": 1,
-        "enableExpiration": false,
-        "minimalPrice": null,
-        "tablePriceId": null,
-        "minimalPriceNumber": null,
-        "postbackUrl": "https://",
-        "name": "Catalogo N∫ 000035",
-        "published": true,
-        "tablePriceWholesaleId": null
-    }
+  {
+    "id": "id",
+    "products": ["id do produto"],
+    "enableExpiration": false,
+    "minimalPrice": null,
+    "cover": null,
+    "postbackPaymentUrl": "",
+    "published": true,
+    "externalId": "10",
+    "createdAt": 1630593791739,
+    "postbackUrl": "https://",
+    "name": "Catalogo e-commerce",
+    "totalItens": 1,
+    "minimalPriceNumber": null,
+    "tablePriceId": null,
+    "tablePriceWholesaleId": null,
+    "friendlyName": "catalogo-e-commerce",
+    "expiredAt": null
+  },
+  {
+    "id": "id",
+    "friendlyName": "catalogo-n-000035",
+    "externalId": "333",
+    "createdAt": 1630675157435,
+    "products": ["id"],
+    "expiredAt": null,
+    "postbackPaymentUrl": "",
+    "cover": null,
+    "totalItens": 1,
+    "enableExpiration": false,
+    "minimalPrice": null,
+    "tablePriceId": null,
+    "minimalPriceNumber": null,
+    "postbackUrl": "https://",
+    "name": "Catalogo N∫ 000035",
+    "published": true,
+    "tablePriceWholesaleId": null
+  }
 ]
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

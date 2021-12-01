@@ -11,7 +11,7 @@ title: Alterar imagem de catálogo
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Alterar a imagem do catálogo
 
@@ -26,8 +26,8 @@ Neste método você será capaz de alterar a imagem do catálogo.
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos | 
-| organizationExternalId | integer | Seu código de identificação no e-vendi |
+| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId | string | Seu código de identificação no e-vendi |
 | catalogExternalId | string | ID do catálogo |
 | cover | string | URL da imagem de capa |
 
@@ -35,11 +35,11 @@ Neste método você será capaz de alterar a imagem do catálogo.
 
 ```json
 {
-    "env": "dev",
-    "organizationExternalId": "Seu ID",
-    "integrationToken": "Seu Token",
-    "catalogExternalId": "ID do catálogo",
-    "cover": "https://e-vendi.app/wp-content/uploads/2021/05/logo-evendi-site.png.webp"
+  "env": "dev",
+  "externalId": "Seu ID",
+  "integrationToken": "Seu Token",
+  "catalogExternalId": "ID do catálogo",
+  "cover": "https://e-vendi.app/wp-content/uploads/2021/05/logo-evendi-site.png.webp"
 }
 ```
 
@@ -49,18 +49,19 @@ Neste método você será capaz de alterar a imagem do catálogo.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| success | boolean | True / false |
+| Atributos |  Tipo   | Descrição    |
+| :-------- | :-----: | :----------- |
+| success   | boolean | True / false |
 
 Exemplo
 
 ```json
 {
-    "success": true
+  "success": true
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 
