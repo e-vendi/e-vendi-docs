@@ -21,7 +21,11 @@ Este método serve para atualizar a quantidade de produtos nos estoques.
 
 ## Atributos
 
-### Obrigatórios
+:::caution Atributos obrigatórios
+
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |

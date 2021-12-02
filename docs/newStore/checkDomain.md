@@ -11,7 +11,7 @@ title: Verificar subdominio
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Verificando disponibilidade de dominio
 
@@ -21,17 +21,21 @@ Este método é responsável por verificar a disponibilidade do dominio.
 
 ## Atributos
 
-### Obrigatórios
+:::caution Atributos obrigatórios
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| domainName | string | Nome para o domíno |
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
+
+| Atributos    |  Tipo  | Descrição          |
+| :----------- | :----: | :----------------- |
+| domainName\* | string | Nome para o domíno |
 
 ## Request body
 
 ```json
 {
-    "domainName": "Nome"
+  "domainName": "Nome"
 }
 ```
 
@@ -41,15 +45,15 @@ Este método é responsável por verificar a disponibilidade do dominio.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
+| Atributos |  Tipo   | Descrição    |
+| :-------- | :-----: | :----------- |
 | available | boolean | True / false |
 
 Exemplo
 
 ```json
 {
-    "available": true
+  "available": true
 }
 ```
 

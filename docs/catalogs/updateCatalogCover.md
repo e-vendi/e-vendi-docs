@@ -21,15 +21,19 @@ Neste método você será capaz de alterar a imagem do catálogo.
 
 ## Atributos
 
-### Obrigatórios
+:::caution Atributos obrigatórios
+
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
-| externalId | string | Seu código de identificação no e-vendi |
-| catalogExternalId | string | ID do catálogo |
-| cover | string | URL da imagem de capa |
+| env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
+| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId\* | string | Seu código de identificação no e-vendi |
+| catalogExternalId\* | string | ID do catálogo |
+| cover\* | string | URL da imagem de capa |
 
 ## Request body
 

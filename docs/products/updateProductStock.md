@@ -21,7 +21,11 @@ Este método serve para atualizar apenas um produto d eum estoque.
 
 ## Atributos
 
-### Obrigatórios
+:::caution Atributos obrigatórios
+
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |

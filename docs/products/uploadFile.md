@@ -11,7 +11,7 @@ title: Hospedar imagem
 
 ---
 
-## Conceituação 
+## Conceituação
 
 Hospedar imagem do produto
 
@@ -21,17 +21,21 @@ Neste método você será capaz de hospedar uma imagem.
 
 ## Atributos
 
-### Obrigatórios
+:::caution Atributos obrigatórios
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| file | string | Url para hospedagem (base 64)|
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
+
+| Atributos |  Tipo  | Descrição                     |
+| :-------- | :----: | :---------------------------- |
+| file\*    | string | Url para hospedagem (base 64) |
 
 ## Request body
 
 ```json
 {
-	"file": "data:image/png;base64,"
+  "file": "data:image/png;base64,"
 }
 ```
 
@@ -41,20 +45,21 @@ Neste método você será capaz de hospedar uma imagem.
 
 ### 200
 
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| error | boolean | True / false |
-| url | string | URL do storage | 
+| Atributos |  Tipo   | Descrição      |
+| :-------- | :-----: | :------------- |
+| error     | boolean | True / false   |
+| url       | string  | URL do storage |
 
 Exemplo
 
 ```json
 {
-    "error": false,
-    "url": "https://"
+  "error": false,
+  "url": "https://"
 }
 ```
-### 400 
+
+### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 

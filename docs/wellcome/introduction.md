@@ -24,7 +24,7 @@ Para poder dar continuidade com nossos serviços e criar sua conta, é necessari
 
 #### Segue o link
 
-[Nosso Formulário](https://docs.google.com/forms/d/e/1FAIpQLScbMScC54Eb3YdIYpqqK3K-V1NG8yydKT4f1iOejmJbDTj_ow/viewform "Formulário para a integração")
+[Nosso Formulário](https://docs.google.com/forms/d/e/1FAIpQLScbMScC54Eb3YdIYpqqK3K-V1NG8yydKT4f1iOejmJbDTj_ow/viewform 'Formulário para a integração')
 
 ---
 
@@ -36,7 +36,7 @@ Agora que nossa equipe entrou em contato, você já tem um usuário e senha e po
 
 #### Segue o link
 
-[Site de Parceiros](https://parceiros.e-vendi.com.br/auth/sign-in "Página de Login")
+[Site de Parceiros](https://parceiros.e-vendi.com.br/auth/sign-in 'Página de Login')
 
 ![img](../../img/telaLogin.png)
 
@@ -48,7 +48,7 @@ Basta colocar suas credenciais e logar na sua conta!
 
 ### Modo de desenvolvedor
 
-Esse modo é um sendbox livre para você aprender a mexer com o nosso sistema, nesse modo transações e não serão cobradas. 
+Esse modo é um sendbox livre para você aprender a mexer com o nosso sistema, nesse modo transações e não serão cobradas.
 
 ![img](../../img/dev.png)
 

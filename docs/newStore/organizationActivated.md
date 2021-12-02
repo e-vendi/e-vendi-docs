@@ -19,6 +19,8 @@ Esse método é responsável por ativar ou desativar sua empresa.
 
 ---
 
+## Atributos
+
 :::note
 
 externalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
@@ -27,21 +29,23 @@ por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cli
 
 :::
 
-## Atributos
+:::caution Atributos obrigatórios
 
-### Obrigatórios
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| externalId | string | Seu código de identificação no e-vendi |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
-| active | boolean | Atributo para ativar ou desativar a sua empresa |
+| organizationExternalId\* | string | Seu código de identificação no e-vendi |
+| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| active\* | boolean | Atributo para ativar ou desativar a sua empresa |
 
 ## Request body
 
 ```json
 {
-  "externalId": "id da empresa",
+  "organizationExternalId": "id da empresa",
   "integrationToken": "id de intgrador",
   "active": true
 }

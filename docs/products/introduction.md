@@ -5,21 +5,11 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos falar um pouco sobre os métodos referentes a  criação e a atualização dos seus produtos, também iremos falar sobre a manipulação do seu estoque e afins.
-
-Você poderá criar e atualizar os catálogos da sua empresa.
-
-Poderá pegar os catálogos existentes da sua empresa.
-
-Poderá ativa e desativas algum catálogo.
-
-Poderá pegar os detalhes de algum catálogo.
-
-Poderá alterar a imagem de um catálogo.
+Neste tópico iremos falar um pouco sobre os métodos referentes a criação e a atualização dos seus produtos, também iremos falar sobre a manipulação do seu estoque e afins.
 
 Poderá hospedar uma imagem.
 
-Poderá atualziar as informações de varios estoques.
+Poderá atualizar as informações de vários estoques.
 
 Poderá atualizar um produto específico de um estoque.
 

@@ -9,29 +9,32 @@
 
 module.exports = {
   tutorialSidebar: {
-    Welcome: ['quickstart/introduction'],
+    "Bem-vindo": ['wellcome/introduction'],
     'Criar Loja': [
-      'newStore/introduction',
-      'newStore/checkDomain',
-      'newStore/organizationExist',
-      'newStore/createOrganization',
-      'newStore/updateOrganizationStatus',
-      'newStore/getOrganization',
+      'newStore/introduction', //ok
+      'newStore/checkDomain', //ok
+      'newStore/organizationExist', //ok
+      'newStore/createOrganization', //ok
+      'newStore/updateOrganizationStatus', //ok
+      'newStore/getOrganization', //ok todos aqui devo verificar o externalId e organizationExternalId com miranda
     ],
-    Catálogo: [
-      'products/introduction',
-      'products/createProduct',
-      'products/getProduct',
-      'products/updateCatalogStatus',
-      'products/getCatalogDetails',
-      'products/updateCatalogCover',
-      'products/uploadFile',
+    Produtos: [
+      'products/introduction', //ok
+      'products/uploadFile', //ok
       'products/updateStock',
       'products/updateProductStock',
       'products/getProductStock',
       'products/updateProduct',
       'products/getStockReserved',
     ],
+    Catálogos: [
+      'catalogs/introduction',//ok
+      'catalogs/createCatalog',
+      'catalogs/getCatalogs',//ok
+      'catalogs/getCatalogDetails', //ok
+      'catalogs/updateCatalogStatus',
+      'catalogs/updateCatalogCover',
+  ],
     Pedidos: [
       'requests/introduction',
       'requests/getOrdersOpened',
@@ -45,6 +48,5 @@ module.exports = {
       'loot/bankAccount',
       'loot/getOrganizationFee',
     ],
-    Sample: ['sample/exemplos'],
   },
 };

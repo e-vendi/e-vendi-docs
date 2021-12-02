@@ -19,6 +19,8 @@ Esse método é responsável por cadastrar e criar sua empresa, ou caso ja tenha
 
 ---
 
+## Atributos
+
 :::note
 
 externalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
@@ -33,15 +35,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 :::
 
-## Atributos
-
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | externalId\* | string | Seu código de identificação no e-vendi |
 
-#### Store\*
+### Store\*
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -94,7 +94,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | titleSEO | string | Título para SEO |
 | zApi | zApi | Configurações de integração com o zApi |
 
-#### Bank
+### Bank\*
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -108,7 +108,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | document | integer | CPF da pessoa |
 | payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) |
 
-#### CaptureLead
+### CaptureLead
 
 | Atributos      |  Tipo   | Descrição                                         |
 | :------------- | :-----: | :------------------------------------------------ |
@@ -118,7 +118,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | description    | string  | descrição do que você deseja que apareça na lead  |
 | successMessage | string  | Mensagem que o cliente receberá ao aceitar a lead |
 
-#### FreeShipping
+### FreeShipping
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -129,14 +129,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | cepStart | string | CEP inicial para frete grátis |
 | cepEnd | string | CEP final para frete grátis |
 
-#### generalRules
+### generalRules
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
 | benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
 
-##### conditions
+### conditions
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -146,7 +146,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | startParcel | number | Parcela inicial |
 | endParcel | number | Parcela final |
 
-##### benefits
+### benefits
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -154,7 +154,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
 | value | array&#60;string&#62; | Valor será conforme o operator informado. |
 
-#### parcelRules
+### parcelRules
 
 | Atributos    |  Tipo  | Descrição                                      |
 | :----------- | :----: | :--------------------------------------------- |
@@ -162,14 +162,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | end          | number | Valor Final (Ex: De 0 ate X)                   |
 | installments | number | Parcelas permitidas para o intervalor definido |
 
-#### RewardBar
+### RewardBar
 
 | Atributos |  Tipo  | Descrição                                   |
 | :-------- | :----: | :------------------------------------------ |
 | link      | string | Link para o qual será direcionado ao clicar |
 | image     | string | Link para carregar a imagem do banner       |
 
-#### zApi
+### zApi
 
 | Atributos      |  Tipo   | Descrição                       |
 | :------------- | :-----: | :------------------------------ |

@@ -1,7 +1,9 @@
 ---
-id: createProduct
+id: createCatalog
 title: Criar/atualizar catálogo
 ---
+
+<!-- A FAZER -->
 
 ## Método
 
@@ -21,17 +23,28 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 
 ## Atributos
 
-### Obrigatórios
+:::caution Atributos obrigatórios
+
+São obrigatórios todos atributos marcados com **\*** (asterisco)
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
-| externalId | string | Seu código de identificação no e-vendi |
-| name | string | Nome do catálogo |
+| env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
+| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| externalId\* | string | Seu código de identificação no e-vendi |
+| name\* | string | Nome do catálogo |
 | enableExpiration | boolean | Atributo para fazer o catálogo expirar o não |
+| expiredAt | boolean | Atributo para saber se o catálogo está ou não expirado |
+| published | boolean | Atributo para publicar ou não o catálogo |
+| wholesale | boolean | Este atributo serve para quando você quer que o usuário não alterne entre catálogos, tendo que realziar suas compras apenas no catálogo selecionado por esse atributo |
+| minimalPriceNumber | boolean | Este atributo serve para mostrar os preços mínimos |
+| minimalItens | boolean | Este atributo serve para mostrar os itens mínimos |
+| postbackPaymentUrl | boolean | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando algo for vendido |
+| cover | boolean | Esse atributo serve para colocar uma capa(Thumbnail) no catálogo |
 
-#### Products
+### Products
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -41,7 +54,7 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 | externalId | string | ID do catálogo |
 | isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor |
 
-#### Itens
+### Itens
 
 | Atributos   |  Tipo   | Descrição                        |
 | :---------- | :-----: | :------------------------------- |
@@ -53,7 +66,7 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 | productType | string  | Tipo do produto                  |
 | reference   | integer | Referência do produto            |
 
-##### Variation
+### Variation
 
 | Atributos |  Tipo  | Descrição          |
 | :-------- | :----: | :----------------- |
@@ -62,17 +75,8 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
 | value     | string | Cor do produto     |
 | valueRef  | string | Hexadecimal da cor |
 
-### Opcionais
-
 | Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| expiredAt | boolean | Atributo para saber se o catálogo está ou não expirado |
-| published | boolean | Atributo para publicar ou não o catálogo |
-| wholesale | boolean | Este atributo serve para quando você quer que o usuário não alterne entre catálogos, tendo que realziar suas compras apenas no catálogo selecionado por esse atributo |
-| minimalPriceNumber | boolean | Este atributo serve para mostrar os preços mínimos |
-| minimalItens | boolean | Este atributo serve para mostrar os itens mínimos |
-| postbackPaymentUrl | boolean | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando algo for vendido |
-| cover | boolean | Esse atributo serve para colocar uma capa(Thumbnail) no catálogo |
+| :-------- | :--: | :-------- |
 
 ## Request body
 
@@ -81,8 +85,7 @@ Neste método você será capaz de criar e atualizar seu catálogo de produtos.
   "env": "dev",
   "integrationToken": "seu token",
   "externalId": "seu id",
-  "externalId": "seu id",
-  "name": "Catalogo N∫ 000035",
+  "name": "Catalogo 000035",
   "enableExpiration": false,
   "expiredAt": null,
   "published": true,
