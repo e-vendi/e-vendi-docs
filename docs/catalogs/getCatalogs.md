@@ -21,6 +21,14 @@ Este método serve para ver quantos e quais catálogos você tem ativo.
 
 ## Atributos
 
+:::note
+
+externalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
+
+por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002
+
+:::
+
 :::caution Atributos obrigatórios
 
 São obrigatórios todos atributos marcados com **\*** (asterisco)
@@ -32,7 +40,6 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | externalId\* | string | Seu código de identificação no e-vendi |
-| organizationExternalId\* | string | Código da organização para o e-vendi, **o id passado aqui é o mesmo do 'externalId'** |
 
 ## Request body
 
@@ -40,8 +47,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 {
   "env": "dev",
   "integrationToken": "seu token",
-  "externalId": "123456789QWERTY",
-  "organizationExternalId": "123456789QWERTY"
+  "externalId": "123456789QWERTY"
 }
 ```
 

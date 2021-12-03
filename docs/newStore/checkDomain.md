@@ -1,6 +1,6 @@
 ---
 id: checkDomain
-title: Verificar subdominio
+title: Verificar subdomínio
 ---
 
 ## Método
@@ -13,9 +13,9 @@ title: Verificar subdominio
 
 ## Conceituação
 
-Verificando disponibilidade de dominio
+Verificando disponibilidade de domínio
 
-Este método é responsável por verificar a disponibilidade do dominio.
+Este método é responsável por verificar a disponibilidade do domínio.
 
 ---
 

@@ -309,7 +309,7 @@ Exemplo
       "valueType": "nullValue"
     },
     "cover": {
-      "stringValue": "https://cd.shoppub.com.br/usevolt/media/cache/77/ff/77ff69ba1a0a0d6fadff3d0c7e941531.jpg",
+      "stringValue": "https://",
       "valueType": "stringValue"
     },
     "name": {
@@ -347,7 +347,7 @@ Exemplo
       "valueType": "nullValue"
     },
     "postbackUrl": {
-      "stringValue": "https://grands.com.br/test",
+      "stringValue": "https://",
       "valueType": "stringValue"
     },
     "minimalPrice": {
@@ -368,7 +368,7 @@ Exemplo
       "_settings": {
         "credentials": {
           "private_key": "...",
-          "client_email": "firebase-adminsdk-q68kh@zaap-admin.iam.gserviceaccount.com"
+          "client_email": "@email"
         },
         "projectId": "zaap-admin",
         "firebaseVersion": "8.10.0",
@@ -377,10 +377,7 @@ Exemplo
         "servicePath": "firestore.googleapis.com",
         "port": 443,
         "clientConfig": {},
-        "scopes": [
-          "https://www.googleapis.com/auth/cloud-platform",
-          "https://www.googleapis.com/auth/datastore"
-        ]
+        "scopes": ["https://", "https://"]
       },
       "_settingsFrozen": true,
       "_serializer": {},
@@ -413,9 +410,9 @@ Exemplo
     "_path": {
       "segments": [
         "organizations",
-        "DoZAp134wc57M2XQ3wHJ",
+        "sdasdg54gw4fwe4e",
         "catalogs",
-        "tD3Ja8ZnnAvR1ocpAHbb"
+        "E5S4FSDF56W5"
       ],
       "projectId": "zaap-admin",
       "databaseId": "(default)"

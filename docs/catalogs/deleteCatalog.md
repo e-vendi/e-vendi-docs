@@ -1,21 +1,21 @@
 ---
-id: updateCatalogStatus
-title: Ativar / Inativar catálogo
+id: deleteCatalog
+title: Apagar Catálogo
 ---
 
 ## Método
 
-**/updateCatalogStatus**
+**/deleteCatalog**
 
-`POST` https://e-vendi.com.br/api/updateCatalogStatus
+`POST` https://e-vendi.com.br/api/deleteCatalog
 
 ---
 
 ## Conceituação
 
-Ativa ou inativa um catálogo
+Pegar Catálogo
 
-Este método serve para ativar ou desativar um catálogo.
+Este método serve para deletar um catálogo.
 
 ---
 
@@ -45,17 +45,16 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | :-- | :-: | :-- |
 | env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
-| externalId\* | string | Seu código de identificação do catálogo no e-vendi |
-| organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| published\* | boolean | Atributo para ativar ou desativar o catálogo |
+| externalId\* | string | Seu código de identificação no e-vendi |
+
+## Request body
 
 ```json
 {
   "env": "dev",
-  "externalId": "Seu ID",
-  "integrationToken": "Seu Token",
-  "organizationExternalId": "ID do catálogo",
-  "published": true
+  "integrationToken": "seu token",
+  "externalId": "123456789QWERTY",
+  "organizationExternalId": "sasddfgdf5g5"
 }
 ```
 
@@ -63,19 +62,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 ## Response
 
-### 200
+### 204
 
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| success   | boolean | True / false |
-
-Exemplo
-
-```json
-{
-  "success": true
-}
-```
+Essa resposta significa que exclusão foi bem sucedida.
 
 ### 400
 
@@ -93,4 +82,4 @@ Caso você receba um erro 415, certifique de adicionar na headers da requisiçã
 
 ## Code
 
-<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/updateCatalogStatus.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getProduct.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

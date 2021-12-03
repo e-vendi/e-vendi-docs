@@ -15,7 +15,7 @@ title: Criar / atualizar empresa
 
 Criar e atualizar empresa
 
-Esse método é responsável por cadastrar e criar sua empresa, ou caso ja tenha criado ele irá atualizar os dados novos que forem inseridos
+Esse método é responsável por criar sua empresa, ou caso já tenha criado ele irá atualizá-la com os novos dados passados.
 
 ---
 

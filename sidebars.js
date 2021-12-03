@@ -16,7 +16,8 @@ module.exports = {
       'newStore/organizationExist', //ok
       'newStore/createOrganization', //ok
       'newStore/updateOrganizationStatus', //ok
-      'newStore/getOrganization', //ok todos aqui devo verificar o externalId e organizationExternalId com miranda
+      'newStore/getOrganization', //ok 
+      'newStore/getOrganizationFee', //ok 
     ],
     Produtos: [
       'products/introduction', //ok
@@ -29,11 +30,12 @@ module.exports = {
     ],
     Catálogos: [
       'catalogs/introduction',//ok
-      'catalogs/createCatalog',
+      'catalogs/createCatalog',//ok
       'catalogs/getCatalogs',//ok
       'catalogs/getCatalogDetails', //ok
-      'catalogs/updateCatalogStatus',
-      'catalogs/updateCatalogCover',
+      'catalogs/updateCatalogStatus', //ok
+      'catalogs/updateCatalogCover', //ok
+      'catalogs/deleteCatalog', //ok
   ],
     Pedidos: [
       'requests/introduction',
