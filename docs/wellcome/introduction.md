@@ -48,7 +48,7 @@ Basta colocar suas credenciais e logar na sua conta!
 
 ### Modo de desenvolvedor
 
-Esse modo é um sendbox livre para você aprender a mexer com o nosso sistema, nesse modo transações e não serão cobradas.
+Esse modo é um sendbox livre para você aprender a mexer com o nosso sistema, nesse modo transações não serão cobradas.
 
 ![img](../../img/dev.png)
 

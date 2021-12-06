@@ -21,6 +21,18 @@ Este método serve para atualizar apenas um produto d eum estoque.
 
 ## Atributos
 
+:::note
+
+organizationExternalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
+
+por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002
+
+productExternalId é o id do seu produto na sua base de dados
+
+itemExternalId é o id do item (quando existe variação no produto)
+
+:::
+
 :::caution Atributos obrigatórios
 
 São obrigatórios todos atributos marcados com **\*** (asterisco)
@@ -29,12 +41,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
-| externalId | string | Seu código de identificação no e-vendi |
-| productExternalId | string | ID do grupo do produto |
+| env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
+| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| organizationExternalId\* | string | Seu código de identificação no e-vendi |
+| productExternalId\* | string | ID do grupo do produto |
+| itens\* | itens | Itens contidos no produto |
 
-#### Itens
+### Itens
 
 | Atributos      |  Tipo   | Descrição                     |
 | :------------- | :-----: | :---------------------------- |

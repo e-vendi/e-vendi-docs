@@ -19,24 +19,29 @@ module.exports = {
       'newStore/getOrganization', //ok 
       'newStore/getOrganizationFee', //ok 
     ],
-    Produtos: [
-      'products/introduction', //ok
-      'products/uploadFile', //ok
-      'products/updateStock',
-      'products/updateProductStock',
-      'products/getProductStock',
-      'products/updateProduct',
-      'products/getStockReserved',
-    ],
     Catálogos: [
       'catalogs/introduction',//ok
       'catalogs/createCatalog',//ok
       'catalogs/getCatalogs',//ok
-      'catalogs/getCatalogDetails', //ok
+      'catalogs/deleteCatalog', //ok
+      // 'catalogs/getCatalogDetails', //ok
       'catalogs/updateCatalogStatus', //ok
       'catalogs/updateCatalogCover', //ok
-      'catalogs/deleteCatalog', //ok
-  ],
+      // 'catalogs/uploadFile', //ok
+      'catalogs/getProductStock', //ok
+      'catalogs/getStockReserved', //ok
+      'catalogs/updateProductStock', //ok
+    ],
+    Clientes : [
+      'customers/introduction', //ok
+      'customers/getClients', //ok
+    ],
+    Cupons: [
+      'coupons/introduction', //ok
+      'coupons/saveCoupon', //ok
+      'coupons/deleteCoupon', //ok
+      'coupons/getCoupons', //ok
+    ],
     Pedidos: [
       'requests/introduction',
       'requests/getOrdersOpened',
