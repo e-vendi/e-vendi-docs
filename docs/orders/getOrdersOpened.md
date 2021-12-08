@@ -43,6 +43,16 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 ---
 
+## Request body
+
+```json
+{
+  "env": "prod",
+  "integrationToken": "Seu token",
+  "organizationExternalId": "id"
+}
+```
+
 ## Response
 
 ### 200
@@ -203,4 +213,4 @@ Caso você receba um erro 415, certifique de adicionar na headers da requisiçã
 
 ## Code
 
-<iframe src="api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getOrdersOpened.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getOrdersOpened.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

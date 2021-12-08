@@ -1,6 +1,6 @@
 {
     "method": "POST",
-    "url": "https://e-vendi.com.br/api/reverseOrderCard",
+    "url": "https://e-vendi.com.br/api/searchOrders",
     "httpVersion": "HTTP/1.1",
     "queryString": [],
     "headers": [
@@ -12,6 +12,6 @@
     "cookies": [],
     "postData": {
         "mimeType": "application/json",
-        "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\", \"externalId\": \"SEU_ID\"}"
-    }
+        "text": "{\"env\": \"prod\",\"integrationToken\": \"Seu token\",\"organizationExternalId\": \"id\",\"filter\": {\"status\": \"CLOSED\",\"query\": \"1003\",\"dates\": {\"start\": 1631909862668,\"end\": null}}}"
+}
 }

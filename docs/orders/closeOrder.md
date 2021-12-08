@@ -42,6 +42,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
 | orderId\* | string | ID da ordem de pedido |
 
+## Request body
+
 ```json
 {
   "env": "dev",
@@ -83,4 +85,4 @@ Caso você receba um erro 415, certifique de adicionar na headers da requisiçã
 
 ## Code
 
-<iframe src="api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/closeOrder.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/closeOrder.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
