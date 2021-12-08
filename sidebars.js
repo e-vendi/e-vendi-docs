@@ -43,17 +43,32 @@ module.exports = {
       'coupons/getCoupons', //ok
     ],
     Pedidos: [
-      'requests/introduction',
-      'requests/getOrdersOpened',
-      'requests/closeOrder',
-      'requests/reverseOrderCard',
-      'requests/reverseOrderPix',
+      'orders/introduction',
+      'orders/getOrdersOpened', //ok
+      'orders/closeOrder', //ok
+      'orders/searchOrders', //ok
+      'orders/getOrderById', //ok
+      'orders/reverseOrder', //ok
+      'orders/saveOrderFiscalNote', //ok
+      'orders/saveOrderTrackingCode', //ok
     ],
-    Saque: [
-      'loot/introduction',
-      'loot/getBanks',
-      'loot/bankAccount',
-      'loot/getOrganizationFee',
+    Promoção: [
+      'promotion/introduction', //ok
+      'promotion/savePromotion', //ok
+      'promotion/deletePromotion', //ok
     ],
+    PagarMe :[
+      'pagarme/introduction',
+      'pagarme/withdraw',
+      'pagarme/getDaysWithTransactionsByFilters',
+      'pagarme/getTransactionsByFilters',
+      'pagarme/accountBalanceByRecipientId',
+    ]
+    // Saque: [
+    //   'loot/introduction',
+    //   'loot/getBanks',
+    //   'loot/bankAccount',
+    //   'loot/getOrganizationFee',
+    // ],
   },
 };

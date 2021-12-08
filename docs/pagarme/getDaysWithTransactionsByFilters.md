@@ -1,21 +1,21 @@
 ---
-id: deleteCoupon
-title: Deletar Cupom
+id: getDaysWithTransactionsByFilters
+title: Pegar dias com transações
 ---
 
 ## Método
 
-**/deleteCoupon**
+**/get-days-with-transactions-by-filters**
 
-`POST` https://e-vendi.com.br/api/deleteCoupon
+`POST` https://e-vendi.com.br/api/get-days-with-transactions-by-filters
 
 ---
 
 ## Conceituação
 
-Deletar cupom
+Pegar dias com transações
 
-Esse método é responsável por deletar o cupom informado.
+Neste método você será capaz de pegar os totais das transações por período.
 
 ---
 
@@ -40,18 +40,20 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| couponCode\* | string | Código do cupom no qual deseja deletar |
-
----
+| status | string | Status disponíveis que o pagar.me fornece (waiting_funds e available) |
+| startDate | number | Data inicial para filtrar a busca |
+| endDate | number | Data final para filtrar a busca |
 
 ## Request body
 
 ```json
 {
-  "env": "dev",
-  "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
-  "couponCode": "TESTE"
+  "env": "prod",
+  "integrationToken": "111122212112sas",
+  "organizationExternalId": "sdfsd1dfgd2g",
+  "startDate": 1636340400000,
+  "endDate": 1639018799999,
+  "status": "available"
 }
 ```
 
@@ -61,15 +63,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 ### 200
 
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| success   | boolean | True / false |
+Atributos referentes ao pagar.me
 
-```json
-{
-  "success": true
-}
-```
+Se o status passado no request for 'available' retornará a documentação seguinte: https://docs.pagar.me/v1/reference#hist%C3%B3rico-das-opera%C3%A7%C3%B5es
+
+senão será a seguinte: https://docs.pagar.me/v1/reference#retornando-receb%C3%ADveis
+
+### 400
+
+Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 
 ### 405
 
@@ -83,4 +85,4 @@ Caso você receba um erro 415, certifique de adicionar na headers da requisiçã
 
 ## Code
 
-<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getOrganization.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/withdraw.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

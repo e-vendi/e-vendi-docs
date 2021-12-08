@@ -5,7 +5,21 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos apresentar como criar, consultar e deletar cupons.
+Neste tópico iremos falar sobre como pegar os pedidos feitos e como finalizá-los.
+
+Poderá ver os pedidos abertos.
+
+Pesquisar pedidos paginado.
+
+Pegar os dados de um pedido por id.
+
+Finaliza um pedido.
+
+Estorna um pedido.
+
+Salva a url da nota fiscal no pedido.
+
+Salva o codigo de rastreio dos correios no pedido.
 
 :::tip
 

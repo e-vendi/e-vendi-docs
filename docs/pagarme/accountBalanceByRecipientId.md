@@ -1,21 +1,21 @@
 ---
-id: deleteCoupon
-title: Deletar Cupom
+id: accountBalanceByRecipientId
+title: Pegar saldo da conta
 ---
 
 ## Método
 
-**/deleteCoupon**
+**/account-balance-by-recipient-id**
 
-`POST` https://e-vendi.com.br/api/deleteCoupon
+`POST` https://e-vendi.com.br/api/account-balance-by-recipient-id
 
 ---
 
 ## Conceituação
 
-Deletar cupom
+Pegar Saldo
 
-Esse método é responsável por deletar o cupom informado.
+Neste método você será capaz de pegar o saldo da conta.
 
 ---
 
@@ -40,18 +40,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| couponCode\* | string | Código do cupom no qual deseja deletar |
-
----
+| status | string | Status disponíveis que o pagar.me fornece (waiting_funds e available) |
 
 ## Request body
 
 ```json
 {
-  "env": "dev",
-  "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
-  "couponCode": "TESTE"
+  "env": "prod",
+  "integrationToken": "111122212112sas",
+  "organizationExternalId": "sdfsd1dfgd2g"
 }
 ```
 
@@ -61,15 +58,21 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 ### 200
 
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| success   | boolean | True / false |
+Atributos referentes ao pagar.me, segue a documentação: hhttps://docs.pagar.me/v1/reference#saldo-de-um-recebedor
 
-```json
-{
-  "success": true
-}
-```
+Retornará também informações sobre o banco.
+
+### Bank
+
+| Atributos |  Tipo   | Descrição                 |
+| :-------- | :-----: | :------------------------ |
+| code      | integer | Código do banco (ex: 333) |
+| id        | string  | Id do banco               |
+| name      | string  | Nome do banco             |
+
+### 400
+
+Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 
 ### 405
 
@@ -83,4 +86,4 @@ Caso você receba um erro 415, certifique de adicionar na headers da requisiçã
 
 ## Code
 
-<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getOrganization.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/accountBalanceByRecipientId.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

@@ -5,7 +5,11 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos apresentar como criar, consultar e deletar cupons.
+Neste tópico iremos falar sobre as promoções.
+
+Poderá salvar e atualizar uma promoção.
+
+Poderá deletar uma promoção.
 
 :::tip
 

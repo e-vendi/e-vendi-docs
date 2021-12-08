@@ -4,7 +4,7 @@ title: Introdução
 slug: /
 ---
 
-## E-vendi - Crie seu eccomerce por API
+## E-vendi - Crie seu e-commerce por API
 
 E-COMMERCE E SACOLINA DO INSTAGRAM: TUDO QUE SUA LOJA PRECISA PARA VENDER MAIS.
 

@@ -1,19 +1,17 @@
---- 
+---
 id: introduction
 title: Introdução
 ---
 
 ## Conceituação
 
-Neste tópico iremos falar sobre como pegar os pedidos feitos e como finaliza-los.
+Neste tópico iremos falar um pouco sobre os métodos referentes ao pagarme
 
-Poderá ver os pedidos abertos.
+solicitar saque
 
-Poderá finalizar algum pedido.
+Pegar transações de um período
 
-Poderá estornar uma compra no cartão.
-
-Poderá estornar uma compra por boleto ou pix.
+Pegar saldo da conta
 
 :::tip
 

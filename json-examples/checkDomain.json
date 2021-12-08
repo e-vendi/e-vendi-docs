@@ -1,6 +1,6 @@
 {
     "method": "POST",
-    "url": "https://e-vendi.com.br/api/checkDomain",
+    "url": "https://e-vendi.com.br/api/checkDomainAvailable",
     "httpVersion": "HTTP/1.1",
     "queryString": [],
     "headers": [

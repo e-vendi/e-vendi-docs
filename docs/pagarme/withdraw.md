@@ -1,21 +1,21 @@
 ---
-id: deleteCoupon
-title: Deletar Cupom
+id: withdraw
+title: Solicitar saque
 ---
 
 ## Método
 
-**/deleteCoupon**
+**/withdraw**
 
-`POST` https://e-vendi.com.br/api/deleteCoupon
+`POST` https://e-vendi.com.br/api/withdraw
 
 ---
 
 ## Conceituação
 
-Deletar cupom
+Solicitar saque
 
-Esse método é responsável por deletar o cupom informado.
+Neste método você será capaz de solicitar saque.
 
 ---
 
@@ -40,18 +40,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| couponCode\* | string | Código do cupom no qual deseja deletar |
-
----
 
 ## Request body
 
 ```json
 {
-  "env": "dev",
-  "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
-  "couponCode": "TESTE"
+  "env": "prod",
+  "integrationToken": "5g6j5k4l",
+  "organizationExternalId": "a1s2d3f4g5h6j7"
 }
 ```
 
@@ -61,15 +57,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 ### 200
 
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| success   | boolean | True / false |
+Exemplo
 
-```json
-{
-  "success": true
-}
-```
+https://docs.pagar.me/reference#saque-1
+
+### 400
+
+Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
 
 ### 405
 
@@ -83,4 +77,4 @@ Caso você receba um erro 415, certifique de adicionar na headers da requisiçã
 
 ## Code
 
-<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getOrganization.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/withdraw.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
