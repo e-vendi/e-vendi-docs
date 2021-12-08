@@ -12,6 +12,7 @@
     "cookies": [],
     "postData": {
         "mimeType": "application/json",
-        "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\", \"externalId\": \"SEU_ID\"}"
+        "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\", \"productExternalId\": \"SEU_ID\", \"organizationExternalId\": \"ID\"}"
+
     }
 }

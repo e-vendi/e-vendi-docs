@@ -1,6 +1,6 @@
 {
     "method": "POST",
-    "url": "https://e-vendi.com.br/api/updateCatalogStatus",
+    "url": "https://e-vendi.com.br/api/getCatalogs",
     "httpVersion": "HTTP/1.1",
     "queryString": [],
     "headers": [
@@ -12,7 +12,6 @@
     "cookies": [],
     "postData": {
         "mimeType": "application/json",
-        "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\", \"externalId\": \"SEU_ID\", \"organizationExternalId\": \"ID\", \"published\": \"true\"}"
-
+        "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\", \"externalId\": \"SEU_ID\", \"organizationExternalId\": \"ID\", \"name\": \"NOME_CATALOGO\" ,\"products\": \"{}\"}"
     }
 }
