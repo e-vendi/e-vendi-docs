@@ -12,6 +12,6 @@
     "cookies": [],
     "postData": {
         "mimeType": "application/json",
-        "text": "{\"integrationToken\": \"SEU_TOKEN\", \"env\": \"dev\", \"externalId\": \"SEU_ID\", \"domainName\": \"name\", \"domainHost\": \"name\", \"name\": \"name\"}"
+        "text": "{\"integrationToken\": \"SEU_TOKEN\", \"env\": \"dev\", \"externalId\": \"SEU_ID\", \"domainName\": \"name\", \"name\": \"name\", \"store:{}, bank:{}\"}"
     }
 }
