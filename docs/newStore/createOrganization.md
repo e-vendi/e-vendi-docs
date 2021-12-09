@@ -13,7 +13,7 @@ title: Criar / atualizar empresa
 
 ## Conceituação
 
-Criar e atualizar empresa
+Criar e atualizar empresa.
 
 Esse método é responsável por criar sua empresa, ou caso já tenha criado ele irá atualizá-la com os novos dados passados.
 
@@ -23,23 +23,27 @@ Esse método é responsável por criar sua empresa, ou caso já tenha criado ele
 
 :::note
 
-externalId é o id do seu cliente na sua base de dados, sempre que você for criar um ecommerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados
+**externalId** é o id do seu cliente na sua base de dados, sempre que você for criar um e-commerce para seu cliente, você precisa informar o ID do seu cliente na sua base de dados.
 
-por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002
+por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002, nesse caso o externalId será 1001 para o cliente 01 e 1002 para o cliente 02.
+
+Atributos que contém **external** em seu nome são para identificar que os ID's passados serão da sua base de dados, isso facilita futuras buscas, pois você poderá fazer consultas através do seu ID uma vez que este está sob seu controle.
 
 :::
 
 :::caution Atributos obrigatórios
 
-São obrigatórios todos atributos marcados com **\*** (asterisco)
+São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 :::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env\* | string | Tipo de envio que será feito, **IMPORTANTE** os tipos de envio são: Dev (Para quando for enviado para um ambiente de desenvolvimento) ou Prod (Para quando for enviado para um ambiente de produção **ATENÇÃO** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas) |
-| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parametro para todos os requisitos |
+| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **Dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **Prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
+| integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | externalId\* | string | Seu código de identificação no e-vendi |
+| store\* | store | Nesse objeto conterá a maioria das configurações do e-commerce |
+| bank\* | bank | Informações da conta bancária para o e-commerce |
 
 ### Store\*
 
@@ -69,7 +73,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 | favicon | string | Atributo para mudar o favicon da sua loja |
 | freeShipping | freeShipping | Configurações para frete grátis. Pode ser feito por região ou um intervalo de CEP's |
 | freeShippingValue | number | Valor mínimo da compra para ter frete grátis |
-| freightCepOrigin | string | CEP do frete de origem |
+| freightCepOrigin\* | string | CEP do frete de origem |
 | generalRules | generalRules | Você pode criar desconto automaticamente baseado em algumas condições que escolher |
 | instagram | string | Nome da loja no Instagram |
 | integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
@@ -98,25 +102,25 @@ São obrigatórios todos atributos marcados com **\*** (asterisco)
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| bankCode | integer | Código do banco (ex: 333) |
-| accountType | integer | Tipo da conta (ex: Conta corrente) |
-| agency | integer | Agência do banco (ex: 3333) |
+| bankCode\* | integer | Código do banco (ex: 333) |
+| accountType\* | integer | Tipo da conta (ex: Conta corrente) |
+| agency\* | integer | Agência do banco (ex: 3333) |
 | dvAgency | integer | Número da agência |
-| accountNumber | integer | Número da conta (ex: 33333) |
-| dvAccount | integer | Número da conta (ex: 3) |
-| holderName | string | Nome da pessoa |
-| document | integer | CPF da pessoa |
-| payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) |
+| accountNumber\* | integer | Número da conta (ex: 33333) |
+| dvAccount\* | integer | Número da conta (ex: 3) |
+| holderName\* | string | Nome da pessoa |
+| document\* | integer | CPF da pessoa |
+| payments\* | array<string\> | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) |
 
 ### CaptureLead
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | captura lead sim ou não                           |
-| title          | string  | título da lead                                    |
-| subtitle       | string  | subtítulo da lead                                 |
-| description    | string  | descrição do que você deseja que apareça na lead  |
-| successMessage | string  | Mensagem que o cliente receberá ao aceitar a lead |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active\* | boolean | captura lead sim ou não |
+| title\* | string | título da lead |
+| subtitle | string | subtítulo da lead |
+| description\* | string | descrição do que você deseja que apareça na lead |
+| successMessage\* | string | Mensagem que o cliente receberá ao aceitar a lead |
 
 ### FreeShipping
 
@@ -339,11 +343,11 @@ Essa resposta significa que o servidor não entendeu a requisição pois está c
 
 ### 405
 
-Neste caso certifique que esteja enviando o corretamente a especificação do método, ou seja verifique se você enviou o POST ou GET conforme especificado no inicio deste tópico.
+Neste caso certifique que esteja enviando corretamente a especificação do método, ou seja, verifique se você enviou o POST ou GET conforme especificado no início deste tópico.
 
 ### 415
 
-Caso você receba um erro 415, certifique de adicionar na headers da requisição o "Content-Type" do objeto que você está enviando, em sua grande maioria "application/json"
+Caso você receba um erro 415, certifique-se de adicionar na headers da requisição o "Content-Type" do objeto que você está enviando, em sua grande maioria "application/json"
 
 ---
 

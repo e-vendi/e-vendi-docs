@@ -4,23 +4,23 @@ title: Introdução
 slug: /
 ---
 
-## E-vendi - Crie seu e-commerce por API
+## E-vendi - Crie seu e-commerce através de nossa API
 
 E-COMMERCE E SACOLINA DO INSTAGRAM: TUDO QUE SUA LOJA PRECISA PARA VENDER MAIS.
 
 ---
 
-## Boas Vindas!!
+## Boas Vindas!
 
-Estamos muito felizes em você considerar ser um parceiro integrador nosso, queremos muito ser benção em seus negócios e esperamos que você prospere muito, e obvio esperamos poder de ajudar nesta empreitada, por isso agora nossa parceria fica ainda mais forte estaremos aqui prontos para lhe ajudar e crecermos juntos, por isso conte com a gente !
+Estamos muito feliz em você considerar ser nosso parceiro integrador, queremos muito ser benção em seus negócios e esperamos que você prospere muito, e óbvio, esperamos poder te ajudar nesta empreitada, por isso agora nossa parceria fica ainda mais forte. Estaremos aqui prontos para te ajudar e crecermos juntos, então conte com a gente!
 
 ---
 
 ## Primeiro Passo
 
-### Como se tornar um integrador!
+### Como se tornar um integrador?
 
-Para poder dar continuidade com nossos serviços e criar sua conta, é necessario preencher nosso formulário de intenção de integrador, e aguardar nossa resposta, assim podemos te adicionar em nosso sistema e começar a trabalhar juntos.
+Para poder dar continuidade em nossos serviços e criar sua conta, é necessário preencher nosso formulário de intenção de integrador, e aguardar nossa resposta, assim te adicionaremos em nosso sistema e começar a trabalhar juntos.
 
 #### Segue o link
 
@@ -32,7 +32,7 @@ Para poder dar continuidade com nossos serviços e criar sua conta, é necessari
 
 ### Acessando painel integrador
 
-Agora que nossa equipe entrou em contato, você já tem um usuário e senha e pode acessar o nosso site de parceiros.
+Agora que nossa equipe entrou em contato, você já tem um usuário e senha para acessar o nosso site de parceiros.
 
 #### Segue o link
 
@@ -66,7 +66,7 @@ Nesse modo a sua loja é real, aqui as transações serão debidatas e creditada
 
 ## Finalização
 
-Agora que a sua conta ja foi criada, você pode seguir com o nosso tutorial de como criar e configurar a sua loja!
+Agora que a sua conta já foi criada, você pode seguir com o nosso tutorial de como criar e configurar a sua loja!
 
 ---
 

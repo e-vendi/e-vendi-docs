@@ -12,6 +12,6 @@
     "cookies": [],
     "postData": {
         "mimeType": "application/json",
-        "text": "{\"env\": \"prod\",\"integrationToken\": \"Seu token\",\"organizationExternalId\": \"id\",\"filter\": {\"status\": \"CLOSED\",\"query\": \"1003\",\"dates\": {\"start\": 1631909862668,\"end\": null}}}"
+        "text": "{\"env\": \"prod\",\"integrationToken\": \"Seu token\",\"organizationExternalId\": \"id\", \"filter\": {\"status\": \"CLOSED\",\"query\": \"1003\",\"dates\": {\"start\": 1631909862668,\"end\": 1631909862668}}}"
 }
 }
