@@ -303,7 +303,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
       {"start": 100, "end": 300, "installments": 6}
     ],
     "phone": "+5544999999999",
-    "plugChatCode": "SGFGDF4G-35DF4ER-8H4TJJFG-4J5XC4ZG-68E4YQE",
+    "plugChatCode": "FFFFF5-FFFFFF5-FFFFFFFFF5-FFFFFFFF5-68E4YQE",
     "postbackNewDealer": "https://",
     "presentialDeliveryTime": 1,
     "rewardBar": [{"link": "https://", "image": "https://image.png"}],

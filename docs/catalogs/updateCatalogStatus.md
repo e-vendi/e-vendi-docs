@@ -51,6 +51,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
 | published\* | boolean | Atributo para ativar ou desativar o catálogo |
 
+## Request body
+
 ```json
 {
   "env": "dev",
