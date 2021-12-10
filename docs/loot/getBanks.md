@@ -13,7 +13,7 @@ title: Bancos Suportados
 
 ## Conceituação
 
-Pegar Bancos Suportados
+Pegar Bancos Suportados.
 
 Este método é responsável por retornar todos os bancos suportados.
 

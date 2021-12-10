@@ -13,7 +13,7 @@ title: Verificar empresa existente
 
 ## Conceituação
 
-Verificar se a empresa existe
+Verificar se a empresa existe.
 
 Esse método é responsável por verificar se a expresa já existe.
 

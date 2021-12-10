@@ -13,7 +13,7 @@ title: Pegar dados da empresa
 
 ## Conceituação
 
-Buscar dados de uma empresa
+Buscar dados de uma empresa.
 
 Esse método é responsável por trazer os dados das empresas solicitadas.
 

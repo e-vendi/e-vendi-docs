@@ -13,7 +13,7 @@ title: Verificar subdomínio
 
 ## Conceituação
 
-Verificando disponibilidade de domínio
+Verificando disponibilidade de domínio.
 
 Este método é responsável por verificar a disponibilidade do domínio.
 

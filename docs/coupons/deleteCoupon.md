@@ -13,7 +13,7 @@ title: Deletar Cupom
 
 ## Conceituação
 
-Deletar cupom
+Deletar cupom.
 
 Esse método é responsável por deletar o cupom informado.
 

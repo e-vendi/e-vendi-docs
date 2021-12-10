@@ -13,7 +13,7 @@ title: Taxas de transação
 
 ## Conceituação
 
-Pegar valor das taxas de transação
+Pegar valor das taxas de transação.
 
 Este método é responsável por pegar os valores das taxas de transação.
 

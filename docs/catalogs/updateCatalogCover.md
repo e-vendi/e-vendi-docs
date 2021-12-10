@@ -13,7 +13,7 @@ title: Alterar imagem de catálogo
 
 ## Conceituação
 
-Alterar a imagem do catálogo
+Alterar a imagem do catálogo.
 
 Neste método você será capaz de alterar a imagem do catálogo.
 
@@ -33,7 +33,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::note
 
-**externalId** é o id do catálogo do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados
+**externalId** é o id do catálogo do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados.
 
 :::
 

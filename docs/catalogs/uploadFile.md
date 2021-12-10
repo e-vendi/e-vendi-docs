@@ -13,7 +13,7 @@ title: Hospedar imagem
 
 ## Conceituação
 
-Hospedar imagem do produto
+Hospedar imagem do produto.
 
 Neste método você será capaz de hospedar uma imagem.
 

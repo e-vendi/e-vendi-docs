@@ -13,7 +13,7 @@ title: Atualizar estoque
 
 ## Conceituação
 
-Atualizar estoque de um produto
+Atualizar estoque de um produto.
 
 Este método serve para atualizar apenas um produto d eum estoque.
 

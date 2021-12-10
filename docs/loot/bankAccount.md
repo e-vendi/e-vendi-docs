@@ -13,7 +13,7 @@ title: Atualizar conta bancaria
 
 ## Conceituação
 
-Atualizar conta bancaria para saque
+Atualizar conta bancaria para saque.
 
 Este método é responsável por verificar atualizar sua conta bancaria para o saque.
 

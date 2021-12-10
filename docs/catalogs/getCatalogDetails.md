@@ -13,7 +13,7 @@ title: Pegar detalhes de catálogo
 
 ## Conceituação
 
-Pegar detalhes de um catálogo
+Pegar detalhes de um catálogo.
 
 Este método serve para pegar todos os detalhes de um catálogo.
 
