@@ -5,7 +5,7 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos apresentar como consultar os clientes cadastrados na sua loja
+Neste tópico iremos apresentar como consultar os clientes cadastrados na sua loja.
 
 :::tip
 

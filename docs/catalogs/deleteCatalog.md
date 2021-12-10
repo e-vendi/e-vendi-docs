@@ -33,7 +33,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::note
 
-**externalId** é o id do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados
+**externalId** é o id do catálogo do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados
 
 :::
 

@@ -13,7 +13,7 @@ title: Salvar Promoção
 
 ## Conceituação
 
-Salvar/atualizar promoção
+Salvar/atualizar promoção.
 
 Neste método você será capaz de salvar/atualizar uma promoção.
 
@@ -28,6 +28,12 @@ Neste método você será capaz de salvar/atualizar uma promoção.
 por exemplo, você tem 2 clientes na sua base de dados Cliente 01 : ID: 1001 Cliente 02 : ID: 1002, nesse caso o organizationExternalId será 1001 para o cliente 01 e 1002 para o cliente 02.
 
 Atributos que contém **external** em seu nome são para identificar que os ID's passados serão da sua base de dados, isso facilita futuras buscas, pois você poderá fazer consultas através do seu ID uma vez que este está sob seu controle. externalId é o id da promoção cadastrada na sua base de dados.
+
+:::
+
+:::note
+
+**externalId** é o id do catálogo do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados.
 
 :::
 

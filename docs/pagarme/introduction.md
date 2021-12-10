@@ -5,13 +5,13 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos falar um pouco sobre os métodos referentes ao pagarme
+Neste tópico iremos falar um pouco sobre os métodos referentes ao pagarme.
 
-solicitar saque
+solicitar saque.
 
-Pegar transações de um período
+Pegar transações de um período.
 
-Pegar saldo da conta
+Pegar saldo da conta.
 
 :::tip
 

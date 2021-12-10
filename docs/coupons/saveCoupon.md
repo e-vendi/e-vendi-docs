@@ -13,7 +13,7 @@ title: Salvar Cupom
 
 ## Conceituação
 
-Salvar cupom
+Salvar cupom.
 
 Esse método é responsável por criar cupom.
 

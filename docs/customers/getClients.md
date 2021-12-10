@@ -13,7 +13,7 @@ title: Pegar dados dos clientes
 
 ## Conceituação
 
-Buscar clientes
+Buscar clientes.
 
 Esse método é responsável por trazer os clientes cadastrados na sua loja.
 

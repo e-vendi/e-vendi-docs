@@ -13,7 +13,7 @@ title: Solicitar saque
 
 ## Conceituação
 
-Solicitar saque
+Solicitar saque.
 
 Neste método você será capaz de solicitar saque.
 

@@ -13,9 +13,9 @@ title: Buscar pedidos
 
 ## Conceituação
 
-Buscar pedidos
+Buscar pedidos.
 
-Neste método você será capaz de buscar os pedidos feitos.
+Neste método você será capaz de buscar os pedidos realizados.
 
 ---
 
@@ -52,7 +52,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | query | string | É um like na qual você pode pesquisar pelo nome do cliente ou número do pedido |
 | dates | dates | Pode pesquisar por data também (Pode informa apenas data inicial, ou apenas a data final, pode informas ambas ou nenhuma) |
 
-### filter
+### dates
 
 | Atributos |  Tipo  | Desc                           |
 | :-------- | :----: | :----------------------------- |

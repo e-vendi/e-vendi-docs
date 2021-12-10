@@ -13,9 +13,9 @@ title: Salvar código de rastreio no pedido
 
 ## Conceituação
 
-Salvar código de rastreio no pedido
+Salvar código de rastreio no pedido.
 
-Neste método você será capaz de salva o código de rastreio dos correios no pedido.
+Neste método você será capaz de salvar o código de rastreio dos correios no pedido.
 
 ---
 

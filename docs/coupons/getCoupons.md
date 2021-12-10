@@ -13,7 +13,7 @@ title: Pegar Cupons
 
 ## Conceituação
 
-Buscar cupons
+Buscar cupons.
 
 Esse método é responsável por trazer os cupons cadastrados na sua loja.
 

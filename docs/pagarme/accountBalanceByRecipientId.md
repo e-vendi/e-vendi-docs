@@ -13,7 +13,7 @@ title: Pegar saldo da conta
 
 ## Conceituação
 
-Pegar Saldo
+Pegar Saldo.
 
 Neste método você será capaz de pegar o saldo da conta.
 

@@ -13,7 +13,7 @@ title: Pegar pedidos abertos
 
 ## Conceituação
 
-Pegar pedidos em aberto
+Pegar pedidos em aberto.
 
 Este método serve para buscar pedidos que estão em aberto.
 

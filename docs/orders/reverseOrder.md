@@ -13,9 +13,9 @@ title: Estornar Pedido
 
 ## Conceituação
 
-Estornar pedido
+Estornar pedido.
 
-Neste método você será capaz de estornar pedidos.
+Neste método você será capaz de estornar pedido.
 
 ---
 

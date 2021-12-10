@@ -13,9 +13,9 @@ title: Pegar pedido por ID
 
 ## Conceituação
 
-Pegar pedidos através do seu ID
+Pegar pedidos através do seu ID.
 
-Este método serve para buscar pedidos por ID do pedido.
+Este método serve para buscar pedidos através do ID do pedido.
 
 ---
 

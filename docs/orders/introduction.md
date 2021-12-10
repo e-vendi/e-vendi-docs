@@ -5,7 +5,7 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos falar sobre como pegar os pedidos feitos e como finalizá-los.
+Neste tópico iremos falar sobre como pegar os pedidos realizados e como finalizá-los.
 
 Poderá ver os pedidos abertos.
 
@@ -13,13 +13,13 @@ Pesquisar pedidos paginado.
 
 Pegar os dados de um pedido por id.
 
-Finaliza um pedido.
+Finalizar um pedido.
 
-Estorna um pedido.
+Estornar um pedido.
 
-Salva a url da nota fiscal no pedido.
+Salvar a url da nota fiscal no pedido.
 
-Salva o codigo de rastreio dos correios no pedido.
+Salvar o código de rastreio dos correios no pedido.
 
 :::tip
 

@@ -7,6 +7,12 @@ title: Introdução
 
 Neste tópico iremos apresentar como criar, consultar e deletar cupons.
 
+Poderá criar um cupom.
+
+Poderá deletar um cupom.
+
+Poderá consultar um cupom.
+
 :::tip
 
 Todos os métodos e atributos necessários para esse tópico estão documentados e com seus significados escritos.

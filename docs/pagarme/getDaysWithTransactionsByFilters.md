@@ -13,7 +13,7 @@ title: Pegar transações no dia
 
 ## Conceituação
 
-Pegar transações no dia
+Pegar transações no dia.
 
 Neste método você será capaz de pegar os totais das transações por período.
 

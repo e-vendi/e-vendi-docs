@@ -13,9 +13,9 @@ title: Finalizar Pedido
 
 ## Conceituação
 
-Finalizar Pedido
+Finalizar Pedido.
 
-Este método serve para finalizar os pedidos feitos.
+Este método serve para finalizar algum um pedido.
 
 ---
 
@@ -31,7 +31,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::
 
-:::caution Atributos obrigatórios
+:::caution Atributos obrigatórios.
 
 São obrigatórios todos atributos marcados com **\*** (asterisco).
 

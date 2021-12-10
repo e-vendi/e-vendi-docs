@@ -13,7 +13,7 @@ title: Pegar transações
 
 ## Conceituação
 
-Pegar transações
+Pegar transações.
 
 Neste método você será capaz de pegar todas as transações feitas no período informado.
 
