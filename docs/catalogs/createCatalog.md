@@ -112,12 +112,11 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### Prices
 
-| Atributos |       Tipo        | Descrição                     |
-| :-------- | :---------------: | :---------------------------- |
-| name      |      string       | Nome do item                  |
-| value     |      number       | Valor do item                 |
-| stock     |      number       | Quantidade do item em estoque |
-| variation | array<variation\> | Variações que o item pode ter |
+| Atributos |  Tipo  | Descrição                                       |
+| :-------- | :----: | :---------------------------------------------- |
+| id        | string | id da tabela de preço que esse preço referência |
+| name      | string | Nome do item                                    |
+| value     | number | Valor do item                                   |
 
 ### Variation
 
@@ -199,6 +198,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
           "name": "Tênis Renew Nike",
           "prices": [
             {
+              "id": "115115",
               "name": "Atacado",
               "value": 251.99
             }
