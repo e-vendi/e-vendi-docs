@@ -35,6 +35,7 @@ module.exports = {
     Clientes : [
       'customers/introduction', //ok
       'customers/getClients', //ok
+      'customers/updateClients', //ok
     ],
     Cupons: [
       'coupons/introduction', //ok
