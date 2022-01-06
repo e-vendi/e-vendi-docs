@@ -5,7 +5,7 @@ title: alterar dados do cliente
 
 ## Método
 
-**/getClients**
+**/updateClient**
 
 `POST` https://e-vendi.com.br/api/updateClient
 
