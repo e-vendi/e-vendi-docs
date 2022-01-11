@@ -43,7 +43,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
 | orderId\* | string | ID do pedido |
-| trackingCode\* | string | URL da nota fiscal |
+| trackingCode\* | string | Código de rastreio |
 
 ## Request body
 

@@ -48,17 +48,17 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### bank
 
-| Atributos      |  Tipo  | Descrição                     |
-| :------------- | :----: | :---------------------------- |
-| code           | string | Código do banco               |
-| agency         | string | Agência bancária do cliente   |
-| dvAgency       | string | Dígito verificador da agência |
-| accountNumber  | string | Número da conta do cliente    |
-| dvAccount      | string | Dígito verificador da conta   |
-| accountType    | string | Tipo da conta                 |
-| documenteType  | string | Tipo do documento (cpf)       |
-| documentNumber | string | Número do CPF                 |
-| name           | string | Nome do cliente               |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| code | string | Código do banco |
+| agency | string | Agência bancária do cliente |
+| dvAgency | string | Dígito verificador da agência |
+| accountNumber | string | Número da conta do cliente |
+| dvAccount | string | Dígito verificador da conta |
+| accountType | string | Tipo da conta. Tipos disponíveis (conta_corrente, conta_poupanca, conta_corrente_conjunta ,conta_poupanca_conjunta) |
+| documenteType | string | Tipo do documento (cpf ou cnpj) |
+| documentNumber | string | Número do CPF |
+| name | string | Nome do cliente |
 
 ## Request body
 

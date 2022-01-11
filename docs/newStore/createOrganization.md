@@ -103,7 +103,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | bankCode\* | integer | Código do banco (ex: 333) |
-| accountType\* | integer | Tipo da conta (ex: Conta corrente) |
+| accountType\* | string | Tipo da conta (ex: Conta corrente) |
 | agency\* | integer | Agência do banco (ex: 3333) |
 | dvAgency | integer | Número da agência |
 | accountNumber\* | integer | Número da conta (ex: 33333) |

@@ -96,19 +96,34 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### values
 
-| Atributos     |  Tipo  | Descrição                                 |
-| :------------ | :----: | :---------------------------------------- |
-| id            | string | Id do pedido                              |
-| orderNumber   | number | Número do pedido                          |
-| createdAt     | number | Data do pedido                            |
-| customerName  | string | Nome do cliente                           |
-| subTotal      | number | Total do pedido                           |
-| total         | number | Total somado ao valor do frete            |
-| freight       | number | Valor do frete                            |
-| paymentMethod | string | Método de pagamento                       |
-| paymentStatus | string | Status do pagamento                       |
-| observation   | string | Observação que o cliente deixou no pedido |
-| status        | string | status do pedido (OPEN, CLOSED, REVERSED) |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| id | string | Id do pedido |
+| orderNumber | number | Número do pedido |
+| createdAt | number | Data do pedido |
+| customerName | string | Nome do cliente |
+| subTotal | number | Total do pedido |
+| total | number | Total somado ao valor do frete |
+| freight | number | Valor do frete |
+| paymentMethod | string | Método de pagamento |
+| paymentStatus | paymentStatus<enum/> | Status do pagamento |
+| observation | string | Observação que o cliente deixou no pedido |
+| status | string | status do pedido (OPEN, CLOSED, REVERSED) |
+
+### paymentStatus
+
+| Atributos | Descrição |
+| :-- | :-- |
+| processing | Transação está em processo de autorização. |
+| authorized | Transação foi autorizada. Cliente possui saldo na conta e este valor foi reservado para futura captura, que deve acontecer em até 5 dias para transações criadas com api_key. Caso não seja capturada, a autorização é cancelada automaticamente pelo banco emissor, e o status da transação permanece authorized. |
+| paid | Transação paga. Foi autorizada e capturada com sucesso, e para boleto, significa que nossa API já identificou o pagamento de seu cliente. |
+| refunded | Transação estornada completamente. |
+| waiting_payment | Transação aguardando pagamento (status válido para boleto bancário). |
+| pending_refund | Transação do tipo boleto e que está aguardando para confirmação do estorno solicitado. |
+| refused | Transação recusada, não autorizada. |
+| chargedback | Transação sofreu chargeback. Mais em nossa central de ajuda. |
+| analyzing | Transação encaminhada para a análise manual feita por um especialista em prevenção a fraude. |
+| pending_review | Transação pendente de revisão manual por parte do lojista. Uma transação ficará com esse status por até 48 horas corridas. |
 
 ### 400
 
