@@ -43,6 +43,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
 | filter | filter | Filtros para refinar sua busca |
+| page | number | Página atual |
+| pageSize | number | Quantidade de itens por página |
 
 ### filter
 
@@ -66,6 +68,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "env": "prod",
   "integrationToken": "Seu token",
   "organizationExternalId": "id",
+  "page": 1,
+  "pageSize": 10,
   "filter": {
     "status": "CLOSED",
     "query": "1003",
