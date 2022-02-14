@@ -67,7 +67,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | cover | boolean | Esse atributo serve para colocar uma capa(Thumbnail) no catálogo |
 | createdAt | number | Data de criação do catálogo |
 | enableExpiration | boolean | Atributo para informar se o catálogo expira |
-| expiredAt | boolean | Data de expiração do catálogo |
+| expiredAt | number | Data de expiração do catálogo |
 | externalId | string | ID que seu sistema criou para o catálogo |
 | friendlyName | string | O nome do catálogo de forma curta |
 | ignoreItens | array<string\> | Produtos que serão ignorados do catálogo |
