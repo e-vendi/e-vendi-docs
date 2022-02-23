@@ -65,6 +65,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
+| id | string | Identificador da loja |
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
