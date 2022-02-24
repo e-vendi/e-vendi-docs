@@ -145,8 +145,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | operator | string | Operador para sua condição. ('>', '<', '=', '>=', '<=', '!=', 'contains') |
-| type | string | Tipo da condição (VALUE ou PAYMENT_TYPE). Se type for "VALUE" então o atributo value deve receber o valor para atender a condição do operator |
-| value | string | Valor para a condição (boleto, presential, pix) |
+| type | string | Tipo da condição (VALUE ou PAYMENT_TYPE). |
+| value | number \| string | Se "type" for VALUE então o atributo "value" deve receber um number. Caso type seja PAYMENT_TYPE então value deve receber uma dessas opções (boleto, presential, pix). |
 | startParcel | number | Parcela inicial |
 | endParcel | number | Parcela final |
 
