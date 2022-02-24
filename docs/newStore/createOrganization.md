@@ -156,7 +156,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | type | string | Tipo do benefício, pode ser ('DISCOUNT' ou 'FREIGHT_FREE') |
 | operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
-| value | array&#60;string&#62; | Valor será conforme o operator informado. |
+| value | number | Valor será conforme o operator informado. |
 
 ### parcelRules
 
