@@ -59,7 +59,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | postbackPaymentUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando pedido foi pago |
 | postbackUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando algo for vendido |
 | createdAt | number | Data de criação do catálogo |
-| cover | boolean | Esse atributo serve para colocar uma capa(Thumbnail) no catálogo |
+| cover | string | Esse atributo serve para colocar uma capa (Thumbnail) no catálogo |
 | enableExpiration | boolean | Atributo para informar se o catálogo expira |
 | expiredAt | number | Data de expiração do catálogo |
 | tablePriceId | string | Id da tabela de preço para o catálogo |
