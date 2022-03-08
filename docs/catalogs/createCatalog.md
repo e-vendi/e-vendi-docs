@@ -100,21 +100,21 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### Itens
 
-| Atributos   |      Tipo      | Descrição                        |
-| :---------- | :------------: | :------------------------------- |
-| externalId  |     string     | ID do item                       |
-| files       |  array<url\>   | campo para o links da imagem     |
-| name        |     string     | nome do produto                  |
-| prices      | array<prices\> | Preço do produto                 |
-| stock       |    integer     | Quantidade do produto em estoque |
-| productType |     string     | Tipo do produto                  |
-| reference   |    integer     | Referência do produto            |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| externalId | string | ID do item |
+| files | array<url\> | campo para o links da imagem |
+| name | string | nome do produto |
+| integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
+| prices | array<prices\> | Preço do produto |
+| stock | integer | Quantidade do produto em estoque |
+| variations | array<variation\> | Variações que item possui |
 
 ### Prices
 
 | Atributos |  Tipo  | Descrição                                       |
 | :-------- | :----: | :---------------------------------------------- |
-| id        | string | id da tabela de preço que esse preço referência |
+| id        | string | id da tabela de preço que esse preço referencia |
 | name      | string | Nome do item                                    |
 | value     | number | Valor do item                                   |
 
