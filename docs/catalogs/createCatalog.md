@@ -78,7 +78,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | controlStock | boolean | Atributo para o controle de estoque |
 | enablePhotoByColor | boolean | Este atributo serve para separar produtos por cores, apresentando um modelo do produto e mostrando os modelos com cores diferentes |
 | postbackUrl | url | Webhook(Postback) necessário para a conexão |
-| externalId | string | ID do catálogo |
+| externalId | string | ID do Produto |
 | isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor |
 | description | string | Descrição para os produtos |
 | descriptionSEO | string | Descrição de SEO para o produtos |
@@ -102,7 +102,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos   |      Tipo      | Descrição                        |
 | :---------- | :------------: | :------------------------------- |
-| externalId  |     string     | ID catálogo                      |
+| externalId  |     string     | ID do item                       |
 | files       |  array<url\>   | campo para o links da imagem     |
 | name        |     string     | nome do produto                  |
 | prices      | array<prices\> | Preço do produto                 |
