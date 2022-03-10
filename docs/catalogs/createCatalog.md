@@ -97,6 +97,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | productType | string | Tipo do produto |
 | reference | string | Referência do produto |
 | titleSEO | string | Título de SEO para o produto |
+| wholesale | boolean | Identifica se o produto está como atacado, caso seja "true" apenas usuário logado e que seja revendedor poderá comprar |
 
 ### Itens
 
@@ -190,6 +191,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
       "genders": [],
       "integrationMetadata": {},
       "isGrid": true,
+      "wholesale": true,
       "itens": [
         {
           "externalId": "5as4f35sd435sa4df35sda4",
