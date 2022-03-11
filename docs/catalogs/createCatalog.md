@@ -69,7 +69,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | ignoreItens | array<string\> | Produtos que serão ignorados do catálogo |
 | minimalItens | number | Mínimo de itens para o catálogo |
 | products\* | array<products\> | Array com os ID's dos produtos que fazem parte do catálogo |
-| wholesale | boolean | Identifica se o catálogo está como atacado |
+| wholesale | boolean | Identifica se o catálogo está como atacado. Caso (wholesale = true) terá os seguintes comportamentos: ( 1 - O usuário terá acesso apenas ao catálogo marcado como atacado, mesmo clicando na logo o usuário não vai conseguir ir para outro catálogo. 2 - Ao adicionar um produto no carrinho o comportamento é direcionar você de volta para o catálogo, caso false então você é direcionado para o carrinho) |
 
 ### Products\*
 
