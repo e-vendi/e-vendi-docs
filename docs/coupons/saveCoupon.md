@@ -67,13 +67,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### conditions
 
-| Atributos |  Tipo  | Descrição                                     |
-| :-------- | :----: | :-------------------------------------------- |
-| id        | string | Id da condição para o cupom                   |
-| valueMask | string | Valor formatado para moeda                    |
-| operator  | string | Operador para condicionar a regra definida    |
-| value     | number | Valor do cupom sem máscara                    |
-| type      | string | Tipo que o cupom pode ser (PERCENTAGE, VALUE) |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| id | string | Id da condição para o cupom |
+| valueMask | string | Valor formatado para moeda |
+| operator | string | Operador para condicionar a regra definida. Operadores aceitos são ('>', '<', '=', '>=', '<=', '!=' e 'contains') |
+| value | number | Valor do cupom sem máscara |
+| type | string | Tipo que o cupom pode ser (PERCENTAGE, VALUE) |
 
 ---
 
