@@ -58,7 +58,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | accumulateWithPromotion | boolean | Verifica se cupom pode acumular com promoção |
 | type | string | Tipo que o cupom pode ser (PERCENTAGE, VALUE) |
 | hasQuantity | boolean | Tem quantidade máxima definida |
-| quantity | number | Quantidade de cupons disponíveis (mandar se hasQuantity for true ) |
+| quantity | number | Quantidade de cupons fornecidos. (mandar se hasQuantity for true ) |
+| availableQuantity | number | Quantidade de cupons disponíveis, deve iniciar com o mesmo valor de quantity. Conforme utilizado esse valor é decrementado. (mandar se hasQuantity for true ) |
 | hasQuantityPerUser | boolean | Verifica se tem quantidade máxima definida por usuário |
 | quantityPerUser | number | Quantidade de cupons por usuário (mandar se hasQuantityPerUser for true ) |
 | integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
