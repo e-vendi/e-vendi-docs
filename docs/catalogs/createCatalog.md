@@ -79,7 +79,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | enablePhotoByColor | boolean | Este atributo serve para separar produtos por cores, apresentando um modelo do produto e mostrando os modelos com cores diferentes |
 | postbackUrl | url | Webhook(Postback) necessário para a conexão |
 | externalId | string | ID do Produto |
-| isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor |
+| isGrid\* | boolean | Atributo para definir se o produto tem variações de tamanho e cor. Se tiver variação deve mandar como true, caso contrário false |
 | description | string | Descrição para os produtos |
 | descriptionSEO | string | Descrição de SEO para o produtos |
 | endRelease | number | Data final para produtos em lançamento. Ao informar data aqui o produto será considerado em lançamento |
