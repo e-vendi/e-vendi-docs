@@ -39,7 +39,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **Dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **Prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
+| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
 | couponCode\* | string | Código do cupom no qual deseja deletar |

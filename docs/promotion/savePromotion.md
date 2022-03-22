@@ -33,7 +33,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::note
 
-**externalId** é o id do catálogo do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados.
+**externalId** é o id da promoção do seu cliente na sua base de dados, sempre que você for criar uma promoção para seu cliente, você precisa informar o ID da promoção do seu cliente na sua base de dados.
 
 :::
 
@@ -45,13 +45,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **Dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **Prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
+| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| externalId\* | number | ID do catálogo |
+| externalId\* | string | ID da promoção |
 | tablePriceId\* | string | ID da tabela de preço |
-| status\* | string | status da promoção |
-| items\* | array<items\> | Itens para a promoção |
+| status\* | boolean | Status da promoção. true para ativa e false para inativa |
+| items\* | array<items\> | Itens que estarão incluídos na promoção |
 | type | string | Tipo de promoção. Tipos disponíveis (VALUE) |
 | name\* | string | Nome da promoção |
 | startDate | number | Data inicial da promoção |
@@ -61,10 +61,10 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| externalId\* | number | Id externo do Item da promoção |
+| externalId\* | string | Id externo do item da promoção |
 | productExternalId\* | string | Id do produto na sua base de dados |
-| itemExternalId\* | string | Id do item na sua base de dados |
-| status\* | string | status do item |
+| itemExternalId\* | string | Id do item na sua base de dados. Aqui é a variação (Tamanho e Cor) |
+| status\* | string | status do item. true para ativa e false para inativa |
 | unitNormalPrice\* | number | Preço normal do produto que será exibido |
 | unitPromotionPrice\* | number | Preço promocional do produto que será exibido |
 
@@ -74,8 +74,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 {
   "env": "prod",
   "integrationToken": "",
-  "externalId": 111111,
-  "organizationExternalId": "",
+  "externalId": "111111",
+  "organizationExternalId": "safdgkkghd",
   "endDate": null,
   "items": [
     {

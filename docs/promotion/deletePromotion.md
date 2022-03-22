@@ -33,7 +33,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::note
 
-**externalId** é o id do catálogo do seu cliente na sua base de dados, sempre que você for criar um catálogo para seu cliente, você precisa informar o ID do catálogo do seu cliente na sua base de dados.
+**externalId** é o id da promoção do seu cliente na sua base de dados, sempre que você for criar uma promoção para seu cliente, você precisa informar o ID da promoção do seu cliente na sua base de dados.
 
 :::
 
@@ -45,10 +45,10 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **Dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **Prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
+| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| externalId\* | string | ID do catálogo |
+| externalId\* | string | ID da promoção |
 
 ## Request body
 
