@@ -96,7 +96,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | showOnlyProductsAvailable | boolean | Habilita/Desabilita mostrar apenas produtos disponíveis |
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
 | titleSEO | string | Título para SEO |
-| zApi | zApi | Configurações de integração com o zApi |
+| zApi | zApi | Configurações de integração com o zApi, através dessas informações que o cliente receberá notificações sobre o status do pedido realizado e a loja receberá aviso de novos pedidos |
 
 ### Bank\*
 
@@ -175,12 +175,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### zApi
 
-| Atributos      |  Tipo   | Descrição                       |
-| :------------- | :-----: | :------------------------------ |
-| integratorName | string  | Nome do integrador              |
-| notifyStore    | boolean | Habilita/Desabilita notificação |
-| phone          | string  | Número do celular da integração |
-| token          | string  | Token para a integração         |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| id | string | id de instância do z-api ( número cadastrado na instância que fará o envio das notificações ao cliente) |
+| integratorName | string | Nome do integrador |
+| notifyStore | boolean | Habilita/Desabilita se minha loja receberá notificação de novos pedidos |
+| phone | string | Número do celular no qual será notificado os novos pedidos |
+| token | string | Token para a integração |
 
 ## Request body
 
@@ -312,7 +313,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
     "storeMode": "VAREJO",
     "titleSEO": "Título SEO",
     "zApi": {
-      "integratorName": "PLUG_CHAT",
+      "id": "123", //id da instancia
+      "token": "456", //id do token
+      "integratorName": "Z_API",
       "notifyStore": true,
       "phone": "+5544999999999",
       "token": "sgsagdf2g2eew2y25g4sdf25htr5j2"
