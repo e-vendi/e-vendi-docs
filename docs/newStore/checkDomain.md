@@ -30,12 +30,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos    |  Tipo  | Descrição          |
 | :----------- | :----: | :----------------- |
 | domainName\* | string | Nome para o domíno |
+| domainHost\* | string | Host para o domíno |
 
 ## Request body
 
 ```json
 {
-  "domainName": "Nome"
+  "domainName": "Nome",
+  "domainHost": "Host"
 }
 ```
 

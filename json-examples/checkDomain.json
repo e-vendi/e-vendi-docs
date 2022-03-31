@@ -1,17 +1,17 @@
 {
-    "method": "POST",
-    "url": "https://e-vendi.com.br/api/checkDomainAvailable",
-    "httpVersion": "HTTP/1.1",
-    "queryString": [],
-    "headers": [
-        {
-            "name": "Content-Type",
-            "value": "application/json"
-        }
-    ],
-    "cookies": [],
-    "postData": {
-        "mimeType": "application/json",
-        "text": "{\"domainName\": \"Nome da sua loja\"}"
+  "method": "POST",
+  "url": "https://e-vendi.com.br/api/checkDomainAvailable",
+  "httpVersion": "HTTP/1.1",
+  "queryString": [],
+  "headers": [
+    {
+      "name": "Content-Type",
+      "value": "application/json"
     }
+  ],
+  "cookies": [],
+  "postData": {
+    "mimeType": "application/json",
+    "text": "{\"domainName\": \"Nome da sua loja\", \"domainHost\": \"Host da sua loja\"}"
+  }
 }
