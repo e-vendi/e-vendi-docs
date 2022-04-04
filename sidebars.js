@@ -28,9 +28,16 @@ module.exports = {
       'catalogs/updateCatalogStatus', //ok
       'catalogs/updateCatalogCover', //ok
       // 'catalogs/uploadFile', //ok
-      'catalogs/getProductStock', //ok
-      'catalogs/getStockReserved', //ok
-      'catalogs/updateProductStock', //ok
+
+    ],
+    Produtos: [
+      'products/introduction', //ok
+      'products/updateProduct',
+      // 'products/getProduct', //ok
+      // 'products/getAllProducts', //ok
+      'products/getProductStock', //ok
+      'products/getStockReserved', //ok
+      'products/updateProductStock', //ok
     ],
     Clientes : [
       'customers/introduction', //ok

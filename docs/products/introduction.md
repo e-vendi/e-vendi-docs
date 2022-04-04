@@ -5,7 +5,7 @@ title: Introdução
 
 ## Conceituação
 
-Neste tópico iremos falar um pouco sobre os métodos referentes a criação e a atualização dos seus produtos, também iremos falar sobre a manipulação do seu estoque e afins.
+Neste tópico iremos falar sobre os métodos referentes a criação e a atualização dos seus produtos e manipulação do seu estoque e afins.
 
 Poderá hospedar uma imagem.
 
@@ -14,8 +14,6 @@ Poderá atualizar as informações de vários estoques.
 Poderá atualizar um produto específico de um estoque.
 
 Poderá ver os estoques dos produtos.
-
-Poderá atualizar um produto do catálogo.
 
 Poderá pegar um estoque de produtos reservados.
 

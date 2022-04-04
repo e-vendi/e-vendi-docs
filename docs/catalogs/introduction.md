@@ -21,15 +21,7 @@ Poderá hospedar uma imagem.
 
 Poderá atualizar um produto do catálogo.
 
-Poderá atualizar as informações de vários estoques.
-
-Poderá atualizar um produto específico de um estoque.
-
-Poderá ver os estoques dos produtos.
-
 Poderá atualizar um produto do catálogo.
-
-Poderá pegar um estoque de produtos reservados.
 
 :::tip
 

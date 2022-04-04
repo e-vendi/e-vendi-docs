@@ -80,6 +80,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | postbackUrl | url | Webhook(Postback) necessário para a conexão |
 | externalId | string | ID do Produto |
 | isGrid\* | boolean | Atributo para definir se o produto tem variações de tamanho e cor. Se tiver variação deve mandar como true, caso contrário false |
+| brandName | string | Nome da marca do produto |
 | description | string | Descrição para os produtos |
 | descriptionSEO | string | Descrição de SEO para o produtos |
 | endRelease | number | Data final para produtos em lançamento. Ao informar data aqui o produto será considerado em lançamento |
@@ -94,7 +95,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | keywords | array<string\> | Lista de palavras chave para o produto |
 | measures | measures | Medidas do produto |
 | name | string | Nome do produto |
-| productType | string | Tipo do produto |
+| productType | array<productTypes\> | Tipos do produto |
 | reference | string | Referência do produto |
 | titleSEO | string | Título de SEO para o produto |
 | wholesale | boolean | Identifica se o produto está como atacado, caso seja "true" apenas usuário logado e que seja revendedor poderá comprar |
@@ -110,6 +111,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | prices | array<prices\> | Preço do produto |
 | stock | integer | Quantidade do produto em estoque |
 | variations | array<variation\> | Variações que item possui |
+
+### Product Types
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| id | string | ID do item |
+| name | string | nome do tipo de produto |
+| defaultIsGrid | string | Se por padrão será como grid |
+| segments | array<prices\> | Array contendo os segmentos. Ex (ROUPA, MODA) |
 
 ### Prices
 
@@ -179,6 +189,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "products": [
     {
       "controlStock": true,
+      "brandName": "marca",
       "description": null,
       "descriptionSEO": "Conforto e leveza durante a caminhada com o Tênis",
       "enablePhotoByColor": false,
@@ -229,7 +240,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
         }
       ],
       "name": "Tênis Renew Nike",
-      "productType": "Tenis",
+      "productType": [
+        {
+          "id": "123",
+          "name": "tenis",
+          "defaultIsGrid": true,
+          "segments": ["CALCADOS"]
+        }
+      ],
       "reference": "355421",
       "titleSEO": "Tênis Renew Nike"
     }

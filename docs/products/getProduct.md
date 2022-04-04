@@ -1,21 +1,21 @@
 ---
-id: updateProduct
-title: Criar / Atualizar produto
+id: getProduct
+title: Pegar Produto
 ---
 
 ## Método
 
-**/updateProduct**
+**/getProduct**
 
-`POST` https://e-vendi.com.br/api/updateProduct
+`POST` https://e-vendi.com.br/api/getProduct
 
 ---
 
 ## Conceituação
 
-Criar/Atualizar produto
+Pegar um produto em específico.
 
-Este método serve para criar ou atualizar um produto específico.
+Este método serve para pegar algum produto pelo código do produto ou pela referência do produto.
 
 ---
 
@@ -33,7 +33,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::note
 
-**externalId** é o id do produto do seu cliente na sua base de dados, sempre que você for criar um produto para seu cliente, você precisa informar o ID do produto do seu cliente na sua base de dados.
+**productExternalId** é o id do seu produto na sua base de dados.
 
 :::
 
@@ -48,7 +48,33 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| externalId\* | string | Seu código de identificação do produto no e-vendi |
+| productExternalId\* | string | ID do produto da sua base de dados que deseja consultar. Se informar "productExternalId" não precisa passar "reference" |
+| reference\* | string | Referência do produto da sua base de dados que deseja consultar. Se informar "reference" não precisa passar "productExternalId" |
+
+## Request body
+
+```json
+{
+  "integrationToken": "seu token",
+  "env": "dev",
+  "organizationExternalId": "seu id",
+  "productExternalId": "seu id",
+  "reference": "936731"
+}
+```
+
+---
+
+## Response
+
+### 200
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| id | string | ID do produto no e-vendi |
+| externalId | string | Seu código de identificação do produto no e-vendi |
+| price | string | Preço do produto se não for produto item |
+| priceNumber | number | Preço do produto como número |
 | brandName | string | Nome da marca do produto |
 | controlStock | boolean | Atributo para controle de estoque |
 | description | string | Descrição para os produtos |
@@ -64,16 +90,18 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | isGrid | boolean | Atributo para definir se o produto tem variações de tamanho e cor |
 | itens | array<itens\> | Itens que o produto pode ter |
 | measures | measures | Medidas do produto |
-| name\* | string | Nome do produto |
+| name | string | Nome do produto |
 | productType | array<productTypes\> | Tipos do produto |
 | reference | string | Referência do produto |
 | titleSEO | string | Título de SEO para o produto |
 | wholesale | boolean | Identifica se o produto está como atacado, caso seja "true" apenas usuário logado e que seja revendedor poderá comprar |
+| saleCount | number | Quantidade vendida do produto |
 
 ### Itens
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
+| id | string | ID do item no e-vendi |
 | externalId | string | ID do item |
 | files | array<url\> | campo para o links da imagem |
 | name | string | nome do produto |
@@ -81,6 +109,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | prices | array<prices\> | Preço do produto |
 | stock | integer | Quantidade do produto em estoque |
 | variations | array<variation\> | Variações que item possui |
+| price | string | Preço do produto se não for produto item |
+| priceNumber | number | Preço do produto como número |
 
 ### Product Types
 
@@ -115,7 +145,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | image      |  string  | URL da imagem de como medir o produto |
 | variations | array<\> | Lista de variações                    |
 
-#### Variation
+### Variation
 
 | Atributos |  Tipo   | Descrição                              |
 | :-------- | :-----: | :------------------------------------- |
@@ -124,25 +154,27 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | label     | string  | Etiqueta do produto (ex: "MILITAR")    |
 | valueRef  | boolean | Referência do valor                    |
 
-## Request body
+### Exemplo
 
 ```json
 {
-  "env": "dev",
-  "integrationToken": "seu token",
-  "organizationExternalId": "333",
+  "id": "123",
   "externalId": "id produto",
+  "price": "180.98",
+  "priceNumber": 180.98,
   "brandName": "marca",
   "controlStock": false,
   "description": "descrição",
+  "descriptionSEO": "descrição SEO",
   "enablePhotoByColor": false,
   "endRelease": 1648822800687,
   "freightHeight": 1.23,
   "freightLength": 123,
   "freightWeight": 123,
   "freightWidth": 123,
+  "genders": [],
   "isGrid": true,
-  "price": 180.98,
+  "saleCount": 1,
   "productType": [
     {
       "id": "123",
@@ -159,13 +191,16 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "integrationMetadata": {
     "priceSheetTypeId": ""
   },
-  "genders": [],
+  "saleCount": 1,
   "itens": [
     {
+      "id": "123",
       "externalId": "5as4f35sd435sa4df35sda4",
       "files": [],
       "integrationMetadata": {},
       "name": "Tênis Renew Nike",
+      "price": null,
+      "priceNumber": null,
       "prices": [
         {
           "id": "115115",
@@ -192,24 +227,6 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 }
 ```
 
----
-
-## Response
-
-### 200
-
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| success   | boolean | true / false |
-
-Exemplo
-
-```json
-{
-  "success": true
-}
-```
-
 ### 400
 
 Essa resposta significa que o servidor não entendeu a requisição pois está com uma sintaxe inválida.
@@ -226,4 +243,4 @@ Caso você receba um erro 415, certifique-se de adicionar na headers da requisi�
 
 ## Code
 
-<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/updateProduct.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getProduct.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
