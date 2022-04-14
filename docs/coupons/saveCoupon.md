@@ -46,6 +46,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### coupon\*
 
+:::note
+
+O atributo modalityType somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar os cupons do varejo e do atacado, desta forma você pode ter cupons diferentes para atacado e varejo.
+
+Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso de acordo com o cadastro do cliente que está comprando, então o sistema irá verificar o tipo conforme o cliente.
+
+:::
+
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | id | string | Id do cupom |
@@ -65,6 +73,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
 | startAt | number | Período inical de validade para o cupom |
 | endAt | number | Período final de validade para o cupom |
+| modalityType | string | Tipo para o cupom ('wholesale' ou 'retail') |
 
 ### conditions
 
@@ -98,7 +107,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
     "quantityPerUser": 10,
     "type": "VALUE",
     "value": 10,
-    "valueMask": "R$ 10,00"
+    "valueMask": "R$ 10,00",
+    "modalityType": "retail"
   }
 }
 ```

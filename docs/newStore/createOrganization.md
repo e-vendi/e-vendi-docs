@@ -85,8 +85,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | freightCepOrigin | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatório** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
 | organizationMinimalItens | number | Indica a quantidade mínima de itens para poder finalizar uma compra |
 | organizationMinimalPrice | number | Valor mínimo para compra |
+| organizationMinimalPriceWholesale | number | Valor mínimo para atacado quando estiver na modalidade ATACAREJO. Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, então nesse atributo será configurado o valor mínimo para vendas de clientes que são somente ATACADO. |
 | organizationSlogan | string | Slogan da loja |
-| parcelRules | parcelRules | Configurações de parcelamento para a loja |
+| parcelRules | creditCard | Configurações de parcelamento para a loja |
 | phone\* | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
 | plugChatCode | string | Código de integração do PlugChat |
 | postbackNewDealer | string | Atributo que armazena uma URL de uma API que o e-vendi vai chamar qando o cliente que se cadastrou no e-commerce solicitou ser um revendedor |
@@ -124,21 +125,39 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### FreeShipping
 
+:::note
+
+O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as configurações de frete do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo.
+
+Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso de acordo com o cadastro do cliente que está comprando, então o sistema irá verificar o tipo conforme o cliente.
+
+:::
+
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | active | boolean | Habilita/Desabilita frete grátis para região |
 | minimalValue | number | Valor mínimo para ter frete grátis |
 | name | string | Nome para a opção de frete grátis |
+| type\* | string | Tipo do frete ('wholesale' ou 'retail') |
 | region | string | Nome da região para o frete grátis. Se fizer por região não informar cepStart nem cepEnd |
 | cepStart | string | CEP inicial para frete grátis |
 | cepEnd | string | CEP final para frete grátis |
 
 ### generalRules
 
+:::note
+
+O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as regras gerais do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo.
+
+Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso de acordo com o cadastro do cliente que está comprando, então o sistema irá verificar o tipo conforme o cliente.
+
+:::
+
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
-| benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
+| benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na condição que você criou |
+| type\* | string | Tipo para regras gerais ('wholesale' ou 'retail') |
 
 ### conditions
 
@@ -158,13 +177,28 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
 | value | number | Valor será conforme o operator informado. |
 
+### creditCard
+
+| Atributos   |    Tipo     | Descrição                                        |
+| :---------- | :---------: | :----------------------------------------------- |
+| parcelRules | parcelRules | Configurações de parcelas para cartão de crédito |
+
 ### parcelRules
 
-| Atributos    |  Tipo  | Descrição                                      |
-| :----------- | :----: | :--------------------------------------------- |
-| start        | number | Valor inicial (Ex: De X ate 100)               |
-| end          | number | Valor Final (Ex: De 0 ate X)                   |
-| installments | number | Parcelas permitidas para o intervalor definido |
+:::note
+
+O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as regras de parcelamento do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo.
+
+Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso de acordo com o cadastro do cliente que está comprando, então o sistema irá verificar o tipo conforme o cliente.
+
+:::
+
+| Atributos    |  Tipo  | Descrição                                         |
+| :----------- | :----: | :------------------------------------------------ |
+| start        | number | Valor inicial (Ex: De X ate 100)                  |
+| end          | number | Valor Final (Ex: De 0 ate X)                      |
+| installments | number | Parcelas permitidas para o intervalo definido     |
+| type\*       | string | Tipo para regras gerais ('wholesale' ou 'retail') |
 
 ### RewardBar
 
@@ -235,34 +269,40 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
         "active": false,
         "minimalValue": 0,
         "name": "Sudeste",
+        "type": "retail",
         "region": "SUDESTE"
       },
       {
         "active": false,
         "minimalValue": 0,
         "name": "Nordeste",
+        "type": "retail",
         "region": "NORDESTE"
       },
       {
         "active": false,
         "minimalValue": 0,
         "name": "Norte",
+        "type": "retail",
         "region": "NORTE"
       },
       {
         "active": false,
         "minimalValue": 0,
         "name": "Centro-Oeste",
+        "type": "retail",
         "region": "CENTRO_OESTE"
       },
       {
         "active": true,
         "minimalValue": 0,
         "name": "Sul",
+        "type": "retail",
         "region": "SUL"
       },
       {
         "active": true,
+        "type": "retail",
         "minimalValue": 100,
         "name": "Exemplo",
         "cepStart": "99999000",
@@ -273,6 +313,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
     "freightCepOrigin": "99999888",
     "generalRules": [
       {
+        "type": "retail",
         "benefits": [
           {
             "operator": "VALUE",
@@ -298,11 +339,16 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
     "organizationFreightMode": "FIX_TAX",
     "organizationMinimalItens": "",
     "organizationMinimalPrice": 9.9,
+    "organizationMinimalPriceWholesale": 999.0,
     "organizationSlogan": "slogan",
-    "parcelRules": [
-      {"start": 0, "end": 100, "installments": 3},
-      {"start": 100, "end": 300, "installments": 6}
-    ],
+    "parcelRules": {
+      "creditCard": [
+        {"start": 0, "end": 100, "installments": 3, "type": "retail"},
+        {"start": 100, "end": 300, "installments": 6, "type": "retail"},
+        {"start": 400, "end": 800, "installments": 12, "type": "retail"},
+        {"start": 0, "end": 1000, "installments": 12, "type": "wholesale"}
+      ]
+    },
     "phone": "+5544999999999",
     "plugChatCode": "FFFFF5-FFFFFF5-FFFFFFFFF5-FFFFFFFF5-68E4YQE",
     "postbackNewDealer": "https://",

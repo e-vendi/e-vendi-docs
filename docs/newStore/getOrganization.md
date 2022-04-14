@@ -105,8 +105,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | freightCepOrigin | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatório** caso você tenha selecionado organizationFreightMode CORREIOS ou DINAMIC |
 | organizationMinimalItens | number | Indica a quantidade mínima de itens para poder finalizar uma compra |
 | organizationMinimalPrice | number | Valor mínimo para compra |
+| organizationMinimalPriceWholesale | number | Valor mínimo para atacado quando estiver na modalidade ATACAREJO. Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, então nesse atributo será configurado o valor mínimo para vendas de clientes que são somente ATACADO. |
 | organizationSlogan | string | Slogan da loja |
-| parcelRules | parcelRules | Configurações de parcelamento para a loja |
+| parcelRules | creditCard | Configurações de parcelamento para a loja |
 | phone | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
 | plugChatCode | string | Código de integração do PlugChat |
 | postbackNewDealer | string | Atributo que armazena uma URL de uma API que o e-vendi vai chamar qando o cliente que se cadastrou no e-commerce solicitou ser um revendedor |
@@ -149,6 +150,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active | boolean | Habilita/Desabilita frete grátis para região |
 | minimalValue | number | Valor mínimo para ter frete grátis |
 | name | string | Nome para a opção de frete grátis |
+| type | string | Tipo do frete. Pode ser ('wholesale' ou 'retail'). O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as configurações de frete do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo. |
 | region | string | Nome da região para o frete grátis. Se fizer por região não informar cepStart nem cepEnd |
 | cepStart | string | CEP inicial para frete grátis |
 | cepEnd | string | CEP final para frete grátis |
@@ -159,6 +161,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
 | benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
+| type | string | Tipo para regras gerais ('wholesale' ou 'retail'). O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as regras gerais do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo. |
 
 ### conditions
 
@@ -176,15 +179,22 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | type | string | Tipo do benefício, pode ser ('DISCOUNT' ou 'FREIGHT_FREE') |
 | operator | string | Pode ser ('PERCENTAGE' ou 'VALUE') |
-| value | [] | Valor será conforme o operator informado. |
+| value | number | Valor será conforme o operator informado. |
+
+### creditCard
+
+| Atributos   |    Tipo     | Descrição                                        |
+| :---------- | :---------: | :----------------------------------------------- |
+| parcelRules | parcelRules | Configurações de parcelas para cartão de crédito |
 
 ### parcelRules
 
-| Atributos    |  Tipo  | Descrição                                      |
-| :----------- | :----: | :--------------------------------------------- |
-| start        | number | Valor inicial (Ex: De X ate 100)               |
-| end          | number | Valor Final (Ex: De 0 ate X)                   |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| start | number | Valor inicial (Ex: De X ate 100) |
+| end | number | Valor Final (Ex: De 0 ate X) |
 | installments | number | Parcelas permitidas para o intervalor definido |
+| type | string | Tipo para regra de parcelamento no cartão ('wholesale' ou 'retail'). O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as regras de parcelamento do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo |
 
 ### RewardBar
 

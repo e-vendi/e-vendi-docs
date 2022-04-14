@@ -79,6 +79,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
 | startAt | number | Período inical de validade para o cupom |
 | endAt | number | Período final de validade para o cupom |
+| modalityType | string | Tipo para o cupom ('wholesale' ou 'retail'). O atributo modalityType somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar os cupons do varejo e do atacado, desta forma você pode ter cupons diferentes para atacado e varejo |
 
 ### conditions
 
