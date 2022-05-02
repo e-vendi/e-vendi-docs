@@ -111,7 +111,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | phone | string | O painel administrativo do e-vendi fica em um aplicativo, por isso é necessário informar o número que será feito a autentificação |
 | plugChatCode | string | Código de integração do PlugChat |
 | postbackNewDealer | string | Atributo que armazena uma URL de uma API que o e-vendi vai chamar qando o cliente que se cadastrou no e-commerce solicitou ser um revendedor |
-| integratorLogo | string | Atributo para mandar a logo do integrador |
+| integratorLogo | string | Atributo para mandar a logo do integrador, esta logo é para p cabeçalho e rodapé apenas |
 | presentialDeliveryTime | number | Tempo de entrega presencial |
 | rewardBar | rewardBar | Barra de benefícios mostra banners com links para descontos |
 | showOnlyProductsAvailable | boolean | Identifica se mostra apenas os produtos disponíveis ou não |
