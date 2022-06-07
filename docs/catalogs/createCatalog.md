@@ -95,7 +95,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | keywords | array<string\> | Lista de palavras chave para o produto |
 | measures | measures | Medidas do produto |
 | name | string | Nome do produto |
-| productType | array<productTypes\> | Tipos do produto |
+| productType | string | Tipos do produto. Ex: 'Tênis' |
 | reference | string | Referência do produto |
 | titleSEO | string | Título de SEO para o produto |
 | wholesale | boolean | Identifica se o produto está como atacado, caso seja "true" apenas usuário logado e que seja revendedor poderá comprar |
@@ -111,15 +111,6 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | prices | array<prices\> | Preço do produto |
 | stock | integer | Quantidade do produto em estoque |
 | variations | array<variation\> | Variações que item possui |
-
-### Product Types
-
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| id | string | ID do item |
-| name | string | nome do tipo de produto |
-| defaultIsGrid | string | Se por padrão será como grid |
-| segments | array<prices\> | Array contendo os segmentos. Ex (ROUPA, MODA) |
 
 ### Prices
 
@@ -240,14 +231,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
         }
       ],
       "name": "Tênis Renew Nike",
-      "productType": [
-        {
-          "id": "123",
-          "name": "tenis",
-          "defaultIsGrid": true,
-          "segments": ["CALCADOS"]
-        }
-      ],
+      "productType": "tenis",
       "reference": "355421",
       "titleSEO": "Tênis Renew Nike"
     }
