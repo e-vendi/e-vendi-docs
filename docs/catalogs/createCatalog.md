@@ -231,7 +231,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
         }
       ],
       "name": "Tênis Renew Nike",
-      "productType": "tenis",
+      "productType": "Tênis",
       "reference": "355421",
       "titleSEO": "Tênis Renew Nike"
     }
