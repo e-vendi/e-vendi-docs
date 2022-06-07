@@ -65,7 +65,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | itens | array<itens\> | Itens que o produto pode ter |
 | measures | measures | Medidas do produto |
 | name\* | string | Nome do produto |
-| productType | array<productTypes\> | Tipos do produto |
+| productType | string | Tipos do produto. Ex: 'Tênis' |
 | reference | string | Referência do produto |
 | titleSEO | string | Título de SEO para o produto |
 | wholesale | boolean | Identifica se o produto está como atacado, caso seja "true" apenas usuário logado e que seja revendedor poderá comprar |
@@ -143,14 +143,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "freightWidth": 123,
   "isGrid": true,
   "price": 180.98,
-  "productType": [
-    {
-      "id": "123",
-      "name": "tenis",
-      "defaultIsGrid": true,
-      "segments": ["CALCADOS"]
-    }
-  ],
+  "productType": "Tênis",
   "reference": "181065",
   "name": "nome produto",
   "descriptionSEO": "Descrição SEO",
