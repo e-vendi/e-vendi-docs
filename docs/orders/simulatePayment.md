@@ -1,23 +1,31 @@
 ---
-id: closeOrder
-title: Finalizar Pedido
+id: simulatePayment
+title: Simular pagamento de boleto/pix
 ---
 
 ## Método
 
-**/closeOrder**
+**/simulatePayment**
 
-`POST` https://e-vendi.com.br/api/closeOrder
+`POST` https://e-vendi.com.br/api/simulatePayment
 
 ---
 
 ## Conceituação
 
-Finalizar Pedido.
+Simular pagamento.
 
-Este método serve para finalizar algum um pedido.
+Simular pagamento de um pedido que foi feito em boleto ou pix
 
 ---
+
+:::caution Como usar.
+
+Este endpoint só é possível simular através de uma loja que tenha sido criada com o environment igual a dev (env: 'dev')
+
+O atributo env que deve ser passado na body sempre será dev, pois se trata de simulações de pagamentos e a única forma para simular sem gerar custos é no ambiente de desenvolvimento.
+
+:::
 
 ## Atributos
 
@@ -39,17 +47,17 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
+| env\* | string | Este endpoint só funciona com ambiente em dev, pois se trata de pagamentos. |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| orderId\* | string | ID da ordem de pedido |
+| orderId\* | string | ID da ordem de pedido e não o número do pedido |
 
 ## Request body
 
 ```json
 {
-  "env": "dev",
   "integrationToken": "seu token",
+  "env": "dev",
   "organizationExternalId": "seu id",
   "orderId": "id do pedido"
 }

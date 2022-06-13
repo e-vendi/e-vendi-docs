@@ -9,26 +9,25 @@
 
 module.exports = {
   tutorialSidebar: {
-    "Bem-vindo": ['wellcome/introduction'],
+    'Bem-vindo': ['wellcome/introduction'],
     'Criar Loja': [
       'newStore/introduction', //ok
       'newStore/checkDomain', //ok
       'newStore/organizationExist', //ok
       'newStore/createOrganization', //ok
       'newStore/updateOrganizationStatus', //ok
-      'newStore/getOrganization', //ok 
-      'newStore/getOrganizationFee', //ok 
+      'newStore/getOrganization', //ok
+      'newStore/getOrganizationFee', //ok
     ],
     Catálogos: [
-      'catalogs/introduction',//ok
-      'catalogs/createCatalog',//ok
-      'catalogs/getCatalogs',//ok
+      'catalogs/introduction', //ok
+      'catalogs/createCatalog', //ok
+      'catalogs/getCatalogs', //ok
       'catalogs/deleteCatalog', //ok
       // 'catalogs/getCatalogDetails', //ok
       'catalogs/updateCatalogStatus', //ok
       'catalogs/updateCatalogCover', //ok
       // 'catalogs/uploadFile', //ok
-
     ],
     Produtos: [
       'products/introduction', //ok
@@ -39,7 +38,7 @@ module.exports = {
       'products/getStockReserved', //ok
       'products/updateProductStock', //ok
     ],
-    Clientes : [
+    Clientes: [
       'customers/introduction', //ok
       'customers/getClients', //ok
       'customers/updateClients', //ok
@@ -59,19 +58,20 @@ module.exports = {
       'orders/reverseOrder', //ok
       'orders/saveOrderFiscalNote', //ok
       'orders/saveOrderTrackingCode', //ok
+      'orders/simulatePayment', //ok
     ],
     Promoção: [
       'promotion/introduction', //ok
       'promotion/savePromotion', //ok
       'promotion/deletePromotion', //ok
     ],
-    PagarMe :[
+    PagarMe: [
       'pagarme/introduction',
       'pagarme/withdraw',
       'pagarme/getDaysWithTransactionsByFilters',
       'pagarme/getTransactionsByFilters',
       'pagarme/accountBalanceByRecipientId',
-    ]
+    ],
     // Saque: [
     //   'loot/introduction',
     //   'loot/getBanks',

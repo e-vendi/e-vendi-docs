@@ -19,6 +19,18 @@ Esse método é responsável por criar sua empresa, ou caso já tenha criado ele
 
 ---
 
+:::warning Ambientes
+
+Aceitamos dois tipos de ambiente, dev (desenvolvimento) e o prod (produção).
+
+No ambiente de desenvolvimento é possível fazer todos os testes, inclusive simular pagamento de pedido sem custos, já em produção será gerado taxas e cobranças.
+
+Sugerimos que crie duas lojas, uma em ambiente de desenvolvimento e outra para produção, lembrando que o suddomínio devem ser diferentes. Uma dica é criar loja.e-vendi.site para produção e loja-dev.e-vendi.site para desenvolvimento. Assim é possível ter seu ambiente para testes e até mesmo para desmonstrações comerciais.
+
+IMPORTANTE: Não é possível fazer troca do environment da loja, seja de DEV para PROD ou vice-versa, uma vez criado não tem como mudar. Apenas excluindo e criando a loja denovo para corrigir.
+
+:::
+
 ## Atributos
 
 :::note
