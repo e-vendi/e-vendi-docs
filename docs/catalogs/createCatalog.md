@@ -56,7 +56,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | banners | array<banners\> | Array de banners que serão exibidos ao entrar no catálogo |
 | bannersMobile | array<bannersMobile\> | Array de banners que serão exibidos ao entrar no catálogo exibidos apenas em mobile |
 | published | boolean | Identificada se catálogo está publicado |
-| postbackPaymentUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando pedido foi pago |
+| postbackPaymentUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando pedido foi pago, se der erro de pagamento não será executado. Pagar-me é quem executa o webhook |
 | postbackUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando algo for vendido |
 | createdAt | number | Data de criação do catálogo |
 | cover | string | Esse atributo serve para colocar uma capa (Thumbnail) no catálogo |
