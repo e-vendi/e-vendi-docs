@@ -45,6 +45,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | status\* | string | Status disponíveis que o pagar.me fornece (waiting_funds e available) |
 | startDate\* | number | Data inicial para filtrar a busca |
 | endDate\* | number | Data final para filtrar a busca |
+| count\* | number | Quantidade de registros por página. Default é 10 |
+| page\* | number | Número da página. Útil para implementação de uma paginação de resultados |
 
 ## Request body
 
@@ -55,7 +57,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "organizationExternalId": "sdfsd1dfgd2g",
   "startDate": 1636340400000,
   "endDate": 1639018799999,
-  "status": "available"
+  "status": "available",
+  "count": 5,
+  "page": 1
 }
 ```
 
@@ -65,9 +69,11 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### 200
 
-Atributos referentes ao pagar.me, segue a documentação: https://docs.pagar.me/v1/reference#opera%C3%A7%C3%B5es-de-saldo-de-um-recebedor
+[]
 
-Para mais informações consulta a documentação do pagar.me v1 https://docs.pagar.me/v1/reference
+<!-- Atributos referentes ao pagar.me, segue a documentação: https://docs.pagar.me/v1/reference/operações-de-saldo-de-um-recebedor
+
+Para mais informações consulta a documentação do pagar.me v1 https://docs.pagar.me/v1/reference -->
 
 ### 400
 

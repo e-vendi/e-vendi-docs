@@ -1,6 +1,6 @@
 ---
 id: getDaysWithTransactionsByFilters
-title: Pegar transações no dia
+title: Pegar transações do dia
 ---
 
 ## Método
@@ -42,9 +42,11 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| status\* | string | Status disponíveis que o pagar.me fornece (waiting_funds e available) |
+| status\* | string | Status disponíveis que o pagar.me fornece (waiting_funds e available). AVAILABLE - Você poderá ver todos os movimentos ocorridos no saldo da sua conta. WAITING_FUNDS - Retorna os recebíveis da sua empresa. |
 | startDate\* | number | Data inicial para filtrar a busca |
 | endDate\* | number | Data final para filtrar a busca |
+| count\* | number | Quantidade de registros por página. Default é 10 |
+| page\* | number | Número da página. Útil para implementação de uma paginação de resultados |
 
 ## Request body
 
@@ -55,7 +57,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "organizationExternalId": "sdfsd1dfgd2g",
   "startDate": 1636340400000,
   "endDate": 1639018799999,
-  "status": "available"
+  "status": "available",
+  "count": 5,
+  "page": 1
 }
 ```
 
@@ -65,13 +69,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### 200
 
-Atributos referentes ao pagar.me
+[]
 
-Se o status passado no request for 'available' retornará a documentação seguinte: https://docs.pagar.me/v1/reference#hist%C3%B3rico-das-opera%C3%A7%C3%B5es
+<!-- Atributos referentes ao pagar.me -->
 
-senão será a seguinte: https://docs.pagar.me/v1/reference#retornando-receb%C3%ADveis
+<!-- Se o status for 'available' retornará: https://docs.pagar.me/v1/reference/histórico-das-operações
 
-Para mais informações consulta a documentação do pagar.me v1 https://docs.pagar.me/v1/reference
+senão será a seguinte: https://docs.pagar.me/v1/reference/retornando-recebíveis
+
+Para mais informações consulta a documentação do pagar.me v1 https://docs.pagar.me/v1/reference -->
 
 ### 400
 
