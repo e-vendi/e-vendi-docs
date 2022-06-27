@@ -18,6 +18,7 @@ module.exports = {
       'newStore/updateOrganizationStatus', //ok
       'newStore/getOrganization', //ok
       'newStore/getOrganizationFee', //ok
+      'newStore/deleteOrganization', //ok
     ],
     Catálogos: [
       'catalogs/introduction', //ok

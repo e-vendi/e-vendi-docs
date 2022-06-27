@@ -1,6 +1,6 @@
 {
-    "method": "POST",
-    "url": "https://e-vendi.com.br/api/organizationExist",
+    "method": "DELETE",
+    "url": "https://e-vendi.com.br/api/deleteOrganization",
     "httpVersion": "HTTP/1.1",
     "queryString": [],
     "headers": [
