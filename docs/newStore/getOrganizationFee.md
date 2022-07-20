@@ -123,10 +123,10 @@ Exemplo
         "parcelEnd": 1
       },
       {
-        "description": "Quando o número de parcela for entre 2 até 7, a taxa é de 6.19%",
+        "description": "Quando o número de parcela for entre 2 até 6, a taxa é de 6.19%",
         "fee": 6.19,
         "parcelStart": 2,
-        "parcelEnd": 7
+        "parcelEnd": 6
       },
       {
         "description": "Quando o número de parcela for entre 7 até 12, a taxa é de 6.29%",
