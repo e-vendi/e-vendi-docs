@@ -81,7 +81,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | ecommerceCatalogId | string | ID do catálago |
 | about | boolean | Identifica se existe conteúdo 'sobre' para a loja |
 | enableExchangePolicy | boolean | HTML ou texto informado para a criação da página 'política de troca' da loja |
-| enableMsgTracking | boolean | Identifica notificações sobre o pedido para o cliente |
+| enableMsgTracking | boolean | Identifica se cliente receberá notificações de seu pedido por whatsapp |
+| enableMsgTrackingByEmail | boolean | Identifica se cliente receberá notificações de seu pedido por e-mail |
 | msgTrackingFiscalNote | string | Mensagem que o cliente receberá sobre a nota fiscal |
 | msgTrackingNewOrder | string | Mensagem que o cliente receberá sobre o pedido feito |
 | msgTrackingOrderInvoiced | string | Mensagem que o cliente receberá sobre pedido aprovado |

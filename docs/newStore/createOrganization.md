@@ -73,7 +73,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | enableCartExpiration | boolean | Habilita/Desabilita expiração do carrinho |
 | enableEcommerceMode | boolean | Habilita/Desabilita modo e-commerce. Se habilitado o atributo 'ecommerceCatalogId' deve ter o ID do catálago |
 | ecommerceCatalogId | string | ID do catálago |
-| enableMsgTracking | boolean | Habilita/Desabilita notificações sobre o pedido para o cliente |
+| enableMsgTracking | boolean | Habilita/Desabilita se cliente receberá notificações de seu pedido por whatsapp |
+| enableMsgTrackingByEmail | boolean | Habilita/Desabilita se cliente receberá notificações de seu pedido por e-mail |
 | msgTrackingFiscalNote | string | Mensagem que o cliente receberá sobre a nota fiscal |
 | msgTrackingNewOrder | string | Mensagem que o cliente receberá sobre o pedido feito |
 | msgTrackingOrderInvoiced | string | Mensagem que o cliente receberá sobre pedido aprovado |
@@ -267,6 +268,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "enableEcommerceMode": true,
     "ecommerceCatalogId": "1efwfdgsdasdgsadgrhw",
     "enableMsgTracking": true,
+    "enableMsgTrackingByEmail": true,
     "msgTrackingFiscalNote": "{nome}, vi aqui que a nota fiscal do seu pedido foi emitida.\nToque no link para visualizar {linkNotaFiscal}\nQualquer novidade sobre sua entrega volto aqui para te contar.",
     "msgTrackingNewOrder": "Olá {nome}! \n\nObrigado por comprar em nossa loja.  \nRecebemos seu pedido {numeroPedido} e estamos aguardando a confirmação do pagamento.\n\n{produtos}\n\nAssim que tiver novidades te aviso por aqui.",
     "msgTrackingOrderInvoiced": "Olá {nome}, seu pedido {numeroPedido} acabou de ser aprovado. 😀\nEm breve voltarei para te contar novidades.",
