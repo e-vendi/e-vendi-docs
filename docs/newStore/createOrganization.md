@@ -110,6 +110,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | showOnlyProductsAvailable | boolean | Habilita/Desabilita mostrar apenas produtos disponíveis |
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
 | titleSEO | string | Título para SEO |
+| requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
 | zApi | zApi | Configurações de integração com o zApi, através dessas informações que o cliente receberá notificações sobre o status do pedido realizado e a loja receberá aviso de novos pedidos |
 
 ### Bank\*
@@ -372,6 +373,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "showOnlyProductsAvailable": true,
     "storeMode": "VAREJO",
     "titleSEO": "Título SEO",
+    "requireStateAndCity": true,
     "zApi": {
       "id": "123", //id da instancia
       "token": "456", //id do token

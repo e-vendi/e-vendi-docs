@@ -118,6 +118,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | showOnlyProductsAvailable | boolean | Identifica se mostra apenas os produtos disponíveis ou não |
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
 | titleSEO | string | Título para SEO |
+| requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
 | zApi | zApi | Configurações de integração com o zApi |
 
 ### Bank
