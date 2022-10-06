@@ -120,6 +120,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | titleSEO | string | Título para SEO |
 | requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
 | zApi | zApi | Configurações de integração com o zApi |
+| columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
+| imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 
 ### Bank
 

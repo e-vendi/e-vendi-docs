@@ -112,7 +112,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | titleSEO | string | Título para SEO |
 | requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
 | zApi | zApi | Configurações de integração com o zApi, através dessas informações que o cliente receberá notificações sobre o status do pedido realizado e a loja receberá aviso de novos pedidos |
-
+| columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
+| imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 ### Bank\*
 
 | Atributos | Tipo | Descrição |
@@ -381,7 +382,9 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       "notifyStore": true,
       "phone": "+5544999999999",
       "token": "sgsagdf2g2eew2y25g4sdf25htr5j2"
-    }
+    },
+    "columnsCatalog": "4",
+    "imageShape" :"RECTANGULAR"
   }
 }
 ```
