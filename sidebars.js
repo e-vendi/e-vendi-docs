@@ -73,6 +73,12 @@ module.exports = {
       'pagarme/getTransactionsByFilters',
       'pagarme/accountBalanceByRecipientId',
     ],
+    // CTA: [
+      // 'cta/introduction',
+      // 'cta/getCta',
+      // 'cta/saveCta',
+    // ],
+    
     // Saque: [
     //   'loot/introduction',
     //   'loot/getBanks',
