@@ -83,6 +83,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | exchangePolicy | string | Conteúdo sobre a política de troca da loja, pode ser informado texto ou HTML |
 | facebook | string | Nome da loja no facebook |
 | facebookDomainTxt | string | Código de validação do facebook business |
+| googleAnalytcs | string | Código para o google tag manager |
+| gAnalytcs | string | Código para o google analytics |
 | favicon | string | Atributo para mudar o favicon da sua loja |
 | freeShipping | freeShipping | Configurações para frete grátis. Pode ser feito por região ou um intervalo de CEP's |
 | freeShippingValue | number | Valor mínimo da compra para ter frete grátis |
@@ -114,6 +116,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | zApi | zApi | Configurações de integração com o zApi, através dessas informações que o cliente receberá notificações sobre o status do pedido realizado e a loja receberá aviso de novos pedidos |
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
+
 ### Bank\*
 
 | Atributos | Tipo | Descrição |
@@ -279,6 +282,8 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "exchangePolicy": "<p>conteúdo sobre a política de troca</p>",
     "facebook": "facebook",
     "facebookDomainTxt": "SAGDHDFHEHDFASD6HF5DFHDFH5H5FHDFH",
+    "googleAnalytcs": "GTM-XABC",
+    "gAnalytcs": "G-ZYX",
     "favicon": "https://image.png",
     "freeShipping": [
       {
@@ -384,7 +389,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       "token": "sgsagdf2g2eew2y25g4sdf25htr5j2"
     },
     "columnsCatalog": "4",
-    "imageShape" :"RECTANGULAR"
+    "imageShape": "RECTANGULAR"
   }
 }
 ```

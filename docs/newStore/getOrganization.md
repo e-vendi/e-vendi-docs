@@ -95,6 +95,8 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | freeShipping | freeShipping | Configurações para frete grátis. Pode ser feito por região ou um intervalo de CEP's |
 | freeShippingValue | number | Valor mínimo da compra para ter frete grátis |
 | freightCepOrigin | string | CEP do frete de origem |
+| googleAnalytcs | string | Código para o google tag manager |
+| gAnalytcs | string | Código para o google analytics |
 | generalRules | generalRules | Você pode criar desconto automaticamente baseado em algumas condições que escolher |
 | instagram | string | Nome da loja no Instagram |
 | integrationMetadata | object | Objeto chave/valor utilizado para armazenar informações adicionais |
