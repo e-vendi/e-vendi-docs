@@ -25,6 +25,8 @@ module.exports = {
       'catalogs/createCatalog', //ok
       'catalogs/getCatalogs', //ok
       'catalogs/deleteCatalog', //ok
+      'catalogs/addProductsCatalog', //ok
+      'catalogs/removeProductCatalog', //ok
       // 'catalogs/getCatalogDetails', //ok
       'catalogs/updateCatalogStatus', //ok
       'catalogs/updateCatalogCover', //ok
@@ -74,11 +76,11 @@ module.exports = {
       'pagarme/accountBalanceByRecipientId',
     ],
     // CTA: [
-      // 'cta/introduction',
-      // 'cta/getCta',
-      // 'cta/saveCta',
+    // 'cta/introduction',
+    // 'cta/getCta',
+    // 'cta/saveCta',
     // ],
-    
+
     // Saque: [
     //   'loot/introduction',
     //   'loot/getBanks',

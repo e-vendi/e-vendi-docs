@@ -1,23 +1,21 @@
 ---
-id: createCatalog
-title: Criar / Atualizar catálogo
+id: addProductsCatalog
+title: Adicionar Produtos
 ---
-
-<!-- A FAZER -->
 
 ## Método
 
-**/createCatalog**
+**/addProductsCatalog**
 
-`POST` https://e-vendi.com.br/api/createCatalog
+`POST` https://e-vendi.com.br/api/addProductsCatalog
 
 ---
 
 ## Conceituação
 
-Criar e atualizar o catálogo de produtos.
+Adicionar produtos em um catálogo.
 
-Neste método você será capaz de criar e atualizar seu catálogo de produtos.
+Este método serve para adicionar produtos em algum catálogo da sua loja.
 
 ---
 
@@ -51,25 +49,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | externalId\* | string | Seu código de identificação do catálogo no e-vendi |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| name\* | string | Nome do catálogo |
-| friendlyName | string | O nome do catálogo de forma curta |
-| banners | array<banners\> | Array de banners que serão exibidos ao entrar no catálogo |
-| bannersMobile | array<bannersMobile\> | Array de banners que serão exibidos ao entrar no catálogo exibidos apenas em mobile |
-| published | boolean | Identificada se catálogo está publicado |
-| postbackPaymentUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando pedido foi pago, se der erro de pagamento não será executado. Pagar-me é quem executa o webhook |
-| postbackUrl | string | Webhook (Postback) para quando uma compra é realizada na plataforma, um aviso para saber quando algo for vendido |
-| createdAt | number | Data de criação do catálogo |
-| cover | string | Esse atributo serve para colocar uma capa (Thumbnail) no catálogo |
-| enableExpiration | boolean | Atributo para informar se o catálogo expira |
-| expiredAt | number | Data de expiração do catálogo |
-| tablePriceId | string | Id da tabela de preço para o catálogo |
-| tablePriceWholesaleId | string | Id da tabela de preço de atacado para o catálogo |
-| minimalPrice | string | Atributo para aparecer o preço mínimo |
-| minimalPriceNumber | number | Número de preços mínimos |
-| ignoreItens | array<string\> | Produtos que serão ignorados do catálogo |
-| minimalItens | number | Mínimo de itens para o catálogo |
 | products\* | array<products\> | Uma lista de produtos que fazem parte do catálogo |
-| wholesale | boolean | Identifica se o catálogo está como atacado. Caso (wholesale = true) terá os seguintes comportamentos: ( 1 - O usuário terá acesso apenas ao catálogo marcado como atacado, mesmo clicando na logo o usuário não vai conseguir ir para outro catálogo. 2 - Ao adicionar um produto no carrinho o comportamento é direcionar você de volta para o catálogo, caso false então você é direcionado para o carrinho) |
 
 ### Products\*
 
@@ -136,47 +116,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | image      |  string  | URL da imagem de como medir o produto |
 | variations | array<\> | Lista de variações                    |
 
-### banners
-
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| link | string | Link para onde o usuário será direcionado ao clicar no banner |
-| url | string | url da imagem do banner |
-
-### bannersMobile
-
-| Atributos | Tipo | Descrição |
-| :-- | :-: | :-- |
-| link | string | Link para onde o usuário será direcionado ao clicar no banner |
-| url | string | url da imagem do banner |
-
 ## Request body
 
 ```json
 {
-  "env": "prod",
-  "externalId": "123456789aafasdgd",
-  "organizationExternalId": "sasddfgdf5g5",
-  "integrationToken": "sd5sdag5dfg5",
-  "banners": [
-    {
-      "link": "https://",
-      "url": "https://"
-    }
-  ],
-  "bannersMobile": [
-    {
-      "link": "https://",
-      "url": "https://"
-    }
-  ],
-  "cover": null,
-  "enableExpiration": false,
-  "expiredAt": null,
-  "ignoreItens": ["543535sda4f5sad3g4"],
-  "name": "Loja 2",
-  "postbackPaymentUrl": "https://",
-  "postbackUrl": "https://",
+  "env": "dev",
+  "externalId": "Seu ID",
+  "integrationToken": "Seu Token",
+  "organizationExternalId": "ID do catálogo",
   "products": [
     {
       "controlStock": true,
@@ -235,10 +182,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
       "reference": "355421",
       "titleSEO": "Tênis Renew Nike"
     }
-  ],
-  "published": true,
-  "tablePriceId": "6f5sdf5sd",
-  "tablePriceWholesaleId": "fsdaf5sadg5sdag5ads"
+  ]
 }
 ```
 
@@ -246,19 +190,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ## Response
 
-### 200
+### 204
 
-| Atributos | Tipo | Descrição                          |
-| :-------- | :--: | :--------------------------------- |
-| url       | link | Retorna o link para o seu catálogo |
-
-Exemplo
-
-```json
-{
-  "url": "https://"
-}
-```
+Essa resposta indica que a solicitação foi bem sucedida
 
 ### 400
 
@@ -276,4 +210,4 @@ Caso você receba um erro 415, certifique-se de adicionar na headers da requisi�
 
 ## Code
 
-<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/createCatalog.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/addProductsCatalog.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
