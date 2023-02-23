@@ -124,6 +124,18 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | zApi | zApi | Configurações de integração com o zApi |
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
+| freightConfig | array&#60;FreightConfig&#62; | Um array contendo configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+
+### FreightConfig
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| mode | string | Modalidade de frente, podendo ser ('FIX_TAX', 'TO_CALCULATE', 'DINAMIC', 'CORREIOS' ). São os mesmos do atributo organizationFreightMode. |
+| freightCepOrigin | string | CEP de origem, geralmente o endereço da loja, de onde saiu o produto para calculo de frete, é **obrigatório** caso você tenha selecionado mode CORREIOS ou DINAMIC |
+| freightCepOriginRaw | string | É o atributo freightCepOrigin sem formatação |
+| deliveryFee | string | Taxa de entrega ( Valor total, em reais R$) |
+| deliveryFeeRaw | number | É o atributo deliveryFee sem formatação |
+| type | string | Tipo do frete, pode ser 'retail', 'wholesale' |
 
 ### Bank
 
@@ -138,6 +150,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | holderName | string | Nome da pessoa |
 | document | integer | CPF da pessoa |
 | payments | string | Tipo de pagamento, pode receber quatro tipo de dados ( BOLETO, CREDIT_CARD, PRESENTIAL, PIX ) |
+| configPayments | ConfigPayments | Configuração de pagamentos quando a modalidade da loja for ATACAREJO. Por padrão o retail é aplicado quando não for atacarejo |
+
+### ConfigPayments
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| retail | array&#60;string&#62; | Um array com os tipos de pagamento informado para opção de varejo |
+| wholesale | array&#60;string&#62; | Um array com os tipos de pagamento informado para opção de atacado |
 
 ### CaptureLead
 
