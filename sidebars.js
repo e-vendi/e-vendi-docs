@@ -56,6 +56,7 @@ module.exports = {
       'orders/introduction',
       'orders/getOrdersOpened', //ok
       'orders/closeOrder', //ok
+      'orders/cancelOrder', //ok
       'orders/searchOrders', //ok
       'orders/getOrderById', //ok
       'orders/reverseOrder', //ok
