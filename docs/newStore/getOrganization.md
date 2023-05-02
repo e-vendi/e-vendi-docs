@@ -69,6 +69,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
+| corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -125,6 +126,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | array&#60;FreightConfig&#62; | Um array contendo configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+
+
+### corporateName
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar razão social             |
+| company        | string  | nome da razão social que deve aparecer no footer da loja           |
 
 ### FreightConfig
 
