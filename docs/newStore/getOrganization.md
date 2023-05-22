@@ -69,6 +69,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
+| orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -168,6 +169,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | subtitle       | string  | subtítulo da lead                                 |
 | description    | string  | descrição do que você deseja que apareça na lead  |
 | successMessage | string  | Mensagem que o cliente receberá ao aceitar a lead |
+
+### orderReceiptSetup
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar mensagem personalizada            |
+| message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
+
 
 ### FreeShipping
 

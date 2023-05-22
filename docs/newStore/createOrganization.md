@@ -64,6 +64,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | about | string | Conteúdo sobre a loja, pode ser informado texto ou HTML |
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
+| orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -166,6 +167,13 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | subtitle | string | subtítulo da lead |
 | description\* | string | descrição do que você deseja que apareça na lead |
 | successMessage\* | string | Mensagem que o cliente receberá ao aceitar a lead |
+
+### orderReceiptSetup
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar mensagem personalizada            |
+| message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
 
 ### FreeShipping
 
@@ -283,6 +291,14 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "about": "<p>conteúdo sobre a loja</p>",
     "active": true,
     "activeWithDraw": true,
+    "orderReceiptSetup": {
+      "active": true,
+      "message": 
+      "
+       - O entregador levará a maquininha de cartão caso seja necessário
+       - Pague ao receber o produto em sua casa
+      "
+    },
     "captureLead": {
       "active": true,
       "description": "Cadastre seu melhor e-mail para ficar por dentro de todas nossas novidades e promoções.",
