@@ -126,6 +126,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | array&#60;FreightConfig&#62; | Um array contendo configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+| releaseSecondaryOrder | ReleaseSecondaryOrder \| null | Determina qual será a segunda ordenação quando o cliente ordena por lançamentos. Quando não informado ficará ordenado apenas pela ordenação primária que é lançamentos. |
+
+### ReleaseSecondaryOrder
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| grade | string | Por grade (aparecer primeiro os produtos que possuem estoque em todas as grades cadastradas) |
+| product | string | Por produto (produtos de cores diferentes, devem aparecer lado a lado no catálogo) |
+| recent | string | Mais recentes (últimos produtos adicionados devem aparecer primeiro) |
 
 ### FreightConfig
 
@@ -172,11 +181,10 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### orderReceiptSetup
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar mensagem personalizada            |
-| message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
-
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar mensagem personalizada |
+| message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
 
 ### FreeShipping
 
