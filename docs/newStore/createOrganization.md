@@ -459,7 +459,8 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       "token": "sgsagdf2g2eew2y25g4sdf25htr5j2"
     },
     "columnsCatalog": "4",
-    "imageShape": "RECTANGULAR"
+    "imageShape": "RECTANGULAR",
+    "releaseSecondaryOrder": "product"
   }
 }
 ```
