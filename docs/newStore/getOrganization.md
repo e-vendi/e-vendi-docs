@@ -132,7 +132,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| grade | string | Por grade (aparecer primeiro os produtos que possuem estoque em todas as grades cadastradas) |
+| grid | string | Por grade (aparecer primeiro os produtos que possuem estoque em todas as grades cadastradas) |
 | product | string | Por produto (produtos de cores diferentes, devem aparecer lado a lado no catálogo) |
 | recent | string | Mais recentes (últimos produtos adicionados devem aparecer primeiro) |
 
