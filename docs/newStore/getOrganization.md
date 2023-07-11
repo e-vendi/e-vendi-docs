@@ -70,6 +70,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
+| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce|
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -176,6 +177,20 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :------------- | :-----: | :------------------------------------------------ |
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
+
+### physicalStoreAddress
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| country              | string  | País do cliente             |
+| localization         | string  | Cidade do cliente |
+| neighbourhood        | string  | informação sobre o bairro |
+| number               | string  | informação sobre o numero do local |
+| premisse             | string  | informação sobre o rua |
+| premisseType         | string  | informação se é RUA ou AVENIDA |
+| state                | string  | Abreviação do estado                    |
+| stateCode            | string  | Código do estado                        |
+| zipCode              | string  | Código de envio                         |
 
 
 ### FreeShipping

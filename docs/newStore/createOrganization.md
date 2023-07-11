@@ -65,6 +65,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
+| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce|
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -174,6 +175,22 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | :------------- | :-----: | :------------------------------------------------ |
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
+
+
+### physicalStoreAddress
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| country              | string  | País do cliente             |
+| localization         | string  | Cidade do cliente |
+| neighbourhood        | string  | informação sobre o bairro |
+| number               | string  | informação sobre o numero do local |
+| premisse             | string  | informação sobre o rua |
+| premisseType         | string  | informação se é RUA ou AVENIDA |
+| state                | string  | Abreviação do estado                    |
+| stateCode            | string  | Código do estado                        |
+| zipCode              | string  | Código de envio                         |
+
 
 ### FreeShipping
 
@@ -432,6 +449,24 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       ]
     },
     "phone": "+5544999999999",
+    "physicalStoreAddress": {
+    "country": "Brasil",
+    "latitude": 0,
+    "longitude": 0,
+    "zipCode": "01153000",
+    "localization": "São Paulo",
+    "premisseSteps": "",
+    "premisse": "Rua Vitorino Carmilo",
+    "premisseType": "RUA",
+    "number": "5000",
+    "neighbourhood": "Barra Funda",
+    "information": "",
+    "stateCode": "35",
+    "countryCode": 1058,
+    "formalCode": "3550308",
+    "state": "SP",
+    "EX": false
+},
     "plugChatCode": "FFFFF5-FFFFFF5-FFFFFFFFF5-FFFFFFFF5-68E4YQE",
     "postbackNewDealer": "https://",
     "presentialDeliveryTime": 1,
