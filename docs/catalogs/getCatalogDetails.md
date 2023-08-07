@@ -56,6 +56,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | name | name | Nome do catálogo |
 | friendlyName | friendlyName | Nome do catálago |
 | enableExpiration | enableExpiration | Identifica se está habilitado para expirar |
+| brand | boolean | Atributo para ocultar marca dentro de detalhes do produto |
 | updatedAt | updatedAt | Data da última atualização do catálogo |
 | published | published | Data de publicação do catálogo |
 | tablePriceWholesaleId | tablePriceWholesaleId | ID da tabela de preço de atacado |

@@ -69,6 +69,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
+| brand | boolean | Atributo para ocultar marca dentro de detalhes do produto |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
