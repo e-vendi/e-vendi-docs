@@ -307,6 +307,13 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
        - Pague ao receber o produto em sua casa
       "
     },
+      "orderDeliverySetup": {
+      "active": true,
+      "message": 
+      "
+       - A entrega será feita pela própria loja, após a confirmação do pagamento
+      "
+    },
     "captureLead": {
       "active": true,
       "description": "Cadastre seu melhor e-mail para ficar por dentro de todas nossas novidades e promoções.",
