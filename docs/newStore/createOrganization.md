@@ -176,6 +176,13 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
 
+### brand
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar marca em detalhes do produto          |
+
+
 ### FreeShipping
 
 :::note
@@ -290,9 +297,9 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
   },
   "store": {
     "about": "<p>conteúdo sobre a loja</p>",
-      "brand": {
-    "active": true
-  },
+    "brand": {
+      "active": true
+    },
     "active": true,
     "activeWithDraw": true,
     "orderReceiptSetup": {

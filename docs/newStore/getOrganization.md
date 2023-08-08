@@ -178,6 +178,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
 
+### brand
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar marca em detalhes do produto          |
+
 
 ### FreeShipping
 
