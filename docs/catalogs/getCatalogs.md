@@ -64,7 +64,6 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | id | string | ID do catálogo no e-vendi |
 | banners | array<banners\> | Array de banners que serão exibidos ao entrar no catálogo |
 | bannersMobile | array<bannersMobile\> | Array de banners que serão exibidos ao entrar no catálogo exibidos apenas em mobile |
-| brand | boolean | Atributo para ocultar marca dentro de detalhes do produto |
 | cover | boolean | Esse atributo serve para colocar uma capa(Thumbnail) no catálogo |
 | createdAt | number | Data de criação do catálogo |
 | enableExpiration | boolean | Atributo para informar se o catálogo expira |

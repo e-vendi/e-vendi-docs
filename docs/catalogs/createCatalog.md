@@ -61,7 +61,6 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | createdAt | number | Data de criação do catálogo |
 | cover | string | Esse atributo serve para colocar uma capa (Thumbnail) no catálogo |
 | enableExpiration | boolean | Atributo para informar se o catálogo expira |
-| brand | boolean | Atributo para ocultar marca dentro de detalhes do produto |
 | expiredAt | number | Data de expiração do catálogo |
 | tablePriceId | string | Id da tabela de preço para o catálogo |
 | tablePriceWholesaleId | string | Id da tabela de preço de atacado para o catálogo |
@@ -165,9 +164,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
       "url": "https://"
     }
   ],
-  "brand": {
-    "active": true
-  },
+
   "bannersMobile": [
     {
       "link": "https://",
