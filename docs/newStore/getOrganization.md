@@ -126,6 +126,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | array&#60;FreightConfig&#62; | Um array contendo configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+| informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
 
 ### FreightConfig
 
@@ -172,11 +173,10 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### orderReceiptSetup
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar mensagem personalizada            |
-| message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
-
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar mensagem personalizada |
+| message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
 
 ### FreeShipping
 
