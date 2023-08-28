@@ -170,10 +170,10 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 
 ### orderReceiptSetup
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar mensagem personalizada            |
-| message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar mensagem personalizada |
+| message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
 
 ### FreeShipping
 
@@ -210,8 +210,15 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
 | benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na condição que você criou |
 | type\* | string | Tipo para regras gerais ('wholesale' ou 'retail') |
+| id | string | Id da regra |
 
 ### conditions
+
+:::note
+
+Conditions é na estrutura de array, porém só será aceito o primeiro índice da condição. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -222,6 +229,12 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | endParcel | number | Parcela final |
 
 ### benefits
+
+:::note
+
+Benefits é na estrutura de array, porém só será aceito o primeiro índice do benefício. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -293,7 +306,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "activeWithDraw": true,
     "orderReceiptSetup": {
       "active": true,
-      "message": 
+      "message":
       "
        - O entregador levará a maquininha de cartão caso seja necessário
        - Pague ao receber o produto em sua casa
@@ -395,19 +408,42 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 
     "generalRules": [
       {
+        "id": "23818F51E9D0F3F88FE09630727D3338",
         "type": "retail",
         "benefits": [
           {
-            "operator": "VALUE",
+            "id": "23F8F05B4628BCC2CF666E5DCFC90C05",
             "type": "DISCOUNT",
-            "value": 10
+            "value": 15,
+            "operator": "PERCENTAGE"
           }
         ],
         "conditions": [
           {
-            "operator": "<=",
-            "type": "VALUE",
-            "value": 180
+            "id": "622CFD3EBB821271DE10CCF8DEF8F9AC",
+            "type": "PAYMENT_TYPE",
+            "value": "pix",
+            "operator": "="
+          }
+        ]
+      },
+      {
+        "id": "D4B61F684B6BB5AE13B7740DEB01BB38",
+        "type": "retail",
+        "benefits": [
+          {
+            "id": "491E5BA2D4FD803EFB9F51CEF3EF857E",
+            "type": "DISCOUNT",
+            "value": 10,
+            "operator": "PERCENTAGE"
+          }
+        ],
+        "conditions": [
+          {
+            "id": "900FA4B84663C60656DD461DE8E20B11",
+            "type": "PAYMENT_TYPE",
+            "value": "credit_card",
+            "operator": "="
           }
         ]
       }
