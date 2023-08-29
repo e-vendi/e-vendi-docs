@@ -65,6 +65,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
+| orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -174,6 +175,13 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | :-- | :-: | :-- |
 | active | boolean | Se deve mostrar mensagem personalizada |
 | message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
+
+### orderDeliverySetup
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar mensagem personalizada            |
+| message        | string  | mensagem personalizada para exibição quando selecionado entrega       |
 
 ### FreeShipping
 
@@ -310,6 +318,13 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       "
        - O entregador levará a maquininha de cartão caso seja necessário
        - Pague ao receber o produto em sua casa
+      "
+    },
+      "orderDeliverySetup": {
+      "active": true,
+      "message": 
+      "
+       - A entrega será feita pela própria loja, após a confirmação do pagamento
       "
     },
     "captureLead": {
