@@ -185,7 +185,6 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado entrega       |
 
-
 ### FreeShipping
 
 | Atributos | Tipo | Descrição |
@@ -205,8 +204,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
 | benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
 | type | string | Tipo para regras gerais ('wholesale' ou 'retail'). O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as regras gerais do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo. |
+| id | string | Id da regra |
 
 ### conditions
+
+:::note
+
+Conditions é na estrutura de array, porém só será aceito o primeiro índice da condição. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -217,6 +223,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | endParcel | number | Parcela final |
 
 ### benefits
+
+:::note
+
+Benefits é na estrutura de array, porém só será aceito o primeiro índice do benefício. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
