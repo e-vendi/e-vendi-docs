@@ -165,6 +165,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
       "url": "https://"
     }
   ],
+
   "bannersMobile": [
     {
       "link": "https://",

@@ -67,6 +67,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | id | string | Identificador da loja |
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
+| brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
@@ -177,6 +178,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :------------- | :-----: | :------------------------------------------------ |
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado pagamento presencial             |
+
+### brand
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar marca em detalhes do produto          |
 
 ### orderDeliverySetup
 

@@ -62,6 +62,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | about | string | Conteúdo sobre a loja, pode ser informado texto ou HTML |
+| brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
@@ -182,6 +183,13 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | :------------- | :-----: | :------------------------------------------------ |
 | active         | boolean | Se deve mostrar mensagem personalizada            |
 | message        | string  | mensagem personalizada para exibição quando selecionado entrega       |
+
+### brand
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar marca em detalhes do produto          |
+
 
 ### FreeShipping
 
@@ -310,6 +318,9 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
   },
   "store": {
     "about": "<p>conteúdo sobre a loja</p>",
+    "brand": {
+      "active": true
+    },
     "active": true,
     "activeWithDraw": true,
     "orderReceiptSetup": {
