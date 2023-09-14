@@ -120,6 +120,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | FreightConfig[] | Um array com configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+| informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
 
 :::note
 
@@ -179,17 +180,16 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 
 ### orderDeliverySetup
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar mensagem personalizada            |
-| message        | string  | mensagem personalizada para exibição quando selecionado entrega       |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar mensagem personalizada |
+| message | string | mensagem personalizada para exibição quando selecionado entrega |
 
 ### brand
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar marca em detalhes do produto          |
-
+| Atributos |  Tipo   | Descrição                                    |
+| :-------- | :-----: | :------------------------------------------- |
+| active    | boolean | Se deve mostrar marca em detalhes do produto |
 
 ### FreeShipping
 
@@ -333,7 +333,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     },
       "orderDeliverySetup": {
       "active": true,
-      "message": 
+      "message":
       "
        - A entrega será feita pela própria loja, após a confirmação do pagamento
       "
@@ -493,6 +493,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
         {"start": 0, "end": 1000, "installments": 12, "type": "wholesale"}
       ]
     },
+    "informSellerOnSale": true,
     "phone": "+5544999999999",
     "plugChatCode": "FFFFF5-FFFFFF5-FFFFFFFFF5-FFFFFFFF5-68E4YQE",
     "postbackNewDealer": "https://",
