@@ -505,7 +505,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "storeMode": "VAREJO",
     "titleSEO": "Título SEO",
     "requireStateAndCity": true,
-     "showDescriptionExpandedAutomatic": true,
+    "showDescriptionExpandedAutomatic": true,
     "zApi": {
       "id": "123", //id da instancia
       "token": "456", //id do token
