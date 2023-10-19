@@ -1,21 +1,21 @@
 ---
-id: updateClient
-title: alterar dados do cliente
+id: cancelOrder
+title: Cancelar Pedido
 ---
 
 ## Método
 
-**/updateClient**
+**/cancelOrder**
 
-`POST` https://e-vendi.com.br/api/updateClient
+`POST` https://e-vendi.com.br/api/cancelOrder
 
 ---
 
 ## Conceituação
 
-Alterar cliente.
+Cancelar Pedido.
 
-Esse método é responsável por criar ou atualizar os dado de um determinado cliente.
+Este método serve para cancelar um pedido que por algum motivo foi recusado.
 
 ---
 
@@ -31,7 +31,7 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::
 
-:::caution Atributos obrigatórios
+:::caution Atributos obrigatórios.
 
 São obrigatórios todos atributos marcados com **\*** (asterisco).
 
@@ -42,15 +42,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| id\* | string | ID do cliente no qual deseja fazer alteração |
-| dealerReject | boolean | Identifica se cliente está rejeitado como revendedor |
-| isDealer | boolean | Identifica se o cliente é um revendedor |
-| dealerStatus | string | Status de revendedor do cliente, podendo ser ('ACTIVE' ou 'INACTIVE' ) |
-| notified | boolean | Identifica se notifica ou não o cliente ao reprová-lo como revendedor |
-| reason | string | Motivo pelo qual o cliente foi reprovado para ser revendedor |
-| tablePriceId | string | ID da tabela de preço para determinado cliente, essa tabela irá prevalecer perante qualquer outra, o cliente sempre verá os preços com base na tabela vinculada a ele se este atributo for informado |
-
----
+| orderId\* | string | ID da ordem de pedido |
 
 ## Request body
 
@@ -59,13 +51,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "env": "dev",
   "integrationToken": "seu token",
   "organizationExternalId": "seu id",
-  "id": "12344321asdasfsd",
-  "dealerReject": false,
-  "isDealer": true,
-  "dealerStatus": "ACTIVE",
-  "notified": true,
-  "reason": null,
-  "tablePriceId": "123456789qoasjkjsdfhmsdhf"
+  "orderId": "id do pedido"
 }
 ```
 
@@ -75,14 +61,10 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### 200
 
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| Response  | boolean | True / false |
-
 Exemplo
 
-```json
-{"sucess": true}
+```text
+success
 ```
 
 ### 400
@@ -101,4 +83,4 @@ Caso você receba um erro 415, certifique-se de adicionar na headers da requisi�
 
 ## Code
 
-<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/updateClient.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/cancelOrder.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

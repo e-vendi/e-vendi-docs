@@ -67,9 +67,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | id | string | Identificador da loja |
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
+| brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
+| corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
+| orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -122,6 +125,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
 | titleSEO | string | Título para SEO |
 | requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
+| showDescriptionExpandedAutomatic | boolean | Atributo para dizer se a descrição deve vir expandida ao entrar no produto |
 | zApi | zApi | Configurações de integração com o zApi |
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
@@ -135,6 +139,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | grid | string | Por grade (aparecer primeiro os produtos que possuem estoque em todas as grades cadastradas) |
 | product | string | Por produto (produtos de cores diferentes, devem aparecer lado a lado no catálogo) |
 | recent | string | Mais recentes (últimos produtos adicionados devem aparecer primeiro) |
+| informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
+
+
+### corporateName
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar razão social             |
+| company        | string  | nome da razão social que deve aparecer no footer da loja           |
 
 ### FreightConfig
 
@@ -186,6 +199,19 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active | boolean | Se deve mostrar mensagem personalizada |
 | message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
 
+### brand
+
+| Atributos |  Tipo   | Descrição                                    |
+| :-------- | :-----: | :------------------------------------------- |
+| active    | boolean | Se deve mostrar marca em detalhes do produto |
+
+### orderDeliverySetup
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar mensagem personalizada |
+| message | string | mensagem personalizada para exibição quando selecionado entrega |
+
 ### FreeShipping
 
 | Atributos | Tipo | Descrição |
@@ -205,8 +231,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
 | benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na consição que você criou |
 | type | string | Tipo para regras gerais ('wholesale' ou 'retail'). O atributo type somente será utilizado quando a modalidade da loja estiver como ATACAREJO. Ele será utilizado para separar as regras gerais do varejo e do atacado, desta forma você pode ter regras diferentes para atacado e varejo. |
+| id | string | Id da regra |
 
 ### conditions
+
+:::note
+
+Conditions é na estrutura de array, porém só será aceito o primeiro índice da condição. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -217,6 +250,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | endParcel | number | Parcela final |
 
 ### benefits
+
+:::note
+
+Benefits é na estrutura de array, porém só será aceito o primeiro índice do benefício. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |

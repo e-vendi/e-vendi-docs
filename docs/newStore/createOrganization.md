@@ -62,9 +62,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | about | string | Conteúdo sobre a loja, pode ser informado texto ou HTML |
+| brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
+| corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
+| orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
@@ -114,11 +117,13 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
 | titleSEO | string | Título para SEO |
 | requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
+| showDescriptionExpandedAutomatic | boolean | Atributo para dizer se a descrição deve vir expandida ao entrar no produto |
 | zApi | zApi | Configurações de integração com o zApi, através dessas informações que o cliente receberá notificações sobre o status do pedido realizado e a loja receberá aviso de novos pedidos |
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | FreightConfig[] | Um array com configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
 | releaseSecondaryOrder | ReleaseSecondaryOrder \| null | Determina qual será a segunda ordenação quando o cliente ordena por lançamentos. Quando não informado ficará ordenado apenas pela ordenação primária que é lançamentos. |
+| informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
 
 :::note
 
@@ -177,12 +182,33 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | description\* | string | descrição do que você deseja que apareça na lead |
 | successMessage\* | string | Mensagem que o cliente receberá ao aceitar a lead |
 
+
+### corporateName
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar razão social             |
+| company        | string  | nome da razão social que deve aparecer no footer da loja           |
+
 ### orderReceiptSetup
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | active | boolean | Se deve mostrar mensagem personalizada |
 | message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
+
+### orderDeliverySetup
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar mensagem personalizada |
+| message | string | mensagem personalizada para exibição quando selecionado entrega |
+
+### brand
+
+| Atributos |  Tipo   | Descrição                                    |
+| :-------- | :-----: | :------------------------------------------- |
+| active    | boolean | Se deve mostrar marca em detalhes do produto |
 
 ### FreeShipping
 
@@ -219,8 +245,15 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | conditions | conditions | Aqui você pode criar condições para aplicar benefícios ao cliente |
 | benefits | benefits | Aqui será informado os benefícios que o cliente terá com base na condição que você criou |
 | type\* | string | Tipo para regras gerais ('wholesale' ou 'retail') |
+| id | string | Id da regra |
 
 ### conditions
+
+:::note
+
+Conditions é na estrutura de array, porém só será aceito o primeiro índice da condição. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -231,6 +264,12 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | endParcel | number | Parcela final |
 
 ### benefits
+
+:::note
+
+Benefits é na estrutura de array, porém só será aceito o primeiro índice do benefício. Para cadastrar mais regras basta enviá-las em generalRules, pois ele é um array e todas as regras devem estar nele com seus types, conditions e benefits e id.
+
+:::
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
@@ -298,14 +337,28 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
   },
   "store": {
     "about": "<p>conteúdo sobre a loja</p>",
+    "brand": {
+      "active": true
+    },
     "active": true,
     "activeWithDraw": true,
+    "corporateName": {
+      "active": true,
+      "company": "Grands Sistemas Lt"
+    },
     "orderReceiptSetup": {
       "active": true,
       "message":
       "
        - O entregador levará a maquininha de cartão caso seja necessário
        - Pague ao receber o produto em sua casa
+      "
+    },
+      "orderDeliverySetup": {
+      "active": true,
+      "message":
+      "
+       - A entrega será feita pela própria loja, após a confirmação do pagamento
       "
     },
     "captureLead": {
@@ -404,19 +457,42 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 
     "generalRules": [
       {
+        "id": "23818F51E9D0F3F88FE09630727D3338",
         "type": "retail",
         "benefits": [
           {
-            "operator": "VALUE",
+            "id": "23F8F05B4628BCC2CF666E5DCFC90C05",
             "type": "DISCOUNT",
-            "value": 10
+            "value": 15,
+            "operator": "PERCENTAGE"
           }
         ],
         "conditions": [
           {
-            "operator": "<=",
-            "type": "VALUE",
-            "value": 180
+            "id": "622CFD3EBB821271DE10CCF8DEF8F9AC",
+            "type": "PAYMENT_TYPE",
+            "value": "pix",
+            "operator": "="
+          }
+        ]
+      },
+      {
+        "id": "D4B61F684B6BB5AE13B7740DEB01BB38",
+        "type": "retail",
+        "benefits": [
+          {
+            "id": "491E5BA2D4FD803EFB9F51CEF3EF857E",
+            "type": "DISCOUNT",
+            "value": 10,
+            "operator": "PERCENTAGE"
+          }
+        ],
+        "conditions": [
+          {
+            "id": "900FA4B84663C60656DD461DE8E20B11",
+            "type": "PAYMENT_TYPE",
+            "value": "credit_card",
+            "operator": "="
           }
         ]
       }
@@ -440,6 +516,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
         {"start": 0, "end": 1000, "installments": 12, "type": "wholesale"}
       ]
     },
+    "informSellerOnSale": true,
     "phone": "+5544999999999",
     "plugChatCode": "FFFFF5-FFFFFF5-FFFFFFFFF5-FFFFFFFF5-68E4YQE",
     "postbackNewDealer": "https://",
@@ -450,6 +527,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     "storeMode": "VAREJO",
     "titleSEO": "Título SEO",
     "requireStateAndCity": true,
+    "showDescriptionExpandedAutomatic": true,
     "zApi": {
       "id": "123", //id da instancia
       "token": "456", //id do token
