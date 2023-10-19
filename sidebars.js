@@ -59,14 +59,15 @@ module.exports = {
     ],
     Pedidos: [
       'orders/introduction',
-      'orders/getOrdersOpened', // ok
-      'orders/closeOrder', // ok
-      'orders/searchOrders', // ok
-      'orders/getOrderById', // ok
-      'orders/reverseOrder', // ok
-      'orders/saveOrderFiscalNote', // ok
-      'orders/saveOrderTrackingCode', // ok
-      'orders/simulatePayment', // ok
+      'orders/getOrdersOpened', //ok
+      'orders/closeOrder', //ok
+      'orders/cancelOrder', //ok
+      'orders/searchOrders', //ok
+      'orders/getOrderById', //ok
+      'orders/reverseOrder', //ok
+      'orders/saveOrderFiscalNote', //ok
+      'orders/saveOrderTrackingCode', //ok
+      'orders/simulatePayment', //ok
     ],
     Promoção: [
       'promotion/introduction', // ok
