@@ -65,6 +65,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
+| corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
 | orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
@@ -171,6 +172,14 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | subtitle | string | subtítulo da lead |
 | description\* | string | descrição do que você deseja que apareça na lead |
 | successMessage\* | string | Mensagem que o cliente receberá ao aceitar a lead |
+
+
+### corporateName
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar razão social             |
+| company        | string  | nome da razão social que deve aparecer no footer da loja           |
 
 ### orderReceiptSetup
 
@@ -324,6 +333,10 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
     },
     "active": true,
     "activeWithDraw": true,
+    "corporateName": {
+      "active": true,
+      "company": "Grands Sistemas Lt"
+    },
     "orderReceiptSetup": {
       "active": true,
       "message":
