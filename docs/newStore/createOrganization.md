@@ -122,6 +122,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | FreightConfig[] | Um array com configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+| releaseSecondaryOrder | ReleaseSecondaryOrder \| null | Determina qual será a segunda ordenação quando o cliente ordena por lançamentos. Quando não informado ficará ordenado apenas pela ordenação primária que é lançamentos. |
 | informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
 
 :::note
@@ -131,6 +132,14 @@ O atributo type somente será utilizado quando a modalidade da loja estiver como
 Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso de acordo com o cadastro do cliente que está comprando, então o sistema irá verificar o tipo conforme o cliente.
 
 :::
+
+### ReleaseSecondaryOrder
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| grid | string | Por grade (aparecer primeiro os produtos que possuem estoque em todas as grades cadastradas) |
+| product | string | Por produto (produtos de cores diferentes, devem aparecer lado a lado no catálogo) |
+| recent | string | Mais recentes (últimos produtos adicionados devem aparecer primeiro) |
 
 ### FreightConfig
 
@@ -528,7 +537,8 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       "token": "sgsagdf2g2eew2y25g4sdf25htr5j2"
     },
     "columnsCatalog": "4",
-    "imageShape": "RECTANGULAR"
+    "imageShape": "RECTANGULAR",
+    "releaseSecondaryOrder": "product"
   }
 }
 ```
