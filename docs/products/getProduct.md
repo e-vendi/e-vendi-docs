@@ -81,6 +81,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | descriptionSEO | string | Descrição de SEO para o produtos |
 | enablePhotoByColor | boolean | Este atributo serve para separar produtos por cores, apresentando um modelo do produto e mostrando os modelos com cores diferentes |
 | endRelease | number | Data final para produtos em lançamento. Ao informar data aqui o produto será considerado em lançamento |
+| highlight | number | Data final para produtos em destaque. Ao informar data aqui o produto será considerado em destaque |
 | freightHeight | float | Altura do produto |
 | freightLength | integer | Comprimento do produto |
 | freightWeight | integer | Peso do produto |
@@ -168,6 +169,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
   "descriptionSEO": "descrição SEO",
   "enablePhotoByColor": false,
   "endRelease": 1648822800687,
+  "highlight": 1648822800687,
   "freightHeight": 1.23,
   "freightLength": 123,
   "freightWeight": 123,
