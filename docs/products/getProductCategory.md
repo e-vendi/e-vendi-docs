@@ -1,21 +1,23 @@
 ---
-id: updateClient
-title: alterar dados do cliente
+id: getProductCategory
+title: Pegar categorias
 ---
 
 ## Método
 
-**/updateClient**
+**/getProductCategory**
 
-`POST` https://e-vendi.com.br/api/updateClient
+`POST` https://e-vendi.com.br/api/getProductCategory
 
 ---
 
 ## Conceituação
 
-Alterar cliente.
+Pegar as categorias.
 
-Esse método é responsável por criar ou atualizar os dado de um determinado cliente.
+Este método serve para pegar as categorias que foram criadas com base nos produtos.
+
+O retorno dessa API vem em ordem alfabética pelo nome da categoria, o campo sequenceOrder é utilizado para ordernar as categorias de forma manual no e-vendi, essa api serve para listar as categorias e disponibilizar para o integrador poder fazer sua ordenação.
 
 ---
 
@@ -42,30 +44,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| id\* | string | ID do cliente no qual deseja fazer alteração |
-| dealerReject | boolean | Identifica se cliente está rejeitado como revendedor |
-| isDealer | boolean | Identifica se o cliente é um revendedor |
-| dealerStatus | string | Status de revendedor do cliente, podendo ser ('ACTIVE' ou 'INACTIVE' ) |
-| notified | boolean | Identifica se notifica ou não o cliente ao reprová-lo como revendedor |
-| reason | string | Motivo pelo qual o cliente foi reprovado para ser revendedor |
-| tablePriceId | string | ID da tabela de preço para determinado cliente, essa tabela irá prevalecer perante qualquer outra, o cliente sempre verá os preços com base na tabela vinculada a ele se este atributo for informado |
-
----
 
 ## Request body
 
 ```json
 {
-  "env": "dev",
   "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
-  "id": "12344321asdasfsd",
-  "dealerReject": false,
-  "isDealer": true,
-  "dealerStatus": "ACTIVE",
-  "notified": true,
-  "reason": null,
-  "tablePriceId": "123456789qoasjkjsdfhmsdhf"
+  "env": "dev",
+  "organizationExternalId": "seu id"
 }
 ```
 
@@ -75,14 +61,32 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### 200
 
-| Atributos |  Tipo   | Descrição    |
-| :-------- | :-----: | :----------- |
-| Response  | boolean | True / false |
+| Atributos |  Tipo  | Descrição               |
+| :-------- | :----: | :---------------------- |
+| count     | number | Quantidade de registros |
+| values    | Items  | Categorias cadastradas  |
+
+#### Items
+
+| Atributos     |  Tipo   | Descrição                             |
+| :------------ | :-----: | :------------------------------------ |
+| id            | string  | Id da categoria                       |
+| name          | string  | Nome da categoria                     |
+| sequenceOrder | integer | Campo que defini a ordem do resultado |
 
 Exemplo
 
 ```json
-{"sucess": true}
+{
+  "count": 1,
+  "values": [
+    {
+      "id": "005001P001",
+      "name": "Categoria",
+      "sequenceOrder": null
+    }
+  ]
+}
 ```
 
 ### 400
@@ -101,4 +105,4 @@ Caso você receba um erro 415, certifique-se de adicionar na headers da requisi�
 
 ## Code
 
-<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/updateClient.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/getProductCategory.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

@@ -1,21 +1,21 @@
 ---
-id: updateClient
-title: alterar dados do cliente
+id: updateProductCategory
+title: Atualizar ordenação da categoria
 ---
 
 ## Método
 
-**/updateClient**
+**/updateProductCategory**
 
-`POST` https://e-vendi.com.br/api/updateClient
+`POST` https://e-vendi.com.br/api/updateProductCategory
 
 ---
 
 ## Conceituação
 
-Alterar cliente.
+Atualizar ordenação das categorias no e-vendi.
 
-Esse método é responsável por criar ou atualizar os dado de um determinado cliente.
+Este método serve definir uma ordenação manual das categorias. Com isso o integrador define a ordem da categoria e o e-vendi não exibirá mais em ordem alfabética.
 
 ---
 
@@ -31,6 +31,12 @@ Atributos que contém **external** em seu nome são para identificar que os ID's
 
 :::
 
+:::note
+
+**externalId** é o id do produto do seu cliente na sua base de dados, sempre que você for criar um produto para seu cliente, você precisa informar o ID do produto do seu cliente na sua base de dados.
+
+:::
+
 :::caution Atributos obrigatórios
 
 São obrigatórios todos atributos marcados com **\*** (asterisco).
@@ -42,15 +48,21 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | env\* | string | Tipo de envio que será feito. Os tipos de envio são: **dev** (Para quando for enviado para um ambiente de desenvolvimento) ou **prod** (Para quando for enviado para um ambiente de produção). **ATENÇÃO,** caso seja enviado para um ambiente de produção todas as transações serão debitadas ou creditadas |
 | integrationToken\* | string | Para se conectar com o e-vendi é necessário um token integrador, ele será passado como parâmetro para todos os requisitos |
 | organizationExternalId\* | string | Seu código de identificação no e-vendi |
-| id\* | string | ID do cliente no qual deseja fazer alteração |
-| dealerReject | boolean | Identifica se cliente está rejeitado como revendedor |
-| isDealer | boolean | Identifica se o cliente é um revendedor |
-| dealerStatus | string | Status de revendedor do cliente, podendo ser ('ACTIVE' ou 'INACTIVE' ) |
-| notified | boolean | Identifica se notifica ou não o cliente ao reprová-lo como revendedor |
-| reason | string | Motivo pelo qual o cliente foi reprovado para ser revendedor |
-| tablePriceId | string | ID da tabela de preço para determinado cliente, essa tabela irá prevalecer perante qualquer outra, o cliente sempre verá os preços com base na tabela vinculada a ele se este atributo for informado |
+| orders\* | Items | Categorias com ordenação configurada |
 
----
+:::note
+
+É importante mandar todas as categorias, quando quiser ordenar uma categoria deve mandar um sequencial no atributo sequenceOrder, as outras categorias deve mandar sempre como null.
+
+:::
+
+#### Items
+
+| Atributos     |      Tipo       | Descrição                             |
+| :------------ | :-------------: | :------------------------------------ |
+| id            |     string      | Id da categoria                       |
+| name          |     string      | Nome da categoria                     |
+| sequenceOrder | integer \| null | Campo que defini a ordem do resultado |
 
 ## Request body
 
@@ -58,14 +70,19 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 {
   "env": "dev",
   "integrationToken": "seu token",
-  "organizationExternalId": "seu id",
-  "id": "12344321asdasfsd",
-  "dealerReject": false,
-  "isDealer": true,
-  "dealerStatus": "ACTIVE",
-  "notified": true,
-  "reason": null,
-  "tablePriceId": "123456789qoasjkjsdfhmsdhf"
+  "organizationExternalId": "333",
+  "orders": [
+    {
+      "id": "11111",
+      "name": "Categoria ordenada",
+      "sequenceOrder": 1
+    },
+    {
+      "id": "11112",
+      "name": "Categoria não ordenada",
+      "sequenceOrder": null
+    }
+  ]
 }
 ```
 
@@ -77,12 +94,14 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos |  Tipo   | Descrição    |
 | :-------- | :-----: | :----------- |
-| Response  | boolean | True / false |
+| success   | boolean | true / false |
 
 Exemplo
 
 ```json
-{"sucess": true}
+{
+  "success": true
+}
 ```
 
 ### 400
@@ -101,4 +120,4 @@ Caso você receba um erro 415, certifique-se de adicionar na headers da requisi�
 
 ## Code
 
-<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/updateClient.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>
+<iframe src="//api.apiembed.com/?source=https://raw.githubusercontent.com/e-vendi/e-vendi-docs/main/json-examples/updateProductCategory.json" frameborder="0" scrolling="no" width="100%" height="500px" seamless></iframe>

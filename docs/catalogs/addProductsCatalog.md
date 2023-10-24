@@ -64,6 +64,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | description | string | Descrição para os produtos |
 | descriptionSEO | string | Descrição de SEO para o produtos |
 | endRelease | number | Data final para produtos em lançamento. Ao informar data aqui o produto será considerado em lançamento |
+| highlight | number | Data final para produtos em destaque. Ao informar data aqui o produto será considerado em destaque |
 | externalId | strging | ID do catálogo |
 | freightHeight | number | Altura do produto para frete |
 | freightLength | number | Tamanho do produto para frete |
@@ -132,6 +133,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
       "descriptionSEO": "Conforto e leveza durante a caminhada com o Tênis",
       "enablePhotoByColor": false,
       "endRelease": null,
+      "highlight": null,
       "externalId": "dsfsd6sd5sda5asdg35d6",
       "freightHeight": null,
       "freightLength": null,
