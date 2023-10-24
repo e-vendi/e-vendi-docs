@@ -50,7 +50,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
-| status | string | Busca por status do pedido (OPEN, CLOSED, REVERSED) |
+| status | string | Busca por status do pedido (OPEN, CLOSED, REVERSED, REFUSED) |
 | query | string | É um like na qual você pode pesquisar pelo nome do cliente ou número do pedido |
 | dates | dates | Pode pesquisar por data também (Pode informa apenas data inicial, ou apenas a data final, pode informas ambas ou nenhuma) |
 
@@ -108,7 +108,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | paymentMethod | string | Método de pagamento |
 | paymentStatus | paymentStatus<enum/> | Status do pagamento |
 | observation | string | Observação que o cliente deixou no pedido |
-| status | string | status do pedido (OPEN, CLOSED, REVERSED) |
+| status | string | status do pedido (OPEN, CLOSED, REVERSED, REFUSED) |
 
 ### paymentStatus
 

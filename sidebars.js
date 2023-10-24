@@ -46,7 +46,12 @@ module.exports = {
     Clientes: [
       'customers/introduction', // ok
       'customers/getClients', // ok
-      'customers/updateClients', // ok
+      'customers/updateClient', // ok
+    ],
+    Vendedores: [
+      'employees/introduction', // ok
+      'employees/getEmployees', // ok
+      'employees/updateEmployee', // ok
     ],
     Cupons: [
       'coupons/introduction', // ok
@@ -56,14 +61,15 @@ module.exports = {
     ],
     Pedidos: [
       'orders/introduction',
-      'orders/getOrdersOpened', // ok
-      'orders/closeOrder', // ok
-      'orders/searchOrders', // ok
-      'orders/getOrderById', // ok
-      'orders/reverseOrder', // ok
-      'orders/saveOrderFiscalNote', // ok
-      'orders/saveOrderTrackingCode', // ok
-      'orders/simulatePayment', // ok
+      'orders/getOrdersOpened', //ok
+      'orders/closeOrder', //ok
+      'orders/cancelOrder', //ok
+      'orders/searchOrders', //ok
+      'orders/getOrderById', //ok
+      'orders/reverseOrder', //ok
+      'orders/saveOrderFiscalNote', //ok
+      'orders/saveOrderTrackingCode', //ok
+      'orders/simulatePayment', //ok
     ],
     Promoção: [
       'promotion/introduction', // ok
