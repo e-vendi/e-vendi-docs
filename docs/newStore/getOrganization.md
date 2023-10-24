@@ -67,7 +67,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | id | string | Identificador da loja |
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
-| brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
+| hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos|
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
 | corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |

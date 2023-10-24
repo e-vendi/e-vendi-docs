@@ -62,7 +62,7 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | about | string | Conteúdo sobre a loja, pode ser informado texto ou HTML |
-| brand | brand | Atributo para ocultar marca dentro de detalhes do produto |
+| hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos|
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
 | corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
@@ -205,11 +205,6 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | active | boolean | Se deve mostrar mensagem personalizada |
 | message | string | mensagem personalizada para exibição quando selecionado entrega |
 
-### brand
-
-| Atributos |  Tipo   | Descrição                                    |
-| :-------- | :-----: | :------------------------------------------- |
-| active    | boolean | Se deve mostrar marca em detalhes do produto |
 
 
 ### physicalStoreAddress
@@ -354,9 +349,7 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
   },
   "store": {
     "about": "<p>conteúdo sobre a loja</p>",
-    "brand": {
-      "active": true
-    },
+    "hideBrand": true,
     "active": true,
     "activeWithDraw": true,
     "corporateName": {
