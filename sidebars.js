@@ -40,6 +40,8 @@ module.exports = {
       'products/getProductStock', // ok
       'products/getStockReserved', // ok
       'products/updateProductStock', // ok
+      'products/getProductCategory', // ok
+      'products/updateProductCategory', // ok
     ],
     Clientes: [
       'customers/introduction', // ok
