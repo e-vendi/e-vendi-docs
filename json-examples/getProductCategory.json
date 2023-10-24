@@ -1,6 +1,6 @@
 {
   "method": "POST",
-  "url": "https://e-vendi.com.br/api/closeOrder",
+  "url": "https://e-vendi.com.br/api/getProductCategory",
   "httpVersion": "HTTP/1.1",
   "queryString": [],
   "headers": [
@@ -12,6 +12,6 @@
   "cookies": [],
   "postData": {
     "mimeType": "application/json",
-    "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\", \"externalId\": \"SEU_ID\", \"orderId\": \"id do pedido\"}"
+    "text": "{\"env\": \"Dev\", \"integrationToken\": \"SEU_TOKEN\",  \"organizationExternalId\": \"ID\"}"
   }
 }

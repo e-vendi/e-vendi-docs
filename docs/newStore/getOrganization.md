@@ -70,7 +70,9 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos|
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
+| corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
+| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce|
 | orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
@@ -124,11 +126,29 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | storeMode | string | Experiencia da compra, aceita dois tipos de dados ( ATACADO ou VAREJO ) |
 | titleSEO | string | Título para SEO |
 | requireStateAndCity | boolean | Identifica se no cadastro de usuário é obrigatório o cliente informar estado e cidade |
+| showDescriptionExpandedAutomatic | boolean | Atributo para dizer se a descrição deve vir expandida ao entrar no produto |
 | zApi | zApi | Configurações de integração com o zApi |
 | columnsCatalog | string | Quantidade de colunas que serão exibidas no catálogo. (3 ou 4). O default é 4 |
 | imageShape | string | Formato que a imagem terá no catálogo. (RECTANGULAR ou SQUARE). Default é RECTANGULAR |
 | freightConfig | array&#60;FreightConfig&#62; | Um array contendo configurações de frente sendo eles retail ou wholesale, se a loja estiver com modalidade ATACAREJO é possível distiguir os frentes pelo retail ou wholesale, mas se não estiver o padrão será o retail |
+| releaseSecondaryOrder | ReleaseSecondaryOrder \| null | Determina qual será a segunda ordenação quando o cliente ordena por lançamentos. Quando não informado ficará ordenado apenas pela ordenação primária que é lançamentos. |
+
+### ReleaseSecondaryOrder
+
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| grid | string | Por grade (aparecer primeiro os produtos que possuem estoque em todas as grades cadastradas) |
+| product | string | Por produto (produtos de cores diferentes, devem aparecer lado a lado no catálogo) |
+| recent | string | Mais recentes (últimos produtos adicionados devem aparecer primeiro) |
 | informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
+
+
+### corporateName
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| active         | boolean | Se deve mostrar razão social             |
+| company        | string  | nome da razão social que deve aparecer no footer da loja           |
 
 ### FreightConfig
 
@@ -180,6 +200,25 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | active | boolean | Se deve mostrar mensagem personalizada |
 | message | string | mensagem personalizada para exibição quando selecionado pagamento presencial |
 
+### physicalStoreAddress
+
+| Atributos      |  Tipo   | Descrição                                         |
+| :------------- | :-----: | :------------------------------------------------ |
+| country              | string  | País do cliente             |
+| localization         | string  | Cidade do cliente |
+| neighbourhood        | string  | informação sobre o bairro |
+| number               | string  | informação sobre o numero do local |
+| premisse             | string  | informação sobre o rua |
+| premisseType         | string  | informação se é RUA ou AVENIDA |
+| state                | string  | Abreviação do estado                    |
+| stateCode            | string  | Código do estado                        |
+| zipCode              | string  | Código de envio                         |
+
+### brand
+
+| Atributos |  Tipo   | Descrição                                    |
+| :-------- | :-----: | :------------------------------------------- |
+| active    | boolean | Se deve mostrar marca em detalhes do produto |
 
 ### orderDeliverySetup
 
