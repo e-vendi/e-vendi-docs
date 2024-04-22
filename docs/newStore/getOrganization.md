@@ -67,14 +67,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | :-- | :-: | :-- |
 | id | string | Identificador da loja |
 | about | string | HTML ou texto informado para a criação da página 'sobre' da loja |
-| hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos|
+| hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos |
 | active | boolean | Identifica se a loja está habilitada/desabilitada |
 | activeWithDraw | boolean | Identifica se pode ser feito retirada do produto na loja |
 | corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
-| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce|
+| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce |
 | orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
+| customerVerification | CustomerVerification | Verificação de cadastro de usuário |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
 | deliveryFee | float | Taxa de entrega ( Valor total, em reais R$) |
@@ -142,13 +143,12 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | recent | string | Mais recentes (últimos produtos adicionados devem aparecer primeiro) |
 | informSellerOnSale | boolean | Habilita para pedir que o cliente informe um vendedor na tela de pagamento. Obs. verificar as API`s de vendedores |
 
-
 ### corporateName
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar razão social             |
-| company        | string  | nome da razão social que deve aparecer no footer da loja           |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar razão social |
+| company | string | nome da razão social que deve aparecer no footer da loja |
 
 ### FreightConfig
 
@@ -193,6 +193,20 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | description    | string  | descrição do que você deseja que apareça na lead  |
 | successMessage | string  | Mensagem que o cliente receberá ao aceitar a lead |
 
+### CustomerVerification
+
+| Atributos |             Tipo              | Descrição                        |
+| :-------- | :---------------------------: | :------------------------------- |
+| required  |            boolean            | Habilita verificação de cadastro |
+| options   | CustomerVerificationOptions[] | Opções de verificação            |
+
+### CustomerVerificationOptions
+
+| Atributos |  Tipo  | Descrição                                          |
+| :-------- | :----: | :------------------------------------------------- |
+| label     | string | Nome visível da opção                              |
+| type      | string | Tipo da opção. Tipos disponíveis [email, whatsapp] |
+
 ### orderReceiptSetup
 
 | Atributos | Tipo | Descrição |
@@ -202,17 +216,17 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 
 ### physicalStoreAddress
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| country              | string  | País do cliente             |
-| localization         | string  | Cidade do cliente |
-| neighbourhood        | string  | informação sobre o bairro |
-| number               | string  | informação sobre o numero do local |
-| premisse             | string  | informação sobre o rua |
-| premisseType         | string  | informação se é RUA ou AVENIDA |
-| state                | string  | Abreviação do estado                    |
-| stateCode            | string  | Código do estado                        |
-| zipCode              | string  | Código de envio                         |
+| Atributos     |  Tipo  | Descrição                          |
+| :------------ | :----: | :--------------------------------- |
+| country       | string | País do cliente                    |
+| localization  | string | Cidade do cliente                  |
+| neighbourhood | string | informação sobre o bairro          |
+| number        | string | informação sobre o numero do local |
+| premisse      | string | informação sobre o rua             |
+| premisseType  | string | informação se é RUA ou AVENIDA     |
+| state         | string | Abreviação do estado               |
+| stateCode     | string | Código do estado                   |
+| zipCode       | string | Código de envio                    |
 
 ### brand
 

@@ -62,14 +62,15 @@ São obrigatórios todos atributos marcados com **\*** (asterisco).
 | Atributos | Tipo | Descrição |
 | :-- | :-: | :-- |
 | about | string | Conteúdo sobre a loja, pode ser informado texto ou HTML |
-| hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos|
+| hideBrand | boolean | Habilita/Desabilita marca dentro de detalhes do produto e catálogos |
 | active | boolean | Habilita/Desabilita a loja |
 | activeWithDraw | boolean | Habilita/Desabilita se pode ser feito retirada do produto na loja |
 | corporateName | boolean | Habilita/Desabilita se pode ter visualização da razão social no footer |
 | orderReceiptSetup | orderReceiptSetup | utilizado para configurar recebimento personalizado quando loja oferecer entrega presencial |
-| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce|
+| physicalStoreAddress | physicalStoreAddress | Caso o endereço físico da loja seja diferente do cadastrado no CNPJ, o endereço cadastrado aparecerá no E-commerce |
 | orderDeliverySetup | orderDeliverySetup | utilizado para configurar entrega personalizado quando loja oferecer entrega |
 | captureLead | captureLead | Informações sobre a captação de lead |
+| customerVerification | CustomerVerification | Verificação de cadastro de usuário |
 | cartExpirationHours | number | Quantidade de horas para o carrinho expirar |
 | createdAt | number | Data de criação da loja |
 | deliveryFee | float | Taxa de entrega ( Valor total, em reais R$) |
@@ -183,13 +184,26 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | description\* | string | descrição do que você deseja que apareça na lead |
 | successMessage\* | string | Mensagem que o cliente receberá ao aceitar a lead |
 
+### CustomerVerification
+
+| Atributos |             Tipo              | Descrição                        |
+| :-------- | :---------------------------: | :------------------------------- |
+| required  |            boolean            | Habilita verificação de cadastro |
+| options   | CustomerVerificationOptions[] | Opções de verificação            |
+
+### CustomerVerificationOptions
+
+| Atributos |  Tipo  | Descrição                                          |
+| :-------- | :----: | :------------------------------------------------- |
+| label     | string | Nome visível da opção                              |
+| type      | string | Tipo da opção. Tipos disponíveis [email, whatsapp] |
 
 ### corporateName
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| active         | boolean | Se deve mostrar razão social             |
-| company        | string  | nome da razão social que deve aparecer no footer da loja           |
+| Atributos | Tipo | Descrição |
+| :-- | :-: | :-- |
+| active | boolean | Se deve mostrar razão social |
+| company | string | nome da razão social que deve aparecer no footer da loja |
 
 ### orderReceiptSetup
 
@@ -205,22 +219,19 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
 | active | boolean | Se deve mostrar mensagem personalizada |
 | message | string | mensagem personalizada para exibição quando selecionado entrega |
 
-
-
 ### physicalStoreAddress
 
-| Atributos      |  Tipo   | Descrição                                         |
-| :------------- | :-----: | :------------------------------------------------ |
-| country              | string  | País do cliente             |
-| localization         | string  | Cidade do cliente |
-| neighbourhood        | string  | informação sobre o bairro |
-| number               | string  | informação sobre o numero do local |
-| premisse             | string  | informação sobre o rua |
-| premisseType         | string  | informação se é RUA ou AVENIDA |
-| state                | string  | Abreviação do estado                    |
-| stateCode            | string  | Código do estado                        |
-| zipCode              | string  | Código de envio                         |
-
+| Atributos     |  Tipo  | Descrição                          |
+| :------------ | :----: | :--------------------------------- |
+| country       | string | País do cliente                    |
+| localization  | string | Cidade do cliente                  |
+| neighbourhood | string | informação sobre o bairro          |
+| number        | string | informação sobre o numero do local |
+| premisse      | string | informação sobre o rua             |
+| premisseType  | string | informação se é RUA ou AVENIDA     |
+| state         | string | Abreviação do estado               |
+| stateCode     | string | Código do estado                   |
+| zipCode       | string | Código de envio                    |
 
 ### FreeShipping
 
@@ -377,6 +388,18 @@ Ex: Quando em ATACAREJO você pode vender para o ATACADO e para o VAREJO, isso d
       "subtitle": "",
       "successMessage": "Pronto! Agora você será informado no seu e-mail sobre todas nossas novidades.",
       "title": "Fique por dentro das novidades"
+    },
+    "customerVerification": {
+      "required": true,
+      "options": [{
+        "label": "E-mail",
+        "type": "email",
+      },
+      {
+        "label": "Whatsapp",
+        "type": "whatsapp",
+      },
+      ]
     },
     "cartExpirationHours": 2,
     "createdAt": 1629748031295,
